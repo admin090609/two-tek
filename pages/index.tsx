@@ -138,6 +138,48 @@ export default function Home() {
           </p>
         </div>
       </div>
+
+      <h1 className="text-center text-4xl mb-20">Cum lucrăm noi</h1>
+      <div>
+        <div>
+          <h1>Share your Calendly availability with others</h1>{" "}
+          <p>
+            Grow your business with scheduling automation. Simply email, text,
+            or add your Calendly availability to your website - and watch
+            prospects and recruits book high-value meetings with you.
+          </p>
+        </div>
+        <div>
+          <Image src="" alt="" width={100} height={100} />
+        </div>
+      </div>
+      <div>
+        <div>
+          <h1>Schedule as a team</h1>{" "}
+          <p>
+            Calendly adapts to both you and your team's scheduling preferences.
+            Co-host a client call with a colleague, email reminders and
+            follow-ups, and integrate everything with your preferred software
+            tools.
+          </p>
+        </div>
+        <div>
+          <Image src="" alt="" width={100} height={100} />
+        </div>
+      </div>
+      <div>
+        <div>
+          <h1>Hit your number</h1>{" "}
+          <p>
+            High-value meetings are the lifeblood of your business. Increase
+            revenue, retain customers, and land recruits with the #1 scheduling
+            automation platform.
+          </p>
+        </div>
+        <div>
+          <Image src="" alt="" width={100} height={100} />
+        </div>
+      </div>
     </>
   );
 }
