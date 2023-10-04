@@ -36,12 +36,12 @@ export default function Home() {
               className="rounded-3xl"
             />
           </div>
-          <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center text-white rounded-3xl mx-16 text-start font-unbounded">
-            <p className="text-6xl font-semibold mb-4 px-10 py-3">
-              Creăm <br /> Profesional <br />{" "}
+          <div className="absolute top-0 left-0 right-0 bottom-0 px-10 flex flex-col justify-center items-start text-white rounded-3xl text-start font-unbounded">
+            <p className="text-6xl font-semibold mb-4 leading-tight  py-3">
+              Creăm <br /> Profesional <br />
               <span className="tracking-wider text-[45px] rounded-[50px] px-3 font-light border-2 border-[#451D75]">
                 WebSite-ul
-              </span>{" "}
+              </span>
               <br />
               Dumneavoastră
             </p>
@@ -66,7 +66,7 @@ export default function Home() {
             <div key={index} className="logo-slide">
               <Link href={logo.link} target="_blank">
                 <div className="w-100 h-100">
-                  {" "}
+                  
                   {/* Set the dimensions here */}
                   <Image
                     width={100}
@@ -89,7 +89,7 @@ export default function Home() {
             <div key={index} className="logo-slide">
               <Link href={logo.link} target="_blank">
                 <div className="w-100 h-100">
-                  {" "}
+                  
                   {/* Set the dimensions here */}
                   <Image
                     width={100}
@@ -144,7 +144,7 @@ export default function Home() {
         <div className="max-w-xl">
           <h1 className="text-4xl font-bold mb-5 leading-normal">
             Share your Calendly <br /> availability with others
-          </h1>{" "}
+          </h1>
           <p className="text-2xl leading-normal">
             Grow your business with scheduling automation. Simply email, text,
             or add your Calendly availability to your website - and watch
@@ -159,7 +159,7 @@ export default function Home() {
         <div className="max-w-xl">
           <h1 className="text-4xl font-bold mb-5 leading-normal">
             Schedule as a team
-          </h1>{" "}
+          </h1>
           <p className="text-2xl leading-normal">
             Calendly adapts to both you and your team's scheduling preferences.
             Co-host a client call with a colleague, email reminders and
@@ -175,7 +175,7 @@ export default function Home() {
         <div className="max-w-xl">
           <h1 className="text-4xl font-bold mb-5 leading-normal">
             Hit your number
-          </h1>{" "}
+          </h1>
           <p className="text-2xl leading-normal">
             High-value meetings are the lifeblood of your business. Increase
             revenue, retain customers, and land recruits with the #1 scheduling
@@ -185,6 +185,19 @@ export default function Home() {
         <div>
           <Image src="/images/cal.png" alt="" width={500} height={100} />
         </div>
+      </div>
+
+      <div className="flex mt-20 justify-around items-center">
+        <div className="max-w-xl">
+          <h1>Echipa Noastră</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia ut,
+            nam dignissimos laborum ullam saepe vero enim. Qui, vel. Doloremque
+            est facere maxime consequatur distinctio omnis praesentium porro
+            delectus placeat.
+          </p>
+        </div>
+        <div><Image src="/images/cal.png" alt="" width={100} height={100}/></div>
       </div>
     </>
   );
