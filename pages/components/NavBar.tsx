@@ -13,46 +13,52 @@ const NavBar = () => {
   };
 
   return (
-    <div className="left-0 top-0 w-full z-10 mt-5">
-      <div className="max-w-[1305px] m-auto sm:mt-4 bg-gradient-to-b from-gray-900 to-indigo-800 sm:w-full flex justify-between items-center sm:p-0 p-5 font-semibold text-lg font-nunito h-[115px]">
-        <Link href="/" className="flex items-center justify-center sm:p-4 text-white ">
+    <div className="left-0 top-0 w-full z-10 mt-5 text-white">
+      <div className="max-w-[1305px] m-auto sm:mt-4 bg-gradient-to-b from-gray-900 to-indigo-800 sm:w-full flex justify-between items-center sm:p-0 p-5 font-semibold text-lg font-nunito h-[85px] rounded-[70px]">
+        <Link href="/" className="flex items-center justify-center sm:p-4 logo">
           2Tek
         </Link>
-        <ul className="hidden sm:flex">
+        <ul className="hidden sm:flex text-base font-medium">
           <li className="p-4">
-            <div className="bg-gradient-to-br from-yellow-400 via-orange-400 to-yellow-400 px-2 rounded-md">
-              <Link href="/">Acasa</Link>
+            <div className="">
+              <Link href="/">Despre Noi</Link>
             </div>
           </li>
           <li className="p-4">
-            <div
-              className=
-                  "bg-gradient-to-br from-yellow-400 via-orange-400 to-yellow-400 px-2 rounded-md"
-            >
-              <Link href="/shop">Acasa</Link>
+            <div className="">
+              <Link href="/shop">Servicii</Link>
             </div>
           </li>
           <li className="p-4">
-            <div
-              className=
-                   "bg-gradient-to-br from-yellow-400 via-orange-400 to-yellow-400 px-2 rounded-md"
-            >
-              <Link href="/about">Acasa</Link>
+            <div className="">
+              <Link href="/about">Proiecte</Link>
+            </div>
+          </li>
+          <li className="p-4">
+            <div className="">
+              <Link href="/about">Procese</Link>
             </div>
           </li>
           <li className="p-4 mr-3">
-            <div
-              className=
-                   "bg-gradient-to-br from-yellow-400 via-orange-400 to-yellow-400 px-2 rounded-md"
-            >
-              <Link href="/contacte">Acasa</Link>
+            <div className="">
+              <Link href="/contacte">Echipă</Link>
             </div>
           </li>
         </ul>
-        <div className="flex">
-        <div className="w-[50px] bg-gradient-to-b from-blue-500 to-purple-900 rounded-[86px]"><div className="w-[25px] h-[25px] bg-gradient-to-b from-orange-200 to-yellow-500 rounded-full"></div>
-</div>
-          <div className="bg-white mr-8 py-1 px-3 rounded-[85px]">RO {">"}</div>
+        <div className="flex items-center">
+          <div className="w-[52px] bg-gradient-to-b from-blue-500 to-purple-900 rounded-[86px] h-[30px] items-center flex mr-4">
+            <div className="w-[25px] h-[25px] bg-gradient-to-b from-orange-200 to-yellow-500 rounded-full ml-1"></div>
+          </div>
+          <div className="bg-white mr-8 py-1 px-2 rounded-[85px] text-black h-[30px] leading-6 flex items-center justify-center ">
+            RO{" "}
+            <Image
+              src="/images/arrow.png"
+              alt="arrow"
+              width={15}
+              height={10}
+              className="h-[16px]"
+            />
+          </div>
         </div>
 
         {/* Mobile Button */}
