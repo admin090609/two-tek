@@ -188,8 +188,8 @@ export default function Home() {
       </div>
 
       <div className="flex mt-20 justify-around items-center">
-        <div className="max-w-xl">
-          <h1>Echipa Noastră</h1>
+        <div className="max-w-md">
+          <h1 className="text-4xl font-bold mb-5">Echipa <br /> Noastră</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia ut,
             nam dignissimos laborum ullam saepe vero enim. Qui, vel. Doloremque
@@ -197,7 +197,7 @@ export default function Home() {
             delectus placeat.
           </p>
         </div>
-        <div><Image src="/images/cal.png" alt="" width={100} height={100}/></div>
+        <div><Image src="/images/echipa.jpg" alt="" width={600} height={100}/></div>
       </div>
     </>
   );
