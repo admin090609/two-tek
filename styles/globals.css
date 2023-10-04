@@ -1,14 +1,25 @@
+@import url('https://fonts.cdnfonts.com/css/sofia-pro');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Unbounded:wght@300&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
-body{
+
+body {
   color: black;
   background-color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+.logo {
+  font-family: 'Sofia Pro', sans-serif;
+  font-size: 45px;
+  font-weight: 500;
+  margin-left: 50px;
 }
 
 .logo-slider-container {
@@ -35,24 +46,31 @@ body{
 }
 
 .logo-slide:hover {
-  transform: scale(.9); /* Increase the scale factor as per your preference */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
-  opacity: 0.8; /* Reduce opacity on hover */
+  transform: scale(.9);
+  /* Increase the scale factor as per your preference */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  /* Add a shadow on hover */
+  opacity: 0.8;
+  /* Reduce opacity on hover */
 }
 
 
 .logo-slider img {
-  width: 100px; /* Lățimea logo-urilor */
+  width: 100px;
+  /* Lățimea logo-urilor */
   height: auto;
-  margin-right: 300px; /* Spațierea dintre logo-uri */
+  margin-right: 300px;
+  /* Spațierea dintre logo-uri */
 }
 
 @keyframes slideRightToLeft {
   from {
-    transform: translateX(0%); /* Logo-urile pornesc în afara ecranului dreapta */
+    transform: translateX(0%);
+    /* Logo-urile pornesc în afara ecranului dreapta */
   }
+
   to {
-    transform: translateX(-100%); /* Logo-urile trec complet prin ecran și apar din nou la dreapta */
+    transform: translateX(-100%);
+    /* Logo-urile trec complet prin ecran și apar din nou la dreapta */
   }
 }
-

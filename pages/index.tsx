@@ -36,8 +36,8 @@ export default function Home() {
               className="rounded-3xl"
             />
           </div>
-          <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center text-white rounded-3xl mx-16 text-start">
-            <p className="text-6xl font-bold mb-4 px-10 py-3">
+          <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center text-white rounded-3xl mx-16 text-start font-unbounded">
+            <p className="text-6xl font-semibold mb-4 px-10 py-3">
               Creăm <br /> Profesional <br />{" "}
               <span className="tracking-wider text-[45px] rounded-[50px] px-3 font-light border-2 border-[#451D75]">
                 WebSite-ul
@@ -46,7 +46,7 @@ export default function Home() {
               Dumneavoastră
             </p>
             <Link href="tel:+37368548789">
-              <button className="px-8 py-2 font-bold mb-5 text-black bg-white rounded-[50px]">
+              <button className="px-8 py-2 font-semibold mb-5 text-black bg-white rounded-[50px]">
                 Contactează-ne la +373 685 487 89
               </button>
             </Link>
