@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     fontFamily: {
       'unbounded': ['Unbounded', 'sans-serif'],
+      'sofia': ["Sofia Pro", 'sans-serif']
     },
     extend: {
       backgroundImage: {
