@@ -10,27 +10,6 @@ const logoData = [
 ];
 
 export default function Home() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const slideItems = [
-    {
-      image: "/images/cal.png",
-      name: "LUNDEV",
-      description:
-        "Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu",
-    },
-    // Add more slide items here
-  ];
-
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % slideItems.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + slideItems.length) % slideItems.length
-    );
-  };
-
   const [isAnimationPaused, setIsAnimationPaused] = useState(false);
 
   const handleMouseEnter = () => {
@@ -220,20 +199,6 @@ export default function Home() {
         </div>
         <div>
           <Image src="/images/echipa.jpg" alt="" width={600} height={100} />
-        </div>
-      </div>
-
-      <div className="container mx-auto px-4 py-8">
-        <div className="flex justify-between items-center mb-4">
-          <button id="prev" onClick={prevSlide}>
-            <i className="fas fa-angle-left"></i>
-          </button>
-          <button id="next" onClick={nextSlide}>
-            <i className="fas fa-angle-right"></i>
-          </button>
-        </div>
-        <div className="flex space-x-4">
-          
         </div>
       </div>
     </>
