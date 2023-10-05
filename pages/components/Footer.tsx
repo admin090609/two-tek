@@ -6,12 +6,36 @@ const Footer = () => {
   return (
     <>
       <div className="flex justify-evenly items-start mt-20 mb-0 bg-[#191722] text-white p-10">
-        <div>
-          <div className="w-[30%]">
-            {/* <Image src="/images/slider.jpg" alt="email" width="" height="0" className="w-full h-full" /> */}
-              
+        <div className="flex flex-col items-center">
+          <div className="rounded-[20px] border-black border-2 overflow-hidden mt-[-40%] bg-white text-black">
+            <Image
+              src="/images/slider.jpg"
+              alt="email"
+              width="350"
+              height="0"
+              className="w-full h-full"
+            />
+            <div className="p-4">
+              <p className="mb-2 text-2xl font-extrabold font-sofia">
+                Rămâi la curent cu tendințele <br /> în design web și oferte
+                exclusive.
+              </p>
+              <div className="flex">
+                <input
+                  type="text"
+                  placeholder="Emailul dvs..."
+                  className="h-12 w-[60%] border-[1px] border-gray-200 rounded-lg email"
+                />
+                <button className="w-[40%] rounded-lg bg-black text-white ml-2">
+                  Abonează-te
+                </button>
+              </div>
+              <p className="text-[13px] mt-2 text-gray-400">
+                Fără spam, vă puteți dezabona în orice moment.
+              </p>
+            </div>
           </div>
-          <h1 className="text-6xl font-bold">2Tek</h1>
+          <h1 className="text-6xl font-bold font-sofia mt-6">2Tek</h1>
         </div>
         <div className="flex flex-col">
           <h1 className="text-3xl font-semibold mb-3">Pagini</h1>
