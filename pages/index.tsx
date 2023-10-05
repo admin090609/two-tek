@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import Slideshow from "./components/Slideshow";
+import Imaginea from "./components/Imaginea";
 
 const logoData = [
   { src: "/images/sanduta.png", link: "" },
@@ -203,8 +203,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div>
-        <Slideshow/>
+      <div className="mt-20 mb-72 flex justify-center items-center">
+        <Imaginea />
       </div>
     </>
   );
