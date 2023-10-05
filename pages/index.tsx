@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import Slideshow from "./components/Slideshow";
 
 const logoData = [
   { src: "/images/sanduta.png", link: "" },
@@ -200,6 +201,10 @@ export default function Home() {
         <div>
           <Image src="/images/echipa.jpg" alt="" width={600} height={100} />
         </div>
+      </div>
+
+      <div>
+        <Slideshow/>
       </div>
     </>
   );
