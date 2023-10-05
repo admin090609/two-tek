@@ -5,8 +5,12 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <>
-      <div className="flex justify-evenly items-start mt-20 mb-0">
+      <div className="flex justify-evenly items-start mt-20 mb-0 bg-[#191722] text-white p-10">
         <div>
+          <div className="w-[30%]">
+            {/* <Image src="/images/slider.jpg" alt="email" width="" height="0" className="w-full h-full" /> */}
+              
+          </div>
           <h1 className="text-6xl font-bold">2Tek</h1>
         </div>
         <div className="flex flex-col">
