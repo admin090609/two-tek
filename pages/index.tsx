@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import Imaginea from "./components/Imaginea";
+import CalendlyWidget from "./components/calendly";
 
 const logoData = [
   { src: "/images/sanduta.png", link: "" },
@@ -206,6 +207,7 @@ export default function Home() {
       <div className="mt-20 mb-72 flex justify-center items-center">
         <Imaginea />
       </div>
+      <CalendlyWidget />
     </>
   );
 }

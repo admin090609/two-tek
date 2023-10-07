@@ -188,7 +188,7 @@ body {
 .buttons {
   position: absolute;
   bottom: 30px;
-  z-index: 222222;
+  z-index: 222;
   text-align: center;
   width: 100%;
 }
