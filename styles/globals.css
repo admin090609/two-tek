@@ -48,13 +48,9 @@ body {
 }
 
 .logo-slide:hover {
-  transform: scale(0.95);
-  /* Increase the scale factor as per your preference */
-  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
-  /* Add a shadow on hover */
+  transform: scale(0.975);
   opacity: 0.8;
   border-radius: 10px;
-  /* Reduce opacity on hover */
 }
 
 .logo-slider img {
@@ -192,5 +188,10 @@ body {
 
 
 .email::placeholder {
-  
+  position: absolute;
+  margin-left: 15px;
+}
+
+.email::pla{
+  margin-left: 15px;
 }
