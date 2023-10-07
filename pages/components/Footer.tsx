@@ -7,7 +7,7 @@ const Footer = () => {
     <>
       <div className="flex justify-evenly items-start mt-20 mb-0 bg-[#191722] text-white p-10">
         <div className="flex flex-col items-center">
-          <div className="rounded-[20px] border-black border-2 overflow-hidden mt-[-40%] bg-white text-black">
+          <div className="rounded-[20px] border-[#191722] border-2 overflow-hidden mt-[-40%] bg-white text-black">
             <Image
               src="/images/slider.jpg"
               alt="email"
@@ -24,9 +24,9 @@ const Footer = () => {
                 <input
                   type="text"
                   placeholder="Emailul dvs..."
-                  className="h-12 w-[60%] border-[1px] border-gray-200 rounded-lg email"
+                  className="h-12 w-[60%] border-[1px] border-gray-200 hover:border-gray-300 rounded-lg email "
                 />
-                <button className="w-[40%] rounded-lg bg-black text-white ml-2">
+                <button className="w-[40%] rounded-lg bg-black opacity-100 hover:opacity-80 text-white ml-2 ease-linear duration-100">
                   Abonează-te
                 </button>
               </div>
@@ -39,11 +39,11 @@ const Footer = () => {
         </div>
         <div className="flex flex-col">
           <h1 className="text-3xl font-semibold mb-3">Pagini</h1>
-          <Link href="">Acasa</Link>
-          <Link href="">Acasa</Link>
-          <Link href="">Acasa</Link>
-          <Link href="">Acasa</Link>
-          <Link href="">Acasa</Link>
+          <Link href="">Despre Noi</Link>
+          <Link href="">Servicii</Link>
+          <Link href="">Proiecte</Link>
+          <Link href="">Procese</Link>
+          <Link href="">Echipă</Link>
         </div>
         <div className="flex flex-col">
           <h1 className="text-3xl font-semibold mb-3">Contacte</h1>

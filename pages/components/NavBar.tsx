@@ -14,8 +14,11 @@ const NavBar = () => {
 
   return (
     <div className="left-0 top-0 w-full z-10 mt-5 text-white">
-      <div className="max-w-[1305px] m-auto sm:mt-4 bg-gradient-to-b from-gray-900 to-indigo-800 sm:w-full flex justify-between items-center sm:p-0 p-5 font-semibold text-lg h-[85px] rounded-[70px]">
-        <Link href="/" className="flex items-center justify-center sm:p-4 logo">
+      <div className="max-w-[1305px] sm:mt-4 bg-gradient-to-b from-gray-900 to-indigo-800 sm:w-full flex justify-between items-center sm:p-0 p-5 font-semibold text-lg h-[85px] rounded-[70px] m-auto">
+        <Link
+          href="/"
+          className="flex items-center justify-center sm:p-4 logo ml-4"
+        >
           2Tek
         </Link>
         <ul className="hidden sm:flex text-base font-medium">
