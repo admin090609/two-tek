@@ -22,7 +22,7 @@ const CalendlyWidget = () => {
         onClick={toggleCalendly}
         style={{
           position: "absolute",
-          background: "#1a1a1a",
+          background: "#008DFD",
           color: "#ffffff",
           padding: "10px 20px",
           border: "none",
