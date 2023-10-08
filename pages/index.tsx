@@ -3,6 +3,8 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import Imaginea from "./components/Imaginea";
 import CalendlyWidget from "./components/calendly";
+import Footer from "./components/Footer";
+import NavBar from "./components/NavBar";
 
 const logoData = [
   { src: "/images/sanduta.png", link: "" },
@@ -24,6 +26,10 @@ export default function Home() {
 
   return (
     <>
+      <div>
+        <NavBar />
+      </div>
+
       <div className="mt-20 text-center relative">
         <div className="w-[70vw] mx-auto relative">
           <div
@@ -208,6 +214,8 @@ export default function Home() {
         <Imaginea />
       </div>
       <CalendlyWidget />
+
+      <Footer />
     </>
   );
 }
