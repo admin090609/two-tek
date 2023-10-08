@@ -12,7 +12,7 @@ function LanguageSelector() {
     <div className="relative">
       <div
         className={`flex items-center justify-between bg-white px-3 py-2 rounded-full cursor-pointer ${
-          isOpen ? "bg-opacity-100" : "bg-opacity-50"
+          isOpen ? "bg-opacity-100" : "bg-opacity-70"
         } transition-all duration-300`}
         onClick={toggleMenu}
         style={{ minHeight: "40px" }}
