@@ -44,8 +44,8 @@ export default function Home() {
               className="rounded-3xl"
             />
           </div>
-          <div className="absolute top-0 left-0 right-0 bottom-0 px-10 flex flex-col justify-center items-start text-white rounded-3xl text-start font-unbounded">
-            <p className="text-6xl font-semibold mb-4 leading-tight  py-3">
+          <div className="absolute top-0 left-0 right-0 bottom-0 px-10 flex flex-col justify-center items-start text-white rounded-3xl text-start">
+            <p className="text-6xl font-semibold mb-4 leading-[60px] py-3">
               Creăm <br /> Profesional <br />
               <span className="tracking-wider text-[45px] rounded-[50px] px-3 font-light border-2 border-[#451D75]">
                 WebSite-ul
@@ -61,7 +61,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <h1 className="mt-20 text-center text-4xl mb-20">
+      <h1 className="mt-20 text-center text-4xl mb-20 font-semibold">
         Transformăm ideile tale în site-uri <br /> funcționale și atrăgătoare.
       </h1>
       <div className="mt-12 logo-slider-container">

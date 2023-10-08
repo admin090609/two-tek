@@ -1,8 +1,10 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import Language from "./Language";
+import Color from "./Color";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
@@ -12,55 +14,63 @@ const NavBar = () => {
     setNav(!nav);
   };
 
+  useEffect(() => {
+    // Delay the animation to ensure it plays when the component mounts
+    setTimeout(() => {
+      setNav(true);
+    }, 100);
+  }, []);
+
   return (
-    <div className="left-0 top-0 w-full z-10 mt-5 text-white">
-      <div className="max-w-[1305px] sm:mt-4 bg-gradient-to-b from-gray-900 to-indigo-800 sm:w-full flex justify-between items-center sm:p-0 p-5 font-semibold text-lg h-[85px] rounded-[70px] m-auto">
-        <Link
-          href="/"
-          className="flex items-center justify-center sm:p-4 logo ml-4"
-        >
+    <div
+      className={`left-0 top-0 w-full z-10 mt-5 text-black ${
+        nav ? "animate-fadeInDown" : "opacity-0 translate-y-[-50px]"
+      } transition-all duration-1000 ease-in-out`}
+    >
+      <div className="max-w-[1305px] sm:mt-4 sm:w-full bg-[#EFF0F3] flex justify-around items-center sm:p-0 p-5 h-[85px] rounded-[70px] m-auto">
+        <Link href="/" className="text-4xl sm:p-4 ml-4 font-bold">
           2Tek
         </Link>
-        <ul className="hidden sm:flex text-base font-medium">
-          <li className="p-4">
-            <div className="">
+
+        <ul className="hidden sm:flex text-base font-semibold text-[#585858]">
+          <li className="p-4 relative group">
+            <div className="group relative">
               <Link href="/">Despre Noi</Link>
+              <div className="absolute inset-x-0 bottom-0 h-0.5 bg-[#585858] transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"></div>
             </div>
           </li>
-          <li className="p-4">
-            <div className="">
+          <li className="p-4 relative group">
+            <div className="group relative">
               <Link href="/shop">Servicii</Link>
+              <div className="absolute inset-x-0 bottom-0 h-0.5 bg-[#585858] transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"></div>
             </div>
           </li>
-          <li className="p-4">
-            <div className="">
+          <li className="p-4 relative group">
+            <div className="group relative">
               <Link href="/about">Proiecte</Link>
+              <div className="absolute inset-x-0 bottom-0 h-0.5 bg-[#585858] transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"></div>
             </div>
           </li>
-          <li className="p-4">
-            <div className="">
+          <li className="p-4 relative group">
+            <div className="group relative">
               <Link href="/about">Procese</Link>
+              <div className="absolute inset-x-0 bottom-0 h-0.5 bg-[#585858] transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"></div>
             </div>
           </li>
-          <li className="p-4 mr-3">
-            <div className="">
+          <li className="p-4 relative group">
+            <div className="group relative">
               <Link href="/contacte">Echipă</Link>
+              <div className="absolute inset-x-0 bottom-0 h-0.5 bg-[#585858] transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"></div>
             </div>
           </li>
         </ul>
-        <div className="flex items-center">
-          <div className="w-[52px] bg-gradient-to-b from-blue-500 to-purple-900 rounded-[86px] h-[30px] items-center flex mr-4">
-            <div className="w-[25px] h-[25px] bg-gradient-to-b from-orange-200 to-yellow-500 rounded-full ml-1"></div>
+
+        <div className="flex  items-center">
+          <div className="mr-5">
+            <Language />
           </div>
-          <div className="bg-white mr-8 py-1 px-2 rounded-[85px] text-black h-[30px] leading-6 flex items-center justify-center ">
-            RO{" "}
-            <Image
-              src="/images/arrow.png"
-              alt="arrow"
-              width={15}
-              height={10}
-              className="h-[16px]"
-            />
+          <div>
+            <Color />
           </div>
         </div>
 
