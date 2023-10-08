@@ -34,7 +34,7 @@ function LanguageSelector() {
         </svg>
       </div>
 
-      {/* Apply transition classes to the dropdown menu */}
+      {/* Apply transition classes to the dropdown menu for both opening and closing */}
       <div
         className={`${
           isOpen ? "opacity-100 scale-y-100" : "opacity-0 scale-y-0"
