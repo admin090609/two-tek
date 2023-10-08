@@ -35,13 +35,13 @@ const NavBar = () => {
         <ul className="hidden sm:flex text-base font-semibold text-white">
           <li className="p-4 relative group">
             <div className="group relative">
-              <Link href="/">Despre Noi</Link>
+              <Link href="/">Performanță</Link>
               <div className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"></div>
             </div>
           </li>
           <li className="p-4 relative group">
             <div className="group relative">
-              <Link href="/shop">Servicii</Link>
+              <Link href="/shop">Echipa</Link>
               <div className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"></div>
             </div>
           </li>
@@ -53,13 +53,7 @@ const NavBar = () => {
           </li>
           <li className="p-4 relative group">
             <div className="group relative">
-              <Link href="/about">Procese</Link>
-              <div className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"></div>
-            </div>
-          </li>
-          <li className="p-4 relative group">
-            <div className="group relative">
-              <Link href="/contacte">Echipă</Link>
+              <Link href="/about">Feedback</Link>
               <div className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"></div>
             </div>
           </li>
