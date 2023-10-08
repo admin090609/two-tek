@@ -35,7 +35,7 @@ function LanguageSelector() {
       </div>
 
       {isOpen && (
-        <div className="absolute mt-2 w-40 bg-white rounded-lg shadow-lg overflow-hidden">
+        <div className="absolute mt-2 w-40 bg-white rounded-lg shadow-lg overflow-hidden z-10">
           <ul className="divide-y divide-gray-200">
             <li>
               <a
@@ -50,10 +50,17 @@ function LanguageSelector() {
                 href="#"
                 className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
               >
-                Rusă
+                Română
               </a>
             </li>
-            {/* Adăugați mai multe opțiuni aici */}
+            <li>
+              <a
+                href="#"
+                className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+              >
+               Rusă
+              </a>
+            </li>
           </ul>
         </div>
       )}
