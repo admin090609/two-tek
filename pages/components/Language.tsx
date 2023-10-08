@@ -11,13 +11,13 @@ function LanguageSelector() {
   return (
     <div className="relative">
       <div
-        className={`flex items-center justify-between bg-white px-3 py-2 rounded-full cursor-pointer transition-all duration-300 ${
-          isOpen ? "" : ""
-        }`}
+        className={`flex items-center justify-between bg-white px-3 py-2 rounded-full cursor-pointer ${
+          isOpen ? "bg-opacity-100" : "bg-opacity-50"
+        } transition-all duration-300`}
         onClick={toggleMenu}
-        style={{ minHeight: "40px" }} // Înălțimea fixă
+        style={{ minHeight: "40px" }}
       >
-        <span className="text-gray-700">Selectează limba</span>
+        <span className="text-gray-700">Română</span>
         <svg
           className={`h-4 w-4 transform transition-transform ${
             isOpen ? "rotate-180" : "rotate-0"
@@ -34,36 +34,31 @@ function LanguageSelector() {
         </svg>
       </div>
 
-      {isOpen && (
-        <div className="absolute mt-2 w-40 bg-white rounded-lg shadow-lg overflow-hidden z-10">
-          <ul className="divide-y divide-gray-200">
-            <li>
-              <a
-                href="#"
-                className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
-              >
-                Engleză
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
-              >
-                Română
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
-              >
-               Rusă
-              </a>
-            </li>
-          </ul>
-        </div>
-      )}
+      {/* Apply transition classes to the dropdown menu */}
+      <div
+        className={`${
+          isOpen ? "opacity-100 scale-y-100" : "opacity-0 scale-y-0"
+        } absolute mt-2 w-40 bg-white rounded-lg shadow-lg overflow-hidden z-10 transform origin-top transition-transform duration-300`}
+      >
+        <ul className="divide-y divide-gray-200">
+          <li>
+            <a
+              href="#"
+              className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+            >
+              Engleză
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+            >
+              Rusă
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }
