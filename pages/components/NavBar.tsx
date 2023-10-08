@@ -18,7 +18,7 @@ const NavBar = () => {
     // Delay the animation to ensure it plays when the component mounts
     setTimeout(() => {
       setNav(true);
-    }, 100);
+    }, 500);
   }, []);
 
   return (

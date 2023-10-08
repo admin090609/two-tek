@@ -5,6 +5,7 @@ import Imaginea from "./components/Imaginea";
 import CalendlyWidget from "./components/calendly";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
+import Info from "./components/Info";
 
 const logoData = [
   { src: "/images/sanduta.png", link: "" },
@@ -30,37 +31,7 @@ export default function Home() {
         <NavBar />
       </div>
 
-      <div className="mt-20 text-center relative">
-        <div className="w-[70vw] mx-auto relative">
-          <div
-            className="rounded-3xl overflow-hidden"
-            style={{ width: "100%", height: "500px" }}
-          >
-            <Image
-              src="/images/slider.jpg"
-              alt=""
-              layout="fill" // This allows the image to fill its container
-              objectFit="cover" // This ensures the image covers the entire container
-              className="rounded-3xl"
-            />
-          </div>
-          <div className="absolute top-0 left-0 right-0 bottom-0 px-10 flex flex-col justify-center items-start text-white rounded-3xl text-start">
-            <p className="text-6xl font-semibold mb-4 leading-[60px] py-3 ">
-              Creăm <br /> Profesional <br />
-              <span className="tracking-wider text-[45px] rounded-[50px] px-3 font-light border-2 border-[#91A8B7]">
-                WebSite-ul
-              </span>
-              <br />
-              Dumneavoastră
-            </p>
-            <Link href="tel:+37368548789">
-              <button className="px-8 py-2 font-semibold mb-5 text-black bg-white rounded-[50px]">
-                Contactează-ne la +373 685 487 89
-              </button>
-            </Link>
-          </div>
-        </div>
-      </div>
+     <Info/>
       <h1 className="mt-20 text-center text-4xl mb-20 font-semibold">
         Transformăm ideile tale în site-uri <br /> funcționale și atrăgătoare.
       </h1>
