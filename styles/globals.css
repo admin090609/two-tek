@@ -297,26 +297,35 @@ body {
   transform: scale(0);
 }
 
-#switch:checked + .icon--moon {
+#switch:checked+.icon--moon {
   transform: rotate(360deg) scale(0);
 }
 
-#switch:checked ~ .icon--sun {
+#switch:checked~.icon--sun {
   transition-delay: 200ms;
   transform: scale(1) rotate(360deg);
 }
 
 .fade-in-up {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 1s ease, transform 1s ease;
+  animation: fadeInUp 1s ease;
 }
 
 .fade-in-up.show {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 0
 }
 
+@keyframes fadeInUp {
+  from {
+    transform: translateY(120px);
+    opacity: 0;
+
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1
+  }
+}
 
 .fade-in-right {
   opacity: 1;
@@ -328,6 +337,3 @@ body {
   opacity: 1;
   transform: translateX(0);
 }
-
-
-
