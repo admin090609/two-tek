@@ -45,9 +45,9 @@ export default function Home() {
             />
           </div>
           <div className="absolute top-0 left-0 right-0 bottom-0 px-10 flex flex-col justify-center items-start text-white rounded-3xl text-start">
-            <p className="text-6xl font-semibold mb-4 leading-[60px] py-3">
+            <p className="text-6xl font-semibold mb-4 leading-[60px] py-3 ">
               Creăm <br /> Profesional <br />
-              <span className="tracking-wider text-[45px] rounded-[50px] px-3 font-light border-2 border-[#451D75]">
+              <span className="tracking-wider text-[45px] rounded-[50px] px-3 font-light border-2 border-[#91A8B7]">
                 WebSite-ul
               </span>
               <br />

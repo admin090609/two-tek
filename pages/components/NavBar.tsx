@@ -27,40 +27,40 @@ const NavBar = () => {
         nav ? "animate-fadeInDown" : "opacity-0 translate-y-[-50px]"
       } transition-all duration-1000 ease-in-out`}
     >
-      <div className="max-w-[1305px] sm:mt-4 sm:w-full bg-[#EFF0F3] flex justify-around items-center sm:p-0 p-5 h-[85px] rounded-[70px] m-auto">
+      <div className="max-w-[1305px] sm:mt-4 sm:w-full bg-gradient-to-r from-[#CFDFEC] via-[#B3C5D3] to-[#97ABBB] flex justify-around items-center sm:p-0 p-5 h-[85px] rounded-[70px] m-auto">
         <Link href="/" className="text-4xl sm:p-4 ml-4 font-bold">
           2Tek
         </Link>
 
-        <ul className="hidden sm:flex text-base font-semibold text-[#585858]">
+        <ul className="hidden sm:flex text-base font-semibold text-white">
           <li className="p-4 relative group">
             <div className="group relative">
               <Link href="/">Despre Noi</Link>
-              <div className="absolute inset-x-0 bottom-0 h-0.5 bg-[#585858] transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"></div>
+              <div className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"></div>
             </div>
           </li>
           <li className="p-4 relative group">
             <div className="group relative">
               <Link href="/shop">Servicii</Link>
-              <div className="absolute inset-x-0 bottom-0 h-0.5 bg-[#585858] transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"></div>
+              <div className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"></div>
             </div>
           </li>
           <li className="p-4 relative group">
             <div className="group relative">
               <Link href="/about">Proiecte</Link>
-              <div className="absolute inset-x-0 bottom-0 h-0.5 bg-[#585858] transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"></div>
+              <div className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"></div>
             </div>
           </li>
           <li className="p-4 relative group">
             <div className="group relative">
               <Link href="/about">Procese</Link>
-              <div className="absolute inset-x-0 bottom-0 h-0.5 bg-[#585858] transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"></div>
+              <div className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"></div>
             </div>
           </li>
           <li className="p-4 relative group">
             <div className="group relative">
               <Link href="/contacte">Echipă</Link>
-              <div className="absolute inset-x-0 bottom-0 h-0.5 bg-[#585858] transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"></div>
+              <div className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"></div>
             </div>
           </li>
         </ul>
