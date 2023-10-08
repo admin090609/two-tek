@@ -307,8 +307,8 @@ body {
 }
 
 .fade-in-up {
-  opacity: 1;
-  transform: translateY(-30px);
+  opacity: 0;
+  transform: translateY(30px);
   transition: opacity 1s ease, transform 1s ease;
 }
 
@@ -317,7 +317,6 @@ body {
   transform: translateY(0);
 }
 
-/* YourComponent.css sau fișierul CSS global al proiectului */
 
 .fade-in-right {
   opacity: 1;
