@@ -26,7 +26,7 @@ const Footer = () => {
                   placeholder="Emailul dvs..."
                   className="h-12 w-[60%] border-[1px] border-gray-200 hover:border-gray-300 rounded-lg email "
                 />
-                <button className="w-[40%] rounded-lg bg-black opacity-100 hover:opacity-80 text-white ml-2 ease-linear duration-100">
+                <button className="w-[40%] rounded-lg bg-black opacity-100 hover:opacity-80 text-white ml-2 ease-linear duration-200">
                   Abonează-te
                 </button>
               </div>

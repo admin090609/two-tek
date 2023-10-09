@@ -27,7 +27,7 @@ const NavBar = () => {
         nav ? "animate-fadeInDown" : "opacity-0 translate-y-[-50px]"
       } transition-all duration-1000 ease-in-out`}
     >
-      <div className="max-w-[1305px] sm:mt-4 sm:w-full bg-gradient-to-r from-[#CFDFEC] via-[#B3C5D3] to-[#97ABBB] flex justify-around items-center sm:p-0 p-5 h-[85px] rounded-[70px] m-auto">
+      <div className="max-w-[1305px] sm:mt-4 sm:w-full bg-gradient-to-r from-[#CFDFEC] via-[#B3C5D3] to-[#97ABBB] flex justify-around items-center sm:p-0 p-5 h-[70px] rounded-[70px] m-auto">
         <Link href="/" className="text-4xl sm:p-4 ml-4 font-bold">
           2Tek
         </Link>

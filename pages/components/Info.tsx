@@ -10,16 +10,12 @@ function Info() {
     const timeout = setTimeout(() => {
       setShowComponent(true);
     }, 500);
-
-    return () => {
-      clearTimeout(timeout);
-    };
   }, []);
 
   return (
     <div
-      className={`mt-24 text-center relative ${
-        showComponent ? "fade-in-up" : ""
+      className={`mt-20 text-center relative ${
+        showComponent ? "fade-in-up" : "opacity-0 translate-y-[-50px]"
       }`}
     >
       <div className="w-[70vw] mx-auto relative">
@@ -50,9 +46,9 @@ function Info() {
           </p>
           <Link href="tel:+37368548789">
             <button
-              className={`px-8 py-2 font-semibold mb-5 text-black bg-white rounded-[50px] ${
+              className={`px-8 py-2 font-semibold mb-5 text-black bg-white rounded-[50px] hover:bg-opacity-70  ${
                 showComponent ? "fade-in-right" : ""
-              }`}
+              }ease-linear duration-500`}
             >
               Contactează-ne la +373 685 487 89
             </button>

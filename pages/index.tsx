@@ -6,80 +6,19 @@ import CalendlyWidget from "./components/calendly";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import Info from "./components/Info";
-
-const logoData = [
-  { src: "/images/sanduta.png", link: "" },
-  { src: "/images/buffy.png", link: "https://admin090609.github.io/" },
-  { src: "/images/a&d.png", link: "https://admin090609.github.io/" },
-  { src: "/images/apisudex.png", link: "https://admin090609.github.io/" },
-];
+import Carousel from "./components/Carousel";
 
 export default function Home() {
-  const [isAnimationPaused, setIsAnimationPaused] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsAnimationPaused(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsAnimationPaused(false);
-  };
-
   return (
     <>
       <div>
         <NavBar />
       </div>
-
-     <Info/>
-      <h1 className="mt-20 text-center text-4xl mb-20 font-semibold">
-        Transformăm ideile tale în site-uri <br /> funcționale și atrăgătoare.
-      </h1>
-      <div className="mt-12 logo-slider-container">
-        <div
-          className={`logo-slider ${isAnimationPaused ? "paused" : ""}`}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        >
-          {logoData.map((logo, index) => (
-            <div key={index} className="logo-slide">
-              <Link href={logo.link} target="_blank">
-                <div className="w-100 h-100">
-                  {/* Set the dimensions here */}
-                  <Image
-                    width={100}
-                    height={100}
-                    src={logo.src}
-                    alt=""
-                    className="object-contain"
-                  />
-                </div>
-              </Link>
-            </div>
-          ))}
-        </div>
-        <div
-          className={`logo-slider ${isAnimationPaused ? "paused" : ""}`}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        >
-          {logoData.map((logo, index) => (
-            <div key={index} className="logo-slide">
-              <Link href={logo.link} target="_blank">
-                <div className="w-100 h-100">
-                  {/* Set the dimensions here */}
-                  <Image
-                    width={100}
-                    height={100}
-                    src={logo.src}
-                    alt=""
-                    className="object-contain"
-                  />
-                </div>
-              </Link>
-            </div>
-          ))}
-        </div>
+      <div>
+        <Info />
+      </div>
+      <div>
+        <Carousel/>
       </div>
 
       <h1 className="text-center text-4xl mb-20">De ce să ne Alegeți</h1>
