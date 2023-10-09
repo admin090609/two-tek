@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import 'animate.css';
 
 const logoData = [
   { src: "/images/sanduta.png", link: "" },
@@ -21,10 +22,10 @@ const Carousel = () => {
   };
   return (
     <>
-      <h1 className="mt-32 text-center text-4xl mb-20 font-semibold text-[#637684]">
-        Transformăm ideile tale în site-uri <br /> funcționale și atrăgătoare.
+      <h1 className="mt-32 text-center text-4xl mb-20 font-semibold text-[#637684] animate__animated animate__flipInX">
+        Transformăm ideile tale în <span className="text-[#008DFD]">site-uri</span>  <br /> funcționale și atrăgătoare.
       </h1>
-      <div className="mt-12 logo-slider-container">
+      <div className="mt-12 logo-slider-container animate__fadeInBottomRight animate__animated">
         <div
           className={`logo-slider ${isAnimationPaused ? "paused" : ""}`}
           onMouseEnter={handleMouseEnter}
