@@ -11,6 +11,7 @@ import Parallax1 from "./components/Parallax1";
 import Paralax2 from "./components/Paralax2";
 
 export default function Home() {
+  
   return (
     <>
       <div>
