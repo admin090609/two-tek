@@ -10,6 +10,7 @@ import Carousel from "./components/Carousel";
 import Parallax1 from "./components/Parallax1";
 
 export default function Home() {
+  
   return (
     <>
       <div>
