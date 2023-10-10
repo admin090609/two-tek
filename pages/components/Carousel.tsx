@@ -22,7 +22,7 @@ const Carousel = () => {
   };
   return (
     <>
-      <h1 className="mt-32 text-center text-4xl mb-20 font-semibold text-[#637684] animate__animated animate__flipInX">
+      <h1 className="mt-32 text-center text-4xl mb-20 font-semibold text-[#637684] animate__animated animate__slideInDown">
         Transformăm ideile tale în <span className="text-[#008DFD]">site-uri</span>  <br /> funcționale și atrăgătoare.
       </h1>
       <div className="mt-12 logo-slider-container animate__fadeInBottomRight animate__animated">
