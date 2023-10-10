@@ -1,6 +1,7 @@
 @import url("https://fonts.cdnfonts.com/css/sofia-pro");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&family=Unbounded:wght@300&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import "animate.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -340,3 +341,20 @@ body {
   transform: translateX(0);
 }
 
+@keyframes fadeInBottomRight {
+  0% {
+    opacity: 0;
+    /* Start with 0 opacity */
+    transform: translate(100%, 100%);
+    /* Move element to the bottom right */
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.add-logos {
+  animation: fadeInBottomRight 1.5s linear;
+}
