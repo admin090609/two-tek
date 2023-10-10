@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import Info from "./components/Info";
 import Carousel from "./components/Carousel";
+import Parallax1 from "./components/Parallax1";
 
 export default function Home() {
   return (
@@ -21,39 +22,9 @@ export default function Home() {
         <Carousel/>
       </div>
 
-      <h1 className="text-center text-4xl mb-20">De ce să ne Alegeți</h1>
-      <div className="flex justify-evenly mb-20 text-start">
-        <div className="shadow-xl py-10 px-3 rounded-xl max-w-[400px]">
-          <h1 className="text-xl font-semibold mb-5">Experiență 2+ Ani</h1>
-          <p>
-            Cu o experiență de peste 2 ani în dezvoltarea și design-ul de
-            website-uri, suntem o echipă dedicată care oferă soluții
-            personalizate pentru nevoile dvs. online. Am colaborat cu o
-            varietate de clienți și proiecte, transformând conceptele în
-            website-uri funcționale și atractive.
-          </p>
-        </div>
-        <div className="shadow-xl py-10 px-3 rounded-xl max-w-[400px]">
-          <h1 className="text-xl font-semibold mb-5">Întotdeauna Conectați</h1>
-          <p>
-            Pentru 2Tek, conectivitatea nu este doar un cuvânt, ci o acțiune
-            rapidă și eficientă. Ne specializăm în oferirea unui nivel înalt de
-            răspuns, asigurându-ne că site-ul dvs. rămâne în permanență la
-            vârful performanței și că reacționăm rapid la cerințele și
-            schimbările dvs.
-          </p>
-        </div>
-        <div className="shadow-xl py-10 px-3 rounded-xl max-w-[400px]">
-          <h1 className="text-xl font-semibold mb-5">Plata în Rate</h1>
-          <p>
-            La 2Tek, vă punem la dispoziție opțiuni de plată în rate
-            avantajoase, astfel încât să puteți beneficia de serviciile noastre
-            de top fără a vă afecta bugetul. Răspundem prompt și eficient în
-            ceea ce privește flexibilitatea financiară, pentru a vă oferi
-            întotdeauna cea mai bună experiență posibilă.
-          </p>
-        </div>
-      </div>
+     <div>
+      <Parallax1/>
+     </div>
 
       <h1 className="text-center text-4xl mb-20">Cum lucrăm noi</h1>
       <div className="flex justify-around items-center mb-5">
