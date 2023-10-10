@@ -9,15 +9,15 @@ import Info from "./components/Info";
 import Carousel from "./components/Carousel";
 import Parallax1 from "./components/Parallax1";
 import Paralax2 from "./components/Paralax2";
+import Echipa from "./components/Echipa";
 
 export default function Home() {
-  
   return (
     <>
       <div>
         <NavBar />
       </div>
-      
+
       <div>
         <Info />
       </div>
@@ -33,6 +33,10 @@ export default function Home() {
         <Paralax2 />
       </div>
 
+      <div>
+        <Echipa />
+      </div>
+      
       <div className="mt-20 mb-72 flex justify-center items-center">
         <Imaginea />
       </div>

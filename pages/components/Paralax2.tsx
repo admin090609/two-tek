@@ -1,19 +1,22 @@
-import React from 'react'
-import Image from 'next/image'
+import React from "react";
+import Image from "next/image";
 
 const Paralax2 = () => {
   return (
     <>
-    <h1 className="text-center text-4xl mb-20 font-semibold text-[#637684]">Modul <span className='text-[#008DFD]'>nostru</span>  de lucru</h1>
+      <h1 className="text-center text-4xl mb-20 mt-32 font-semibold text-[#637684]">
+        Modul <span className="text-[#008DFD]">nostru</span> de lucru
+      </h1>
       <div className="flex justify-around items-center mb-5">
         <div className="max-w-xl">
           <h1 className="text-4xl font-bold mb-5 leading-normal">
-            Share your Calendly <br /> availability with others
+            Analiza produsului <br /> și crearea sarcinilor tehnice
           </h1>
           <p className="text-2xl leading-normal">
-            Grow your business with scheduling automation. Simply email, text,
-            or add your Calendly availability to your website - and watch
-            prospects and recruits book high-value meetings with you.
+            Ne vom implica într-un dialog constructiv cu clientul nostru pentru
+            a discuta în detaliu despre produsul nostru, apoi preluăm
+            responsabilitatea de a elabora specificațiile tehnice, împărțindu-le
+            în grupuri mici printre colegii noștri.
           </p>
         </div>
         <div>
@@ -23,13 +26,12 @@ const Paralax2 = () => {
       <div className="flex justify-around items-center mb-5">
         <div className="max-w-xl">
           <h1 className="text-4xl font-bold mb-5 leading-normal">
-            Schedule as a team
+            Împărțirea lucrării în etape
           </h1>
           <p className="text-2xl leading-normal">
-            Calendly adapts to both you and your team's scheduling preferences.
-            Co-host a client call with a colleague, email reminders and
-            follow-ups, and integrate everything with your preferred software
-            tools.
+            Divizăm procesul în etape. În prima săptămână, ne concentrăm pe
+            crearea designului web și lucrăm la acest aspect până când sunteți
+            complet mulțumit cu produsul final.
           </p>
         </div>
         <div>
@@ -39,37 +41,20 @@ const Paralax2 = () => {
       <div className="flex justify-around items-center mb-5">
         <div className="max-w-xl">
           <h1 className="text-4xl font-bold mb-5 leading-normal">
-            Hit your number
+            Dezvoltarea produsului și suportului său
           </h1>
           <p className="text-2xl leading-normal">
-            High-value meetings are the lifeblood of your business. Increase
-            revenue, retain customers, and land recruits with the #1 scheduling
-            automation platform.
+            Dezvoltarea produsului, inclusiv toate aspectele legate de design,
+            producție, actualizări, și serviciile oferite pentru a asigura buna
+            funcționare a acestuia.
           </p>
         </div>
         <div>
           <Image src="/images/cal.png" alt="" width={500} height={100} />
         </div>
       </div>
+    </>
+  );
+};
 
-      <div className="flex mt-20 justify-around items-center">
-        <div className="max-w-md">
-          <h1 className="text-4xl font-bold mb-5">
-            Echipa <br /> Noastră
-          </h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia ut,
-            nam dignissimos laborum ullam saepe vero enim. Qui, vel. Doloremque
-            est facere maxime consequatur distinctio omnis praesentium porro
-            delectus placeat.
-          </p>
-        </div>
-        <div>
-          <Image src="/images/echipa.jpg" alt="" width={600} height={100} />
-        </div>
-      </div>
-      </>
-  )
-}
-
-export default Paralax2
+export default Paralax2;
