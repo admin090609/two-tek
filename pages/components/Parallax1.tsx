@@ -3,7 +3,7 @@ import React from "react";
 const Parallax1 = () => {
   return (
     <>
-      <h1 className="text-center text-4xl mb-20 text-[#637684] font-semibold animate__animated animate__slideInUp">
+      <h1 className="text-center text-4xl mb-20 text-[#637684] mt-44 font-semibold animate__animated animate__slideInUp">
         Care sunt <span className="text-[#008DFD]">avantajele</span> de a lucra
         cu noi
       </h1>

@@ -24,7 +24,6 @@ body {
   width: 80%;
   overflow: hidden;
   white-space: nowrap;
-  margin-bottom: 200px;
 }
 
 .logo-slider {
@@ -339,22 +338,4 @@ body {
   color: #637684;
   opacity: 1;
   transform: translateX(0);
-}
-
-@keyframes fadeInBottomRight {
-  0% {
-    opacity: 0;
-    /* Start with 0 opacity */
-    transform: translate(100%, 100%);
-    /* Move element to the bottom right */
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0, 0);
-  }
-}
-
-.add-logos {
-  animation: fadeInBottomRight 1.5s linear;
 }

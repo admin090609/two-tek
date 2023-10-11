@@ -13,20 +13,39 @@ const logoData = [
 
 const Carousel = () => {
   const myRef = useRef<HTMLDivElement | null>(null);
+  const h1Ref = useRef<HTMLDivElement | null>(null);
   const [isVisible, setIsVisible] = useState(false);
-  console.log("isVisible", isVisible);
+  const [isVisible2, setIsVisible2] = useState(false);
+  const [isAnimationPaused, setIsAnimationPaused] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false); // State pentru a urmări dacă animația a fost deja activată
 
   useEffect(() => {
-    if (myRef.current) {
+    if (myRef.current && !hasAnimated) {
       const observer = new IntersectionObserver((entries) => {
         const entry = entries[0];
-        setIsVisible(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          setHasAnimated(true);
+          observer.unobserve(myRef.current!); // Use the non-null assertion operator here
+        }
       });
-      observer.observe(myRef.current);
+      observer.observe(myRef.current!); // Use the non-null assertion operator here
     }
-  }, []);
-
-  const [isAnimationPaused, setIsAnimationPaused] = useState(false);
+  
+    if (h1Ref.current && !hasAnimated) {
+      const h1Observer = new IntersectionObserver((entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsVisible2(true);
+          setHasAnimated(true);
+          h1Observer.unobserve(h1Ref.current!); // Use the non-null assertion operator here
+        }
+      });
+      h1Observer.observe(h1Ref.current!); // Use the non-null assertion operator here
+    }
+  }, [hasAnimated]);
+  
+  
 
   const handleMouseEnter = () => {
     setIsAnimationPaused(true);
@@ -35,15 +54,20 @@ const Carousel = () => {
   const handleMouseLeave = () => {
     setIsAnimationPaused(false);
   };
+
   return (
     <>
-      <h1 className="mt-32 text-center text-4xl mb-20 font-semibold text-[#637684] animate__animated animate__slideInDown">
+      <h1
+        ref={h1Ref}
+        className={` mt-32 text-center text-4xl mb-20 font-semibold text-[#637684]
+${isVisible2 ? "animate__animated animate__fadeInLeft" : ""}`}
+      >
         Transformăm ideile tale în{" "}
         <span className="text-[#008DFD]">site-uri</span> <br /> funcționale și
         atrăgătoare.
       </h1>{" "}
       <div>
-        <div ref={myRef} className={`${isVisible ? "add-logos" : ""}`}>
+        <div ref={myRef} className={`${isVisible ? "animate__animated animate__slideInRight" : ""}`}>
           <div className="mt-12 logo-slider-container ">
             <div
               className={`logo-slider ${isAnimationPaused ? "paused" : ""}`}
