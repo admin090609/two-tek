@@ -38,14 +38,6 @@ const Footer = () => {
           <h1 className="text-6xl font-bold font-sofia mt-6">2Tek</h1>
         </div>
         <div className="flex flex-col">
-          <h1 className="text-3xl font-semibold mb-3">Pagini</h1>
-          <Link href="">Despre Noi</Link>
-          <Link href="">Servicii</Link>
-          <Link href="">Proiecte</Link>
-          <Link href="">Procese</Link>
-          <Link href="">Echipă</Link>
-        </div>
-        <div className="flex flex-col">
           <h1 className="text-3xl font-semibold mb-3">Contacte</h1>
           <Link href="tel:+37368548789">+373 685 487 89</Link>
           <Link href="tel:+37360008857">+373 600 088 57</Link>
