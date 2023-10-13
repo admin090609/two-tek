@@ -204,17 +204,17 @@ body {
 
 .email::placeholder {
   position: absolute;
-  left: 10px;
+  left: 13px;
   font-size: 14px;
 }
 
 .email:focus {
-  border: 1px solid rgb(156 163 175);
+  border: 1px solid white;
 }
 
 .email[type="text" i] {
   padding-block: 1px;
-  padding-inline: 10px;
+  padding-inline: 13px;
   font-size: 14px;
 }
 
@@ -335,7 +335,9 @@ body {
 }
 
 .fade-in-right.show {
-  color: #637684;
+  color: #f2d40f;
   opacity: 1;
   transform: translateX(0);
 }
+
+

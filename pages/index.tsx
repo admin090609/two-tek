@@ -11,6 +11,7 @@ import Parallax1 from "./components/Parallax1";
 import Paralax2 from "./components/Paralax2";
 import Echipa from "./components/Echipa";
 import HorizontalSlider from "./components/HorizontalSlider";
+import Email from "./components/Email";
 
 export default function Home() {
   return (
@@ -27,7 +28,7 @@ export default function Home() {
       </div>
 
       <div>
-        <HorizontalSlider/>
+        <HorizontalSlider />
       </div>
 
       <div>
@@ -37,12 +38,15 @@ export default function Home() {
       <div>
         <Echipa />
       </div>
-      
-      <div className="mt-20 mb-72 flex justify-center items-center">
+
+      <div className="mt-20 mb-32 flex justify-center items-center">
         <Imaginea />
       </div>
       <CalendlyWidget />
 
+      <div>
+        <Email />
+      </div>
       <Footer />
     </>
   );
