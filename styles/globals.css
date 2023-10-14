@@ -340,4 +340,140 @@ body {
   transform: translateX(0);
 }
 
+.card {
+  position: absolute;
+  border-radius: 20px;
+  width: 250px;
+  height: 311.5px;
+  margin: auto;
+  margin-top: -312px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 80px -10px black;
+  overflow: hidden;
+}
 
+.card-blur {
+  position: absolute;
+  height: 100%;
+  width: calc(100% + 1px);
+  background-color: black;
+  opacity: 0;
+  transition: opacity 0.15s ease-in;
+}
+
+.card:hover .card-blur {
+  opacity: 0.3;
+}
+
+.footer {
+  z-index: 1;
+  position: absolute;
+  height: 80px;
+  width: 100%;
+}
+
+svg#curve {
+  position: absolute;
+  right: 0;
+  width: 400px;
+  height: 450px;
+}
+
+.connections {
+  height: 100px;
+  width: 400px;
+  position: absolute;
+  left: 200px;
+  right: 0;
+  bottom: 100px;
+  margin: auto;
+}
+
+.connection {
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+  background-color: white;
+  display: flex;
+  padding: 5px;
+  margin-bottom: 25px;
+  transform: translateY(-50px);
+  transition: transform 1s cubic-bezier(.46, 1.48, .18, .81);
+}
+
+.card:hover .connection {
+  transform: translateY(250px);
+}
+
+.info {
+  padding-left: 20px;
+  transform: translateY(-100px);
+
+  transition: transform 1s cubic-bezier(.31, 1.21, .64, 1.02);
+}
+
+.card:hover .info {
+  transform: translateY(20px);
+}
+
+.name {
+  font-weight: bolder;
+  padding-top: 5px;
+  color: #fff;
+}
+
+.job {
+  color: #fff;
+  margin-top: 5px;
+}
+
+.connection.facebook {
+  height: 35px;
+  width: 35px;
+  padding: 0px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.connection.twitter {
+  transition-delay: 0.06s;
+  height: 35px;
+  width: 35px;
+  padding: 0px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.connection.behance {
+  transition-delay: 0.12s;
+  height: 35px;
+  width: 35px;
+  padding: 0px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.connection.facebook .icon {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.connection.twitter .icon {
+  height: 100%;
+  width: 100%;
+  margin-top: 4px;
+  background-position: center;
+  background-size: cover;
+}
+
+.connection.behance .icon {
+  height: 100%;
+  width: 100%;
+  margin-top: 3px;
+  background-position: center;
+  background-size: cover;
+}

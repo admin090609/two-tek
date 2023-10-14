@@ -14,7 +14,7 @@ const Footer = () => {
 
   return (
     <>
-      <div className="flex items-center justify-around p-10 text-center mb-20">
+      <div className="flex items-center justify-around p-10 text-center mb-10">
         <div className="flex ml-20">
           <Link href="https://www.instagram.com/two_2tek">
             <Image

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Echipa = () => {
   return (
@@ -21,10 +22,74 @@ const Echipa = () => {
           <Image src="/images/gif.gif" alt="" width={300} height={100} />
           <div className="flex">
             <div className="p-4">
-              <Image src="/images/danu.png" alt="" width={250} height={100} />
+              <Image
+                src="/images/danu.jpeg"
+                alt=""
+                width={2264}
+                height={100}
+                className="rounded-[20px] w-[250px]"
+              />
+              <div id="curve" className="card">
+                <div className="footer">
+                  <div className="connections">
+                    <div className="connection facebook">
+                      <Link
+                        href="https://www.facebook.com/loghin.dan.1"
+                        className="icon"
+                      ></Link>
+                    </div>
+                    <div className="connection twitter">
+                      <Link
+                        href="https://www.instagram.com/loghindan/"
+                        className="icon"
+                      ></Link>
+                    </div>
+                    <div className="connection behance">
+                      <Link href="" className="icon"></Link>
+                    </div>
+                  </div>
+                  <div className="info">
+                    <div className="name">Loghin Dan</div>
+                    <div className="job">Developer</div>
+                  </div>
+                </div>
+                <div className="card-blur"></div>
+              </div>
             </div>
             <div className="p-4">
-              <Image src="/images/eduard.png" alt="" width={250} height={100} />
+              <Image
+                src="/images/eduard.jpeg"
+                alt=""
+                width={2260}
+                height={100}
+                className="rounded-[20px] w-[250px]"
+              />
+              <div id="curve" className="card">
+                <div className="footer">
+                  <div className="connections">
+                    <div className="connection facebook">
+                      <Link
+                        href="https://www.facebook.com/eduard.ivanov.7334"
+                        className="icon"
+                      ></Link>
+                    </div>
+                    <div className="connection twitter">
+                      <Link
+                        href="https://www.instagram.com/i_edy_/"
+                        className="icon"
+                      ></Link>
+                    </div>
+                    <div className="connection behance">
+                      <Link href="" className="icon"></Link>
+                    </div>
+                  </div>
+                  <div className="info">
+                    <div className="name">Ivanov Eduard</div>
+                    <div className="job">Developer</div>
+                  </div>
+                </div>
+                <div className="card-blur"></div>
+              </div>
             </div>
           </div>
         </div>
