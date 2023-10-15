@@ -202,22 +202,6 @@ body {
 }
 
 
-.email::placeholder {
-  position: absolute;
-  left: 13px;
-  font-size: 14px;
-}
-
-.email:focus {
-  border: 1px solid white;
-}
-
-.email[type="text" i] {
-  padding-block: 1px;
-  padding-inline: 13px;
-  font-size: 14px;
-}
-
 .loader {
   width: 60px;
   display: flex;
@@ -456,25 +440,3 @@ body {
   background-size: cover;
 }
 
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-
-  /* Center slide text vertically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
