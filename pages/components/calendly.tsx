@@ -34,7 +34,7 @@ const CalendlyWidget = () => {
           zIndex: 10000, // Ensure the button is on top
         }}
       >
-        Stabiliți o întâlnire cu noi
+        Stabiliți o întâlnire
       </button>
       <div style={calendlyStyles}>
         <iframe
