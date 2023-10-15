@@ -374,21 +374,15 @@ body {
   width: 100%;
 }
 
-svg#curve {
-  position: absolute;
-  right: 0;
-  width: 400px;
-  height: 450px;
-}
-
 .connections {
-  height: 100px;
+  height: 150px;
   width: 400px;
   position: absolute;
   left: 200px;
   right: 0;
   bottom: 100px;
   margin: auto;
+  z-index: 2;
 }
 
 .connection {
@@ -398,13 +392,13 @@ svg#curve {
   background-color: white;
   display: flex;
   padding: 5px;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
   transform: translateY(-50px);
   transition: transform 1s cubic-bezier(.46, 1.48, .18, .81);
 }
 
 .card:hover .connection {
-  transform: translateY(250px);
+  transform: translateY(200px);
 }
 
 .info {
@@ -429,14 +423,6 @@ svg#curve {
   margin-top: 5px;
 }
 
-.connection.facebook {
-  height: 35px;
-  width: 35px;
-  padding: 0px;
-  border-radius: 100%;
-  overflow: hidden;
-}
-
 .connection.twitter {
   transition-delay: 0.06s;
   height: 35px;
@@ -455,17 +441,9 @@ svg#curve {
   overflow: hidden;
 }
 
-.connection.facebook .icon {
-  height: 100%;
-  width: 100%;
-  background-position: center;
-  background-size: cover;
-}
-
 .connection.twitter .icon {
   height: 100%;
   width: 100%;
-  margin-top: 4px;
   background-position: center;
   background-size: cover;
 }
