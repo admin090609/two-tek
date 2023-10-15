@@ -12,6 +12,7 @@ import Paralax2 from "./components/Paralax2";
 import Echipa from "./components/Echipa";
 import HorizontalSlider from "./components/HorizontalSlider";
 import Email from "./components/Email";
+import Review from "./components/Review";
 
 export default function Home() {
   return (
@@ -42,6 +43,10 @@ export default function Home() {
       <div className="mt-20 mb-32 flex justify-center items-center">
         <Imaginea />
       </div>
+      <div className="mb-20">
+        <Review />
+      </div>
+
       <CalendlyWidget />
 
       <div>
