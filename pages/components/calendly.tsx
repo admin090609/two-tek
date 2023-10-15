@@ -28,7 +28,7 @@ const CalendlyWidget = () => {
           border: "none",
           bottom: "20px", // Adjust this to control the distance from the button
           right: "20px",
-          width: "235px",
+          width: "190px",
           borderRadius: "5px",
           cursor: "pointer",
           zIndex: 10000, // Ensure the button is on top
