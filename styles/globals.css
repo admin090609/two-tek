@@ -441,7 +441,7 @@ body {
 }
 
 .horizontal-slider {
-  width: 140vw;
+  width: 100vw;
   height: 100vh;
   z-index: 6;
 }
@@ -452,14 +452,14 @@ body {
 
 .boxuri {
   position: relative;
-  width: 220px;
-  height: 300px;
+  width: 300px;
+  height: 450px;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: 0.5s;
   z-index: 1;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .boxuri::before {
@@ -497,7 +497,7 @@ body {
 
 .boxuri:before,
 .boxuri:after {
-  background: linear-gradient(315deg, #ffbc00, #ff0058)
+  background: linear-gradient(315deg, #CFDFEC, #B3C5D3, #7ca7cb)
 }
 
 .boxuri span {
@@ -519,12 +519,12 @@ body {
   width: 0;
   height: 0;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(200, 200, 200, 0.1);
   backdrop-filter: blur(10px);
   opacity: 0;
   transition: 0.1s;
   animation: animate 2s ease-in-out infinite;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08)
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.163)
 }
 
 .boxuri span::before {
@@ -547,7 +547,7 @@ body {
   backdrop-filter: blur(10px);
   opacity: 0;
   transition: 0.5s;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.163);
   animation-delay: -1s;
 }
 
@@ -561,12 +561,12 @@ body {
 
 .boxuri .contenturi {
   position: relative;
-  width: 190px;
-  height: 254px;
+  width: 250px;
+  height: 350px;
   padding: 20px 40px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(217, 217, 217, 0.215);
   backdrop-filter: blur(10px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.179);
   border-radius: 8px;
   z-index: 1;
   transform: 0.5s;

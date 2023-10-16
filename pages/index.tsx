@@ -28,7 +28,7 @@ export default function Home() {
         <Carousel />
       </div>
 
-      <div className="w-[100vw] h-[100vh]">
+      <div className="w-[100vw] h-[60vh]">
         <ScrollAnimation />
       </div>
 
