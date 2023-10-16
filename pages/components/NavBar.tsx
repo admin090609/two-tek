@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import Language from "./Language";
 import Color from "./Color";
+import { Link as ScrollLink } from "react-scroll";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
@@ -35,25 +36,61 @@ const NavBar = () => {
         <ul className="hidden sm:flex text-base font-semibold text-white">
           <li className="p-4 relative group">
             <div className="group relative">
-              <Link href="/">Performanță</Link>
+              <ScrollLink
+                to="horizontal" // Identificatorul secțiunii căreia doriți să faceți clic
+                spy={true}
+                smooth={true}
+                offset={-70} // Ajustați această valoare pentru a potrivi poziția de destinație
+                duration={1000}
+                className="cursor-pointer"
+              >
+                Performanță
+              </ScrollLink>
               <div className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"></div>
             </div>
           </li>
           <li className="p-4 relative group">
             <div className="group relative">
-              <Link href="/shop">Echipa</Link>
+            <ScrollLink
+                to="echipa" // Identificatorul secțiunii căreia doriți să faceți clic
+                spy={true}
+                smooth={true}
+                offset={-70} // Ajustați această valoare pentru a potrivi poziția de destinație
+                duration={1800}
+                className="cursor-pointer"
+              >
+                Echipa
+              </ScrollLink>
               <div className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"></div>
             </div>
           </li>
           <li className="p-4 relative group">
             <div className="group relative">
-              <Link href="/about">Proiecte</Link>
+              <ScrollLink
+                to="proiecte" // Identificatorul secțiunii căreia doriți să faceți clic
+                spy={true}
+                smooth={true}
+                offset={-70} // Ajustați această valoare pentru a potrivi poziția de destinație
+                duration={1800}
+                className="cursor-pointer"
+              >
+                Proiecte
+              </ScrollLink>
               <div className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"></div>
             </div>
           </li>
           <li className="p-4 relative group">
             <div className="group relative">
-              <Link href="/about">Feedback</Link>
+            <ScrollLink
+                to="feedback" // Identificatorul secțiunii căreia doriți să faceți clic
+                spy={true}
+                smooth={true}
+                offset={-60} // Ajustați această valoare pentru a potrivi poziția de destinație
+                duration={2000}
+                className="cursor-pointer"
+              >
+                Feedback
+              </ScrollLink>
               <div className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"></div>
             </div>
           </li>
