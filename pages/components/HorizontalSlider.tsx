@@ -11,8 +11,9 @@ const ScrollAnimation = () => {
     const sections = gsap.utils.toArray(".panel");
 
     const scrollTween = gsap.to(sections, {
-      xPercent: -20 * (sections.length - 1),
-      ease: "none",
+      xPercent: -80 * sections.length,
+      ease: "power4.out",
+      duration: "2050",
       scrollTrigger: {
         trigger: ".horizontal-slider",
         pin: false,
