@@ -7,6 +7,8 @@ import { observe } from "react-intersection-observer";
 
 const Email = () => {
   const myRef = useRef<HTMLDivElement | null>(null);
+  const h1Ref = useRef<HTMLDivElement | null>(null);
+  const [isVisible2, setIsVisible2] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false); // State pentru a urmări dacă animația a fost deja activată
 
@@ -92,18 +94,34 @@ const Email = () => {
       });
       observer.observe(myRef.current!); // Use the non-null assertion operator here
     }
+
+    if (h1Ref.current && !hasAnimated) {
+      const h1Observer = new IntersectionObserver((entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsVisible2(true);
+          setHasAnimated(true);
+          h1Observer.unobserve(h1Ref.current!); // Use the non-null assertion operator here
+        }
+      });
+      h1Observer.observe(h1Ref.current!); // Use the non-null assertion operator here
+    }
   }, [hasAnimated]);
 
   return (
     <>
-      <div>
-        <div
-          ref={myRef}
-          className={`flex justify-between items-center bg-[#008DFD] mx-56 rounded-md px-20 py-5 mb-10${
-            isVisible ? "animate__animated animate__fadeInBottomLeft" : ""
-          }`}
-        >
-          <div>
+      <div
+        ref={myRef}
+        className={`${
+          isVisible ? "animate__animated animate__fadeInBottomLeft" : ""
+        }`}
+      >
+        <div className="flex justify-between items-center bg-[#008DFD] mx-56 rounded-md px-20 py-5 mb-10">
+          <div
+            ref={h1Ref}
+            className={`
+${isVisible2 ? "animate__animated animate__fadeInLeft " : ""}`}
+          >
             <h1 className="text-white text-3xl font-semibold mb-3 ">
               Rămâi la curent cu tendințele <br /> în design web și oferte
               exclusive
