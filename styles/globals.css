@@ -195,6 +195,7 @@ body {
   border-radius: 50%;
   border: 1px solid #555;
   transition: 0.5s;
+  margin-right: 5px;
 }
 
 .buttons button:hover {
@@ -452,8 +453,8 @@ body {
 
 .boxuri {
   position: relative;
-  width: 350px;
-  height: 500px;
+  width: 320px;
+  height: 450px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -561,11 +562,11 @@ body {
 
 .boxuri .contenturi {
   position: relative;
-  width: 280px;
-  height: 400px;
-  padding: 20px 30px;
+  width: 235px;
+  height: 350px;
+  padding: 20px 25px;
   background: rgba(217, 217, 217, 0.215);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(2px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.179);
   border-radius: 8px;
   z-index: 1;
@@ -575,8 +576,14 @@ body {
   align-items: center;
 }
 
-.boxuri .contenturi h2 {
+.boxuri .contenturi h1 {
   font-size: 20px;
-  color: #fff;
+  color: #000000;
   margin-bottom: 10px;
+}
+
+.boxuri .contenturi p {
+  font-size: 14px;
+  color: #000000;
+  z-index: 10;
 }

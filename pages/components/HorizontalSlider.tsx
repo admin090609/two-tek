@@ -11,7 +11,7 @@ const ScrollAnimation = () => {
     const sections = gsap.utils.toArray(".horizontal-slider");
 
     const scrollTween = gsap.to(sections, {
-      xPercent: -6 * sections.length,
+      xPercent: 20 * sections.length,
       ease: "power4.out",
       duration: 25.0,
       delay: 5,
@@ -19,7 +19,7 @@ const ScrollAnimation = () => {
         trigger: ".horizontal-slider",
         pin: false,
         scrub: 0.1,
-        end: "+=2000",
+        end: "+=8000",
       },
     });
   });
@@ -27,7 +27,7 @@ const ScrollAnimation = () => {
   const myRef = useRef<HTMLDivElement | null>(null);
   const h1Ref = useRef<HTMLDivElement | null>(null);
   const [isVisible2, setIsVisible2] = useState(false);
-  const [hasAnimated, setHasAnimated] = useState(false); // State pentru a urmări dacă animația a fost deja activată
+  const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
     if (h1Ref.current && !hasAnimated) {
@@ -50,6 +50,7 @@ const ScrollAnimation = () => {
         className={`text-center text-4xl mb-20 mt-20 font-semibold text-[#637684] ${
           isVisible2 ? "animate__animated animate__backInDown" : ""
         }`}
+        id="performanta"
       >
         {" "}
         Transformăm ideile tale în
