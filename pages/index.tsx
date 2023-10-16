@@ -10,8 +10,8 @@ import Carousel from "./components/Carousel";
 import Parallax1 from "./components/Parallax1";
 import Paralax2 from "./components/Paralax2";
 import Echipa from "./components/Echipa";
-import HorizontalSlider from "./components/HorizontalSlider";
 import Email from "./components/Email";
+import ScrollAnimation from "./components/HorizontalSlider";
 
 export default function Home() {
   return (
@@ -27,8 +27,8 @@ export default function Home() {
         <Carousel />
       </div>
 
-      <div>
-        <HorizontalSlider />
+      <div className="w-[100vw] h-[100vh]">
+        <ScrollAnimation />
       </div>
 
       <div>

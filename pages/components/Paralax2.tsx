@@ -71,7 +71,7 @@ const Paralax2 = () => {
     <>
       <h1
         ref={h1Ref}
-        className={`text-center text-4xl mb-20 mt-44 font-semibold text-[#637684] ${
+        className={`text-center text-4xl mb-20 mt-20 font-semibold text-[#637684] ${
           isVisible ? "animate__animated animate__backInDown" : ""
         }`}
       >
@@ -97,7 +97,13 @@ const Paralax2 = () => {
           </p>
         </div>
         <div>
-          <Image src="/images/search.png" alt="" width={250} height={100} className="py-5"/>
+          <Image
+            src="/images/search.png"
+            alt=""
+            width={250}
+            height={100}
+            className="py-5"
+          />
         </div>
       </div>
 
@@ -118,7 +124,13 @@ const Paralax2 = () => {
           </p>
         </div>
         <div>
-          <Image src="/images/web.png" alt="" width={250} height={100} className="py-5" />
+          <Image
+            src="/images/web.png"
+            alt=""
+            width={250}
+            height={100}
+            className="py-5"
+          />
         </div>
       </div>
 
@@ -139,7 +151,13 @@ const Paralax2 = () => {
           </p>
         </div>
         <div>
-          <Image src="/images/mobile.png" alt="" width={250} height={100} className="py-5"/>
+          <Image
+            src="/images/mobile.png"
+            alt=""
+            width={250}
+            height={100}
+            className="py-5"
+          />
         </div>
       </div>
     </>
