@@ -56,7 +56,7 @@ const ScrollAnimation = () => {
         <span className="text-[#008DFD]"> site-uri</span> funcționale și
         atrăgătoare.
       </h1>
-      <div className="horizontal-slider flex justify-center mt-20">
+      <div className="horizontal-slider flex justify-center mt-30">
         <section className="panel red">
           <div>
             <div className="boxuri">
