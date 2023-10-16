@@ -452,8 +452,8 @@ body {
 
 .boxuri {
   position: relative;
-  width: 300px;
-  height: 450px;
+  width: 350px;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -561,17 +561,16 @@ body {
 
 .boxuri .contenturi {
   position: relative;
-  width: 250px;
-  height: 350px;
-  padding: 20px 40px;
+  width: 280px;
+  height: 400px;
+  padding: 20px 30px;
   background: rgba(217, 217, 217, 0.215);
   backdrop-filter: blur(10px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.179);
   border-radius: 8px;
   z-index: 1;
   transform: 0.5s;
-  color: #fff;
-  display: flex;
+  color: #000000;
   justify-content: center;
   align-items: center;
 }
