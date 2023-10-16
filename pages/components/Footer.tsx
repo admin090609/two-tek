@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+
+
 const Footer = () => {
   const [hoverStates, setHoverStates] = useState([false, false, false, false]);
 
@@ -16,7 +18,7 @@ const Footer = () => {
     <>
       <div className="flex items-center justify-around p-10 text-center mb-10">
         <div className="flex ml-20">
-          <Link href="https://www.instagram.com/two_2tek">
+          <Link href="https://www.instagram.com/two_2tek" className="hover:-translate-y-1 transition duration-500 ease-in-out">
             <Image
               src={
                 hoverStates[0]
@@ -31,7 +33,7 @@ const Footer = () => {
               onMouseLeave={() => handleIconHover(0, false)}
             />
           </Link>
-          <Link href="https://www.tiktok.com/@_2.tek_">
+          <Link href="https://www.tiktok.com/@_2.tek_" className="hover:-translate-y-1 transition duration-500 ease-in-out">
             <Image
               src={
                 hoverStates[1]
