@@ -28,7 +28,7 @@ export default function Home() {
         <Carousel />
       </div>
 
-      <div className="w-[100vw] h-[60vh]">
+      <div className="w-[100vw] h-[60vh]" id="horizontal">
         <ScrollAnimation />
       </div>
 
@@ -36,14 +36,15 @@ export default function Home() {
         <Paralax2 />
       </div>
 
-      <div>
+      <div id="echipa">
         <Echipa />
       </div>
 
-      <div className="mt-20 mb-32 flex justify-center items-center">
+      <div className="mt-20 mb-32 flex justify-center items-center" id="proiecte">
         <Imaginea />
       </div>
-      <div className="mb-20">
+      
+      <div className="mb-20" id="feedback">
         <Review />
       </div>
 
