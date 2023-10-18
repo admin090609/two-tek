@@ -2,7 +2,8 @@ import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import "animate.css";
-import { observe } from "react-intersection-observer";
+import useLanguage from "../../public/LanguageContext";
+import { getTranslatedContent } from "./TranslateRoToRu";
 
 const logoData = [
   { src: "/images/sanduta.png", link: "" },
@@ -19,6 +20,9 @@ const Carousel = () => {
   const [isAnimationPaused, setIsAnimationPaused] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false); // State pentru a urmări dacă animația a fost deja activată
 
+  const { language, setLanguage } = useLanguage();
+  const content = getTranslatedContent(language);
+
   useEffect(() => {
     if (myRef.current && !hasAnimated) {
       const observer = new IntersectionObserver((entries) => {
@@ -31,7 +35,7 @@ const Carousel = () => {
       });
       observer.observe(myRef.current!); // Use the non-null assertion operator here
     }
-  
+
     if (h1Ref.current && !hasAnimated) {
       const h1Observer = new IntersectionObserver((entries) => {
         const entry = entries[0];
@@ -44,8 +48,6 @@ const Carousel = () => {
       h1Observer.observe(h1Ref.current!); // Use the non-null assertion operator here
     }
   }, [hasAnimated]);
-  
-  
 
   const handleMouseEnter = () => {
     setIsAnimationPaused(true);
@@ -62,12 +64,18 @@ const Carousel = () => {
         className={` mt-32 text-center text-4xl mb-20 font-semibold text-[#637684]
 ${isVisible2 ? "animate__animated animate__fadeInLeft" : ""}`}
       >
-        Transformăm ideile tale în{" "}
-        <span className="text-[#008DFD]">site-uri</span> <br /> funcționale și
-        atrăgătoare.
+        {content.CarouselTitle1}
+        <br />
+        <span className="text-[#008DFD]">{content.CarouselSiteuri}</span>{" "}
+        {content.CarouselTitle2}
       </h1>{" "}
       <div>
-        <div ref={myRef} className={`${isVisible ? "animate__animated animate__slideInRight" : ""}`}>
+        <div
+          ref={myRef}
+          className={`${
+            isVisible ? "animate__animated animate__slideInRight" : ""
+          }`}
+        >
           <div className="mt-12 logo-slider-container ">
             <div
               className={`logo-slider ${isAnimationPaused ? "paused" : ""}`}

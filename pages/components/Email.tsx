@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import { a, useTrail } from "react-spring";
 import Image from "next/image";
-import Link from "next/link";
 import "animate.css";
-import { observe } from "react-intersection-observer";
+import useLanguage from "../../public/LanguageContext";
+import { getTranslatedContent } from "./TranslateRoToRu";
 
 const Email = () => {
   const myRef = useRef<HTMLDivElement | null>(null);
@@ -11,6 +11,9 @@ const Email = () => {
   const [isVisible2, setIsVisible2] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false); // State pentru a urmări dacă animația a fost deja activată
+
+  const { language, setLanguage } = useLanguage();
+  const content = getTranslatedContent(language);
 
   const [open, setOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -37,7 +40,7 @@ const Email = () => {
     e.preventDefault();
 
     if (emailValue === "") {
-      setEmailError("Completați adresa de email!");
+      setEmailError(`${content.EmailCompleteEmail}`);
       return;
     }
 
@@ -123,8 +126,7 @@ const Email = () => {
 ${isVisible2 ? "animate__animated animate__fadeInLeft " : ""}`}
           >
             <h1 className="text-white text-3xl font-semibold mb-3 ">
-              Rămâi la curent cu tendințele <br /> în design web și oferte
-              exclusive
+              {content.EmailTitle1} <br /> {content.EmailTitle2}
             </h1>
             <div className="flex items-center">
               <div className="relative w-[80%]">
@@ -155,7 +157,7 @@ ${isVisible2 ? "animate__animated animate__fadeInLeft " : ""}`}
                         style={{ scale }}
                         className="px-4 py-1 text-gray-500 bg-white rounded-full"
                       >
-                        Trimite
+                        {content.EmailSend}
                       </a.button>
                     </a.form>
                   ) : (
@@ -164,7 +166,7 @@ ${isVisible2 ? "animate__animated animate__fadeInLeft " : ""}`}
                         onClick={resetForm}
                         className="text-white cursor-pointer mt-12 text-sm"
                       >
-                        Completează din nou
+                        {content.EmailComplete}
                       </a.button>
                     </>
                   )}
@@ -178,7 +180,7 @@ ${isVisible2 ? "animate__animated animate__fadeInLeft " : ""}`}
                     className="absolute px-4 py-2 border rounded-full font-semibold"
                   >
                     <a.span style={{ opacity }}>
-                      {formVisible ? "Anunță-ne" : "Mulțumesc!"}
+                      {formVisible ? `${content.EmailAnounce}` : `${content.EmailThanks}`}
                     </a.span>
                   </a.button>
                 </div>

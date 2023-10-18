@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import useLanguage from "../../public/LanguageContext";
+import { getTranslatedContent } from "./TranslateRoToRu";
 
 function Info() {
   const [showComponent, setShowComponent] = useState(false);
+
+  const { language, setLanguage } = useLanguage();
+  const content = getTranslatedContent(language);
 
   useEffect(() => {
     // Setăm `showComponent` la `true` după o întârziere scurtă pentru a declanșa animația
@@ -37,12 +42,12 @@ function Info() {
           }`}
         >
           <p className="text-6xl font-semibold mb-4 leading-[60px] py-3 ">
-            Creăm <br /> Profesional <br />
+            {content.LandingTitle1} <br /> {content.LandingTitle2} <br />
             <span className="tracking-wider text-[45px] rounded-[50px] px-3 font-light border-2 border-[#91A8B7]">
-              WebSite-ul
+              {content.LandingTitleCircle}
             </span>
             <br />
-            Dumneavoastră
+            {content.LandingTitle3}
           </p>
           <Link href="tel:+37368548789">
             <button
@@ -50,7 +55,7 @@ function Info() {
                 showComponent ? "fade-in-right" : ""
               }ease-linear duration-500`}
             >
-              Contactează-ne la +373 685 487 89
+              {content.LandingContacts} +373 685 487 89
             </button>
           </Link>
         </div>

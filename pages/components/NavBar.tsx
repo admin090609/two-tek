@@ -2,14 +2,22 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { useRouter } from "next/router";
-import Image from "next/image";
 import Language from "./Language";
 import Color from "./Color";
 import { Link as ScrollLink } from "react-scroll";
+import TranslateRoToRu from "./TranslateRoToRu";
+import useLanguage from "../../public/LanguageContext";
+import { getTranslatedContent } from "./TranslateRoToRu";
+
+
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
   const router = useRouter();
+
+  const { language, setLanguage } = useLanguage();
+  const content = getTranslatedContent(language);
+
 
   const handleNav = () => {
     setNav(!nav);
@@ -44,14 +52,14 @@ const NavBar = () => {
                 duration={1000}
                 className="cursor-pointer"
               >
-                Performanță
+                {content.Nav1}
               </ScrollLink>
               <div className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"></div>
             </div>
           </li>
           <li className="p-4 relative group">
             <div className="group relative">
-            <ScrollLink
+              <ScrollLink
                 to="echipa" // Identificatorul secțiunii căreia doriți să faceți clic
                 spy={true}
                 smooth={true}
@@ -59,7 +67,7 @@ const NavBar = () => {
                 duration={1800}
                 className="cursor-pointer"
               >
-                Echipa
+                {content.Nav2}
               </ScrollLink>
               <div className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"></div>
             </div>
@@ -74,14 +82,14 @@ const NavBar = () => {
                 duration={1800}
                 className="cursor-pointer"
               >
-                Proiecte
+                {content.Nav3}
               </ScrollLink>
               <div className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"></div>
             </div>
           </li>
           <li className="p-4 relative group">
             <div className="group relative">
-            <ScrollLink
+              <ScrollLink
                 to="feedback" // Identificatorul secțiunii căreia doriți să faceți clic
                 spy={true}
                 smooth={true}
@@ -89,7 +97,7 @@ const NavBar = () => {
                 duration={2000}
                 className="cursor-pointer"
               >
-                Feedback
+                {content.Nav4}
               </ScrollLink>
               <div className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"></div>
             </div>
@@ -98,6 +106,7 @@ const NavBar = () => {
 
         <div className="flex  items-center">
           <div className="mr-5">
+            <TranslateRoToRu />
             <Language />
           </div>
           <div>

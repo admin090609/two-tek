@@ -1,12 +1,17 @@
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import "animate.css";
+import useLanguage from "../../public/LanguageContext";
+import { getTranslatedContent } from "./TranslateRoToRu";
 
 const Paralax2 = () => {
   const div1Ref = useRef<HTMLDivElement | null>(null);
   const div2Ref = useRef<HTMLDivElement | null>(null);
   const div3Ref = useRef<HTMLDivElement | null>(null);
   const h1Ref = useRef<HTMLDivElement | null>(null);
+
+  const { language, setLanguage } = useLanguage();
+  const content = getTranslatedContent(language);
 
   const [isVisible1, setIsVisible1] = useState(false);
   const [isVisible2, setIsVisible2] = useState(false);
@@ -76,7 +81,7 @@ const Paralax2 = () => {
         }`}
       >
         {" "}
-        Modul <span className="text-[#008DFD]">nostru</span> de lucru
+        {content.HowTitle1} <span className="text-[#008DFD]">{content.HowTitle2}</span> {content.HowTitle3}
       </h1>
 
       <div
@@ -87,13 +92,10 @@ const Paralax2 = () => {
       >
         <div className="max-w-2xl">
           <h1 className="text-3xl font-bold mb-5 leading-tight">
-            Analiza produsului <br /> și crearea sarcinilor tehnice
+            {content.HowBoxTitle1} <br /> {content.HowBoxTitle2}
           </h1>
           <p className="text-xl leading-normal">
-            Ne vom implica într-un dialog constructiv cu clientul nostru pentru
-            a discuta în detaliu despre produsul nostru, apoi preluăm
-            responsabilitatea de a elabora specificațiile tehnice, împărțindu-le
-            în grupuri mici printre colegii noștri.
+            {content.HowBoxText}
           </p>
         </div>
         <div>
@@ -115,12 +117,10 @@ const Paralax2 = () => {
       >
         <div className="max-w-2xl">
           <h1 className="text-3xl font-bold mb-5 leading-normal">
-            Împărțirea lucrării în etape
+          {content.HowBoxTitlev2}
           </h1>
           <p className="text-xl leading-normal">
-            Divizăm procesul în etape. În prima săptămână, ne concentrăm pe
-            crearea designului web și lucrăm la acest aspect până când sunteți
-            complet mulțumit cu produsul final.
+            {content.HowBoxTextv2}
           </p>
         </div>
         <div>
@@ -142,12 +142,10 @@ const Paralax2 = () => {
       >
         <div className="max-w-2xl ">
           <h1 className="text-3xl font-bold mb-5 leading-normal">
-            Dezvoltarea produsului și suportului său
+            {content.HowBoxTitlev3}
           </h1>
           <p className="text-xl leading-normal">
-            Dezvoltarea produsului, inclusiv toate aspectele legate de design,
-            producție, actualizări, și serviciile oferite pentru a asigura buna
-            funcționare a acestuia.
+            {content.HowBoxTextv3}
           </p>
         </div>
         <div>

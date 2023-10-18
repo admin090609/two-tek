@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Image from "next/image";
 
 function LanguageSelector() {
   const [isOpen, setIsOpen] = useState(false);
