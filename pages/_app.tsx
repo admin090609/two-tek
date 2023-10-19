@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import { useEffect, useState } from "react";
 import { Router } from "next/router";
 import Loading from "./components/Loading";
+import { LanguageProvider } from "../public/LanguageContext";
 
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -24,8 +25,10 @@ export default function App({ Component, pageProps }: AppProps) {
   }, []);
   return (
     <>
-      {loading ? <Loading /> : null}
-      <Component {...pageProps} />
+      <LanguageProvider>
+        {loading ? <Loading /> : null}
+        <Component {...pageProps} />
+      </LanguageProvider>
     </>
   );
 }

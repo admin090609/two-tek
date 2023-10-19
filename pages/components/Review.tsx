@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import useLanguage from "../../public/LanguageContext";
+import { getTranslatedContent } from "./TranslateRoToRu";
 
 const Review = () => {
+  const { language, setLanguage } = useLanguage();
+  const content = getTranslatedContent(language);
+
   const [reviewData, setReviewData] = useState({
     title: "Review - APISUDEX",
     description:
@@ -37,8 +42,8 @@ const Review = () => {
             <div
               onClick={() =>
                 handleImageClick(
-                  "Review - APISUDEX",
-                  "Colaborarea cu Two Tek pentru dezvoltarea website-ului nostru a fost cu adevărat excepțională. De la calitatea lor remarcabilă și atenția minuțioasă acordată fiecărui detaliu, până la crearea unui website unic și memorabil. Îi recomandăm cu încredere celor care caută parteneri de încredere în acest domeniu.",
+                  `${content.ReviewApiSudexTitle}`,
+                  `${content.ReviewApiSudexText}`,
                   "/images/misha.png"
                 )
               }
@@ -55,8 +60,8 @@ const Review = () => {
             <div
               onClick={() =>
                 handleImageClick(
-                  "Review - A&D",
-                  "Suntem extrem de mulțumiți de experiența noastră de colaborare cu Two Tek pentru dezvoltarea site-ului nostru. Aceștia au livrat un produs de excepție, cu performanță remarcabilă, timp de încărcare rapid și comunicare eficientă, ceea ce îi recomandă cu încredere ca partener de încredere în dezvoltarea web.",
+                  `${content.ReviewADTitle}`,
+                  `${content.ReviewADText}`,
                   "/images/viorel.png"
                 )
               }
@@ -73,8 +78,8 @@ const Review = () => {
             <div
               onClick={() =>
                 handleImageClick(
-                  "Review - SĂNDUȚA ART",
-                  "Echipa Two Tek a furnizat o colaborare de excepție pentru dezvoltarea site-ului Sanduta Art. Site-ul funcționează perfect, iar calitatea, viteza și transparența serviciului lor ne-au uimit. Recomandăm cu încredere serviciile Two Tek pentru oricine caută o echipă profesionistă de dezvoltare web.",
+                  `${content.ReviewSandutaArtTitle}`,
+                  `${content.ReviewSAText}`,
                   "/images/vasea.png"
                 )
               }

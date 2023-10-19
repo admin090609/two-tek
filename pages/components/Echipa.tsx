@@ -1,21 +1,21 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import useLanguage from "../../public/LanguageContext";
+import { getTranslatedContent } from "./TranslateRoToRu";
 
 const Echipa = () => {
+  const { language, setLanguage } = useLanguage();
+  const content = getTranslatedContent(language);
   return (
     <>
       <div className="flex mt-20 justify-around items-center">
         <div className="max-w-md">
           <h1 className="text-4xl font-bold mb-5">
-            Echipa <br /> Noastră
+            {content.EchipaTitle1} <br /> {content.EchipaTitle2}
           </h1>
           <p>
-            Echipa noastră are ca obiectiv să aducă inovație și să sporească
-            eficiența colaborării în colectiv, oferind suport clienților noștri
-            pentru a se dezvolta în mediul digital și a atinge rezultate pe care
-            nu le-au atins până acum. Suntem o companie în plină expansiune,
-            orientată către progres continuu.
+            {content.EchipaText}
           </p>
         </div>
         <div className="bg-gray-700 flex justify-center items-center flex-col rounded-[20px]">
@@ -62,8 +62,8 @@ const Echipa = () => {
                     </div>
                   </div>
                   <div className="info">
-                    <div className="name">Loghin Dan</div>
-                    <div className="job">Developer</div>
+                    <div className="name">{content.NumeDan}</div>
+                    <div className="job">{content.Job}</div>
                   </div>
                 </div>
                 <div className="card-blur"></div>
@@ -110,8 +110,8 @@ const Echipa = () => {
                     </div>
                   </div>
                   <div className="info">
-                    <div className="name">Ivanov Eduard</div>
-                    <div className="job">Developer</div>
+                    <div className="name">{content.NumeEdu}</div>
+                    <div className="job">{content.Job}</div>
                   </div>
                 </div>
                 <div className="card-blur"></div>
