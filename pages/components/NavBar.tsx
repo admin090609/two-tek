@@ -9,15 +9,12 @@ import TranslateRoToRu from "./TranslateRoToRu";
 import useLanguage from "../../public/LanguageContext";
 import { getTranslatedContent } from "./TranslateRoToRu";
 
-
-
 const NavBar = () => {
   const [nav, setNav] = useState(false);
   const router = useRouter();
 
   const { language, setLanguage } = useLanguage();
   const content = getTranslatedContent(language);
-
 
   const handleNav = () => {
     setNav(!nav);
@@ -107,7 +104,6 @@ const NavBar = () => {
         <div className="flex  items-center">
           <div className="mr-5">
             <TranslateRoToRu />
-            <Language />
           </div>
           <div>
             <Color />
