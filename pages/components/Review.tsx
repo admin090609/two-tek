@@ -42,7 +42,7 @@ const Review = () => {
                   "/images/misha.png"
                 )
               }
-              className="rounded-[50px] shadow-md shadow-white hover:scale-[0.9] transition duration-500 ease-in-out"
+              className="rounded-[50px] shadow-md shadow-white hover:scale-[0.9] transition duration-500 ease-in-out cursor-pointer"
             >
               <Image
                 src="/images/misha.png"
@@ -60,7 +60,7 @@ const Review = () => {
                   "/images/viorel.png"
                 )
               }
-              className="rounded-[50px] shadow-md shadow-white hover:scale-[0.9] transition duration-500 ease-in-out"
+              className="rounded-[50px] shadow-md shadow-white hover:scale-[0.9] transition duration-500 ease-in-out cursor-pointer"
             >
               <Image
                 src="/images/viorel.png"
@@ -78,7 +78,7 @@ const Review = () => {
                   "/images/vasea.png"
                 )
               }
-              className="rounded-[50px] shadow-md shadow-white hover:scale-[0.9] transition duration-500 ease-in-out"
+              className="rounded-[50px] shadow-md shadow-white hover:scale-[0.9] transition duration-500 ease-in-out cursor-pointer"
             >
               <Image
                 src="/images/vasea.png"

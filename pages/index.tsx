@@ -13,7 +13,6 @@ import Echipa from "./components/Echipa";
 import Email from "./components/Email";
 import Review from "./components/Review";
 import ScrollAnimation from "./components/HorizontalSlider";
-import { ParallaxProvider } from "react-scroll-parallax";
 import ScrollUpButton from "./components/ScrollUpButton";
 
 export default function Home() {
@@ -30,11 +29,9 @@ export default function Home() {
           <Carousel />
         </div>
 
-        <ParallaxProvider>
           <div className="w-[100vw] h-[60vh]" id="horizontal">
             <Parallax1 />
           </div>
-        </ParallaxProvider>
 
         <div>
           <Paralax2 />
