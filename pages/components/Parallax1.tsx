@@ -1,7 +1,78 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import "animate.css";
 
 const Parallax1 = () => {
   const [hoveredCircle, setHoveredCircle] = useState<number | null>(null);
+  const myRef = useRef<HTMLDivElement | null>(null);
+  const h1Ref = useRef<HTMLDivElement | null>(null);
+  const h2Ref = useRef<HTMLHRElement | null>(null); // Update this line
+  const h3Ref = useRef<HTMLDivElement | null>(null);
+  const h4Ref = useRef<HTMLDivElement | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible2, setIsVisible2] = useState(false);
+  const [isVisible3, setIsVisible3] = useState(false);
+  const [isVisible4, setIsVisible4] = useState(false);
+  const [isVisible5, setIsVisible5] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false); // State pentru a urmări dacă animația a fost deja activată
+
+  useEffect(() => {
+    if (myRef.current && !hasAnimated) {
+      const observer = new IntersectionObserver((entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          setHasAnimated(true);
+          observer.unobserve(myRef.current!); // Use the non-null assertion operator here
+        }
+      });
+      observer.observe(myRef.current!); // Use the non-null assertion operator here
+    }
+
+    if (h1Ref.current && !hasAnimated) {
+      const h1Observer = new IntersectionObserver((entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsVisible2(true);
+          setHasAnimated(true);
+          h1Observer.unobserve(h1Ref.current!); // Use the non-null assertion operator here
+        }
+      });
+      h1Observer.observe(h1Ref.current!); // Use the non-null assertion operator here
+    }
+    if (h2Ref.current && !hasAnimated) {
+      const h2Observer = new IntersectionObserver((entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsVisible3(true);
+          setHasAnimated(true);
+          h2Observer.unobserve(h2Ref.current!); // Use the non-null assertion operator here
+        }
+      });
+      h2Observer.observe(h2Ref.current!); // Use the non-null assertion operator here
+    }
+    if (h3Ref.current && !hasAnimated) {
+      const h3Observer = new IntersectionObserver((entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsVisible4(true);
+          setHasAnimated(true);
+          h3Observer.unobserve(h3Ref.current!); // Use the non-null assertion operator here
+        }
+      });
+      h3Observer.observe(h3Ref.current!); // Use the non-null assertion operator here
+    }
+    if (h4Ref.current && !hasAnimated) {
+      const h4Observer = new IntersectionObserver((entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsVisible5(true);
+          setHasAnimated(true);
+          h4Observer.unobserve(h4Ref.current!); // Use the non-null assertion operator here
+        }
+      });
+      h4Observer.observe(h4Ref.current!); // Use the non-null assertion operator here
+    }
+  }, [hasAnimated]);
 
   const circleData = [
     {
@@ -41,18 +112,44 @@ const Parallax1 = () => {
 
   return (
     <>
-      <h1 className="text-center text-4xl mb-32 text-[#637684] mt-44 font-semibold">
-        Care sunt <span className="text-[#008DFD]">avantajele</span> de a lucra
-        cu noi
-      </h1>
-      <div className="flex flex-col justify-between text-center items-center text-white ">
+      <div className="mb-32 mt-44 flex justify-evenly mx-32 items-center">
+        <h1
+          ref={h1Ref}
+          className={`text-start text-5xl leading-[60px]  text-[#0B3558] font-semibold
+${isVisible2 ? "animate__animated animate__fadeInLeft" : ""}`}
+        >
+          Ce vă oferim <br /> ca parteneri
+        </h1>
+        <hr
+          ref={h2Ref}
+          className={` bg-[#008DFD] h-1 rounded-xl rotate-90 w-24
+${isVisible3 ? "tracking-in-expand" : ""}`}
+        />
+        <p
+          ref={h3Ref}
+          className={`text-[#0B3558] text-xl text-start
+${isVisible4 ? "tilt-in-right-1" : ""}`}
+        >
+          Oportunitatea de a beneficia de expertiza noastră și de a <br />{" "}
+          dezvolta împreună a soluțiilor de succes este <br /> baza
+          <span className="text-[#008DFD] font-semibold">
+            {" "}
+            colaboarării noastre.
+          </span>
+        </p>
+      </div>
+      <div
+        ref={h4Ref}
+        className={`flex flex-col justify-between text-center items-center text-white
+${isVisible5 ? "fade-in-bck" : ""}`}
+      >
         <div className="flex justify-between mb-10">
           {circleData.map((circle, index) => (
             <div
               key={index}
               className={`circle-box circle-box-${
                 index + 1
-              } shadow-md shadow-black ${
+              } shadow-lg shadow-gray border-2 ${
                 hoveredCircle === index ? "hovered" : ""
               }`}
               onMouseEnter={() => handleCircleHover(index)}
@@ -72,7 +169,7 @@ const Parallax1 = () => {
         .circle-box {
           width: 230px;
           height: 230px;
-          background-color: black;
+          background-color: #008dfd;
           border-radius: 50%;
           margin-right: 5rem;
           animation: moveAround 5s linear infinite alternate;
@@ -83,9 +180,12 @@ const Parallax1 = () => {
           align-items: center;
           cursor: pointer;
           transition: all 0.2s ease-in;
+          background: linear-gradient(45deg, #008dfd, #00a5d7); /* Use a gradient background */
+
         }
 
         .circle-box.hovered {
+          background-color: #0b3558;
           animation-play-state: paused;
           transform: scale(1.2);
           border-radius: 70px;

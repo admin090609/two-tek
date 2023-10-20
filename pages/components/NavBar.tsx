@@ -33,24 +33,24 @@ const NavBar = () => {
   return (
     <div
       className={`left-0 top-0 w-full z-10 mt-5 text-black ${
-        nav ? "animate-fadeInDown" : "opacity-0 translate-y-[-50px]"
+        nav ? "text-focus-in" : "opacity-0 translate-y-[-50px]"
       } transition-all duration-1000 ease-in-out`}
     >
       <div className="max-w-[1305px] sm:mt-4 sm:w-full bg-gradient-to-r from-[#CFDFEC] via-[#B3C5D3] to-[#97ABBB] flex justify-around items-center sm:p-0 p-5 h-[70px] rounded-[70px] m-auto">
-        <Link href="/" className="text-4xl sm:p-4 ml-4 font-bold">
+        <Link href="/" className="text-4xl sm:p-4 ml-4 font-bold text-focus-in">
           2Tek
         </Link>
 
-        <ul className="hidden sm:flex text-base font-semibold text-white">
+        <ul className="hidden sm:flex text-base font-semibold text-white ">
           <li className="p-4 relative group">
-            <div className="group relative">
+            <div className="group relative tracking-in-expand-fwd-bottom">
               <ScrollLink
                 to="horizontal" // Identificatorul secțiunii căreia doriți să faceți clic
                 spy={true}
                 smooth={true}
                 offset={-70} // Ajustați această valoare pentru a potrivi poziția de destinație
                 duration={1000}
-                className="cursor-pointer"
+                className="cursor-pointer "
               >
                 {content.Nav1}
               </ScrollLink>
@@ -58,7 +58,7 @@ const NavBar = () => {
             </div>
           </li>
           <li className="p-4 relative group">
-            <div className="group relative">
+            <div className="group relative tracking-in-expand-fwd-bottom">
               <ScrollLink
                 to="echipa" // Identificatorul secțiunii căreia doriți să faceți clic
                 spy={true}
@@ -73,7 +73,7 @@ const NavBar = () => {
             </div>
           </li>
           <li className="p-4 relative group">
-            <div className="group relative">
+            <div className="group relative tracking-in-expand-fwd-bottom">
               <ScrollLink
                 to="proiecte" // Identificatorul secțiunii căreia doriți să faceți clic
                 spy={true}
@@ -88,7 +88,7 @@ const NavBar = () => {
             </div>
           </li>
           <li className="p-4 relative group">
-            <div className="group relative">
+            <div className="group relative tracking-in-expand-fwd-bottom">
               <ScrollLink
                 to="feedback" // Identificatorul secțiunii căreia doriți să faceți clic
                 spy={true}

@@ -12,7 +12,6 @@ import Paralax2 from "./components/Paralax2";
 import Echipa from "./components/Echipa";
 import Email from "./components/Email";
 import Review from "./components/Review";
-import ScrollAnimation from "./components/HorizontalSlider";
 import ScrollUpButton from "./components/ScrollUpButton";
 
 export default function Home() {

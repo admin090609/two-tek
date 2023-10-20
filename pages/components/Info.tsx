@@ -20,7 +20,7 @@ function Info() {
   return (
     <div
       className={`mt-20 text-center relative ${
-        showComponent ? "fade-in-up" : "opacity-0 translate-y-[-50px]"
+        showComponent ? "text-focus-in" : "opacity-0 translate-y-[-50px]"
       }`}
     >
       <div className="w-[70vw] mx-auto relative">
@@ -37,22 +37,22 @@ function Info() {
           />
         </div>
         <div
-          className={`absolute top-0 left-0 right-0 bottom-0 px-10 flex flex-col justify-center items-start text-white rounded-3xl text-start ${
-            showComponent ? "fade-in-right" : ""
+          className={`absolute top-0 left-0 tracking-[.4em] right-0 bottom-0 px-10 flex flex-col justify-center items-start text-white rounded-3xl text-start ${
+            showComponent ? "tracking-in-contract-bck" : ""
           }`}
         >
-          <p className="text-6xl font-semibold mb-4 leading-[60px] py-3 ">
+          <p className="text-6xl font-semibold mb-4 leading-[60px] py-3  ">
             {content.LandingTitle1} <br /> {content.LandingTitle2} <br />
-            <span className="tracking-wider text-[45px] rounded-[50px] px-3 font-light border-2 border-[#91A8B7]">
+            <span className="tracking-widest text-[45px] rounded-[50px] tracking-in-contract-bck px-3 font-light border-2 border-[#91A8B7]">
               {content.LandingTitleCircle}
             </span>
             <br />
             {content.LandingTitle3}
           </p>
-          <Link href="tel:+37368548789">
+          <Link href="tel:+37368548789" className="text-shadow-pop-left">
             <button
-              className={`px-8 py-2 font-semibold mb-5 text-black bg-white rounded-[50px] hover:bg-opacity-70  ${
-                showComponent ? "fade-in-right" : ""
+              className={`px-8 py-2 tracking-wider  font-semibold mb-5 text-black bg-white rounded-[50px] hover:bg-opacity-70 hover:scale-[1.08] transition duration-500 ease-in-out ${
+                showComponent ? "text-shadow-pop-left" : ""
               }ease-linear duration-500`}
             >
               {content.LandingContacts} +373 685 487 89

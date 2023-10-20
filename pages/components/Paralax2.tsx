@@ -76,7 +76,7 @@ const Paralax2 = () => {
     <>
       <h1
         ref={h1Ref}
-        className={`text-center text-4xl mb-20 mt-72 font-semibold text-[#637684] ${
+        className={`text-center text-4xl mb-20 mt-44 font-semibold text-[#637684] ${
           isVisible ? "animate__animated animate__backInDown" : ""
         }`}
       >
