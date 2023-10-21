@@ -112,11 +112,11 @@ const Parallax1 = () => {
 
   return (
     <>
-      <div className="mb-32 mt-44 flex justify-evenly mx-32 items-center">
+      <div className="mb-32 mt-32 flex justify-evenly mx-32 items-center">
         <h1
           ref={h1Ref}
           className={`text-start text-5xl leading-[60px]  text-[#0B3558] font-semibold
-${isVisible2 ? "animate__animated animate__fadeInLeft" : ""}`}
+${isVisible2 ? "animate__animated animate__delay-2s animate__fadeInLeft" : ""}`}
         >
           Ce vă oferim <br /> ca parteneri
         </h1>

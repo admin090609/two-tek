@@ -9,6 +9,7 @@ const Paralax2 = () => {
   const div2Ref = useRef<HTMLDivElement | null>(null);
   const div3Ref = useRef<HTMLDivElement | null>(null);
   const h1Ref = useRef<HTMLDivElement | null>(null);
+  const h2Ref = useRef<HTMLDivElement | null>(null);
 
   const { language, setLanguage } = useLanguage();
   const content = getTranslatedContent(language);
@@ -16,6 +17,7 @@ const Paralax2 = () => {
   const [isVisible1, setIsVisible1] = useState(false);
   const [isVisible2, setIsVisible2] = useState(false);
   const [isVisible3, setIsVisible3] = useState(false);
+  const [isVisible4, setIsVisible4] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -55,6 +57,14 @@ const Paralax2 = () => {
       }
     }, observerOptions);
 
+    const observer5 = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (entry.isIntersecting) {
+        setIsVisible(true);
+        observer5.unobserve(div3Ref.current!);
+      }
+    }, observerOptions);
+
     if (div1Ref.current) {
       observer1.observe(div1Ref.current);
     }
@@ -70,33 +80,52 @@ const Paralax2 = () => {
     if (h1Ref.current) {
       observer4.observe(h1Ref.current);
     }
+
+    if (h2Ref.current) {
+      observer5.observe(h2Ref.current);
+    }
   }, []);
 
   return (
     <>
-      <h1
-        ref={h1Ref}
-        className={`text-center text-4xl mb-20 mt-44 font-semibold text-[#637684] ${
-          isVisible ? "animate__animated animate__backInDown" : ""
-        }`}
-      >
-        {" "}
-        {content.HowTitle1} <span className="text-[#008DFD]">{content.HowTitle2}</span> {content.HowTitle3}
-      </h1>
-
+      <div className="mt-56 mx-64">
+        <h1
+          ref={h1Ref}
+          className={`text-center text-5xl text-[#0B3558] font-semibold ${
+            isVisible ? "tracking-in-contract-bck-top" : ""
+          }`}
+        >
+          {content.HowTitle1}{" "}
+          <span className="text-[#008DFD]">{content.HowTitle2}</span>{" "}
+          {content.HowTitle3}
+        </h1>
+        <p
+          ref={h2Ref}
+          className={`text-center text-2xl mb-20 mt-7 leading-[35px] text-[#637684] ${
+            isVisible ? "tracking-in-contract-bck-bottom" : ""
+          }`}
+        >
+          În cadrul metodei noastre de lucru, punem accent pe lucru în echipă și
+          comunicarea eficientă, astfel încât să atingem cu succes obiectivele
+          stabilite.
+        </p>
+      </div>
       <div
         ref={div1Ref}
-        className={`flex justify-around items-center mb-12 shadow-xl mx-10 rounded-md bg-[#EDEDED] ${
-          isVisible1 ? "animate__animated animate__fadeInTopLeft" : ""
+        className={`flex justify-around items-center mb-12 shadow-xl mr-20 ml-96 rounded-md bg-[#EDEDED] ${
+          isVisible1
+            ? "animate__animated animate__fadeInTopLeft animate__delay-2s"
+            : ""
         }`}
+        style={{
+          background: "linear-gradient(135deg, #00A8CC, #0060A8)", // Keep the original colors or change them as needed
+        }}
       >
-        <div className="max-w-2xl">
+        <div className="max-w-2xl hover:-translate-y-1 transition duration-500 ease-in-out">
           <h1 className="text-3xl font-bold mb-5 leading-tight">
             {content.HowBoxTitle1} <br /> {content.HowBoxTitle2}
           </h1>
-          <p className="text-xl leading-normal">
-            {content.HowBoxText}
-          </p>
+          <p className="text-xl leading-normal">{content.HowBoxText}</p>
         </div>
         <div>
           <Image
@@ -111,17 +140,20 @@ const Paralax2 = () => {
 
       <div
         ref={div2Ref}
-        className={`flex justify-around items-center mb-12 shadow-xl mx-10 rounded-md bg-[#EDEDED] ${
-          isVisible2 ? "animate__animated animate__fadeInTopRight" : ""
+        className={`flex justify-around items-center mb-12 shadow-xl mx-44 ml-20 mr-96 rounded-md bg-[#EDEDED] ${
+          isVisible2
+            ? "animate__animated animate__fadeInTopRight animate__delay-2s"
+            : ""
         }`}
+        style={{
+          background: "linear-gradient(135deg, #00A8CC, #0060A8)", // Keep the original colors or change them as needed
+        }}
       >
-        <div className="max-w-2xl">
+        <div className="max-w-2xl hover:-translate-y-1 transition duration-500 ease-in-out">
           <h1 className="text-3xl font-bold mb-5 leading-normal">
-          {content.HowBoxTitlev2}
+            {content.HowBoxTitlev2}
           </h1>
-          <p className="text-xl leading-normal">
-            {content.HowBoxTextv2}
-          </p>
+          <p className="text-xl leading-normal">{content.HowBoxTextv2}</p>
         </div>
         <div>
           <Image
@@ -136,17 +168,20 @@ const Paralax2 = () => {
 
       <div
         ref={div3Ref}
-        className={`flex justify-around items-center mb-12 shadow-xl mx-10 rounded-md bg-[#EDEDED] ${
-          isVisible3 ? "animate__animated animate__fadeInLeft" : ""
+        className={`flex justify-around items-center mb-12 shadow-xl mx-44 mr-20 ml-96 rounded-md bg-[#EDEDED] ${
+          isVisible3
+            ? "animate__animated animate__fadeInLeft animate__delay-2s"
+            : ""
         }`}
+        style={{
+          background: "linear-gradient(135deg, #00A8CC, #0060A8)", // Keep the original colors or change them as needed
+        }}
       >
-        <div className="max-w-2xl ">
+        <div className="max-w-2xl hover:-translate-y-1 transition duration-500 ease-in-out ">
           <h1 className="text-3xl font-bold mb-5 leading-normal">
             {content.HowBoxTitlev3}
           </h1>
-          <p className="text-xl leading-normal">
-            {content.HowBoxTextv3}
-          </p>
+          <p className="text-xl leading-normal">{content.HowBoxTextv3}</p>
         </div>
         <div>
           <Image
