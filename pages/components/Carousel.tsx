@@ -91,7 +91,7 @@ const Carousel = () => {
           className={` text-center text-4xl mb-7 font-semibold text-[#0B3558]
 ${isVisible2 ? "tracking-in-expand-fwd-top" : ""}`}
         >
-          Transformăm conceptele în realitate online
+          {content.CarouselTitle}
         </h1>
         <hr
           ref={h2Ref}
@@ -99,13 +99,15 @@ ${isVisible2 ? "tracking-in-expand-fwd-top" : ""}`}
 ${isVisible3 ? "tracking-in-expand" : ""}`}
         />
 
-        <p ref={h3Ref} className={`text-[#0B3558] text-xl text-center mx-[19vw]
-${isVisible4 ? "tilt-in-left-1" : ""}`}>
-          Oportunitatea de a beneficia de expertiza noastră și de a dezvolta
-          împreună a soluțiilor de succes este baza
+        <p
+          ref={h3Ref}
+          className={`text-[#0B3558] text-xl text-center mx-[19vw]
+${isVisible4 ? "tilt-in-left-1" : ""}`}
+        >
+          {content.CarouselText1}
           <span className="text-[#008DFD] font-semibold">
             {" "}
-            colaboarării noastre.
+            {content.CarouselText2}
           </span>
         </p>
       </div>

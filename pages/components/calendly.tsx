@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import useLanguage from "../../public/LanguageContext";
+import { getTranslatedContent } from "./TranslateRoToRu";
 
 const CalendlyWidget = () => {
   const [showCalendly, setShowCalendly] = useState(false);
@@ -6,6 +8,9 @@ const CalendlyWidget = () => {
   const toggleCalendly = () => {
     setShowCalendly(!showCalendly);
   };
+
+  const { language, setLanguage } = useLanguage();
+  const content = getTranslatedContent(language);
 
   const calendlyStyles: React.CSSProperties = {
     width: "100vw", // Adjust the width as needed
@@ -34,7 +39,7 @@ const CalendlyWidget = () => {
           zIndex: 10000, // Ensure the button is on top
         }}
       >
-        Stabiliți o întâlnire
+        {content.calendly}
       </button>
       <div style={calendlyStyles}>
         <iframe

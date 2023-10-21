@@ -8,9 +8,8 @@ const Review = () => {
   const content = getTranslatedContent(language);
 
   const [reviewData, setReviewData] = useState({
-    title: "Review - APISUDEX",
-    description:
-      "Colaborarea cu Two Tek pentru dezvoltarea website-ului nostru a fost cu adevărat excepțională. De la calitatea lor remarcabilă și atenția minuțioasă acordată fiecărui detaliu, până la crearea unui website unic și memorabil. Îi recomandăm cu încredere celor care caută parteneri de încredere în acest domeniu.",
+    title: `${content.ReviewApiSudexTitle}`,
+    description: `${content.ReviewApiSudexText}`,
     mainImage: "/images/misha.png",
   });
 
