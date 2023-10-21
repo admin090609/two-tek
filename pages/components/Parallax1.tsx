@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "animate.css";
+import useLanguage from "../../public/LanguageContext";
+import { getTranslatedContent } from "./TranslateRoToRu";
 
 const Parallax1 = () => {
   const [hoveredCircle, setHoveredCircle] = useState<number | null>(null);
@@ -14,6 +16,9 @@ const Parallax1 = () => {
   const [isVisible4, setIsVisible4] = useState(false);
   const [isVisible5, setIsVisible5] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false); // State pentru a urmări dacă animația a fost deja activată
+
+  const { language, setLanguage } = useLanguage();
+  const content = getTranslatedContent(language);
 
   useEffect(() => {
     if (myRef.current && !hasAnimated) {
@@ -76,29 +81,24 @@ const Parallax1 = () => {
 
   const circleData = [
     {
-      title: "Dominați cu noi",
-      description:
-        "Dezvoltăm website-uri captivante pentru a vă diferenția de concurență și a atrage atenția publicului dvs.",
+      title: `${content.CirclesTitle1}`,
+      description: `${content.CirclesText1}`,
     },
     {
-      title: "Operăm cu rapiditate",
-      description:
-        "Suntem alegerea perfectă pentru a vă construi cu viteză și eficiență web-siteul dvs.",
+      title: `${content.CirclesTitle2}`,
+      description: `${content.CirclesText2}`,
     },
     {
-      title: "Experiență 2+ Ani",
-      description:
-        "Peste 2 ani experiență în dezvoltarea și design-ul web, creăm site-uri personalizate și funcționale.",
+      title: `${content.CirclesTitle3}`,
+      description: `${content.CirclesText3}`,
     },
     {
-      title: "Plata în Rate",
-      description:
-        "2Tek vă oferă servicii de top cu opțiuni de plată în rate pentru o experiență financiară excelentă.",
+      title: `${content.CirclesTitle4}`,
+      description: `${content.CirclesText4}`,
     },
     {
-      title: "Întotdeauna Conectați",
-      description:
-        "2Tek oferă conectivitate și performanță rapidă, cu un accent pe răspuns eficient.",
+      title: `${content.CirclesTitle5}`,
+      description: `${content.CirclesText5}`,
     },
   ];
 
@@ -118,11 +118,11 @@ const Parallax1 = () => {
           className={`text-start text-5xl leading-[60px]  text-[#0B3558] font-semibold
 ${isVisible2 ? "animate__animated animate__fadeInLeft" : ""}`}
         >
-          Ce vă oferim <br /> ca parteneri
+          {content.BlobsTitle1} <br /> {content.BlobsTitle2}
         </h1>
         <hr
           ref={h2Ref}
-          className={` bg-[#008DFD] h-1 rounded-xl rotate-90 w-24
+          className={`bg-[#008DFD] h-1 rounded-xl rotate-90 w-24
 ${isVisible3 ? "tracking-in-expand" : ""}`}
         />
         <p
@@ -130,11 +130,10 @@ ${isVisible3 ? "tracking-in-expand" : ""}`}
           className={`text-[#0B3558] text-xl text-start
 ${isVisible4 ? "tilt-in-right-1" : ""}`}
         >
-          Oportunitatea de a beneficia de expertiza noastră și de a <br />{" "}
-          dezvolta împreună a soluțiilor de succes este <br /> baza
+          {content.BlobsText1} <br /> {content.BlobsText2} <br />
           <span className="text-[#008DFD] font-semibold">
             {" "}
-            colaboarării noastre.
+            {content.BlobsText3}
           </span>
         </p>
       </div>
@@ -180,8 +179,11 @@ ${isVisible5 ? "fade-in-bck" : ""}`}
           align-items: center;
           cursor: pointer;
           transition: all 0.2s ease-in;
-          background: linear-gradient(45deg, #008dfd, #00a5d7); /* Use a gradient background */
-
+          background: linear-gradient(
+            45deg,
+            #008dfd,
+            #00a5d7
+          ); /* Use a gradient background */
         }
 
         .circle-box.hovered {

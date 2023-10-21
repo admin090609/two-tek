@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import Imaginea from "./components/Imaginea";
 import CalendlyWidget from "./components/calendly";

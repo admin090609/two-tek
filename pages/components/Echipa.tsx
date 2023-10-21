@@ -14,12 +14,10 @@ const Echipa = () => {
           <h1 className="text-4xl font-bold mb-5">
             {content.EchipaTitle1} <br /> {content.EchipaTitle2}
           </h1>
-          <p>
-            {content.EchipaText}
-          </p>
+          <p>{content.EchipaText}</p>
         </div>
         <div className="bg-gray-700 flex justify-center items-center flex-col rounded-[20px]">
-          <Image src="/images/gif.gif" alt="" width={300} height={100} />
+          <Image src={content.gif} alt="" width={300} height={100} />
           <div className="flex">
             <div className="p-4">
               <Image

@@ -1,6 +1,7 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState } from "react";
 import useLanguage from "../../public/LanguageContext";
 import { getTranslatedContent } from "./TranslateRoToRu";
+import Image from "next/image";
 
 const ScrollToTopButton = () => {
   const [showButton, setShowButton] = useState(false);
@@ -18,23 +19,31 @@ const ScrollToTopButton = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <div
-      className={`scroll-to-top-container ${showButton ? 'visible' : 'hidden'}`}
+      className={`scroll-to-top-container ${showButton ? "visible" : "hidden"}`}
       onClick={scrollToTop}
     >
-      <div className="scroll-button">{content.ScrollUp}</div>
+      <div className="scroll-button">
+        <Image
+          className="w-[20px] h-[20px]"
+          src="/images/scroll.png"
+          alt=""
+          width={512}
+          height={512}
+        />
+      </div>
     </div>
   );
 };
