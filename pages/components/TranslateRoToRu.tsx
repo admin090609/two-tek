@@ -34,6 +34,8 @@ function TranslationRoToRu() {
     setIsOpen(false);
 
     localStorage.setItem("selectedLanguage", newLanguage as string);
+
+    router.reload();
   };
 
   const [isOpen, setIsOpen] = useState(false);

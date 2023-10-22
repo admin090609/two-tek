@@ -105,17 +105,13 @@ const Paralax2 = () => {
             isVisible ? "slide-in-bck-bottom" : ""
           }`}
         >
-          În cadrul metodei noastre de lucru, punem accent pe lucru în echipă și
-          comunicarea eficientă, astfel încât să atingem cu succes obiectivele
-          stabilite.
+          {content.HowText}
         </p>
       </div>
       <div
         ref={div1Ref}
         className={`flex justify-around items-center mb-12 shadow-xl mr-20 ml-80 py-2 rounded-md bg-[#EDEDED] ${
-          isVisible1
-            ? "tilt-in-fwd-tl"
-            : ""
+          isVisible1 ? "tilt-in-fwd-tl" : ""
         }`}
         style={{
           background: "linear-gradient(135deg, #00A8CC, #0060A8)", // Keep the original colors or change them as needed
@@ -141,9 +137,7 @@ const Paralax2 = () => {
       <div
         ref={div2Ref}
         className={`flex justify-around items-center mb-12 shadow-xl mx-44 ml-20 mr-80 py-2 rounded-md bg-[#EDEDED] ${
-          isVisible2
-            ? "tilt-in-fwd-tr"
-            : ""
+          isVisible2 ? "tilt-in-fwd-tr" : ""
         }`}
         style={{
           background: "linear-gradient(135deg, #00A8CC, #0060A8)", // Keep the original colors or change them as needed
@@ -169,9 +163,7 @@ const Paralax2 = () => {
       <div
         ref={div3Ref}
         className={`flex justify-around items-center mb-12 shadow-xl mx-44 mr-20 ml-80 py-2 rounded-md bg-[#EDEDED] ${
-          isVisible3
-            ? "tilt-in-fwd-tl"
-            : ""
+          isVisible3 ? "tilt-in-fwd-tl" : ""
         }`}
         style={{
           background: "linear-gradient(135deg, #00A8CC, #0060A8)", // Keep the original colors or change them as needed
