@@ -37,13 +37,13 @@ function Info() {
           />
         </div>
         <div
-          className={`absolute top-0 left-0 tracking-[.4em] right-0 bottom-0 px-10 flex flex-col justify-center items-start text-white rounded-3xl text-start ${
+          className={`absolute top-0 left-0 tracking-[.1em] right-0 bottom-0 px-10 flex flex-col justify-center items-start text-white rounded-3xl text-start ${
             showComponent ? "tracking-in-contract-bck" : ""
           }`}
         >
           <p className="text-6xl font-semibold mb-4 leading-[60px] py-3  ">
             {content.LandingTitle1} <br /> {content.LandingTitle2} <br />
-            <span className="tracking-widest text-[45px] rounded-[50px] tracking-in-contract-bck px-3 font-light border-2 border-[#91A8B7]">
+            <span className="tracking-wide text-[45px] rounded-[50px] tracking-in-contract-bck px-3 font-light border-2 border-[#91A8B7]">
               {content.LandingTitleCircle}
             </span>
             <br />
