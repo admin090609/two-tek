@@ -65,7 +65,14 @@
             "CirclesText3": "Peste 2 ani experiență în dezvoltarea și design-ul web, creăm site-uri personalizate și funcționale.",
             "CirclesText4": "2Tek vă oferă servicii de top cu opțiuni de plată în rate pentru o experiență financiară excelentă.",
             "CirclesText5": "2Tek oferă conectivitate și performanță rapidă, cu un accent pe răspuns eficient.",
-            "gif": "/images/gif.gif"
+            "gif": "/images/gif.gif",
+            "SliderButton": "Vezi Website-ul",
+            "WebsiteApisudex": "APISUDEX",
+            "WebsiteAD": "A&D",
+            "WebsiteSA": "SĂNDUȚA ART",
+            "WebsiteBuffy": "BUFFY",
+            "SliderTitle1": "Accesează paginile",
+            "SliderTitle2": "noastre web:"
         },
         "ru": {
             "Nav1": "Производительность",
@@ -132,7 +139,14 @@
             "CirclesText3": "Более 2 лет опыта в веб-разработке и дизайне мы создаем индивидуальные и функциональные веб-сайты.",
             "CirclesText4": "2Tek предлагает вам первоклассные услуги с возможностью рассрочки платежа для получения превосходного финансового опыта.",
             "CirclesText5": "2Tek предлагает быстрое подключение и производительность, уделяя особое внимание эффективному реагированию.",
-            "gif": "/images/echipa-ru.gif"
+            "gif": "/images/echipa-ru.gif",
+            "SliderButton": "Посмотреть веб-сайт",
+            "WebsiteApisudex": "АПИСУДЭКС",
+            "WebsiteAD": "A&D",
+            "WebsiteSA": "САНДУЦА АРТ",
+            "WebsiteBuffy": "БАФФИ",
+            "SliderTitle1": "Посетите наши",
+            "SliderTitle2": "веб-страницы:"
         },
         "en": {
             "Nav1": "Performance",
@@ -199,7 +213,14 @@
             "CirclesText3": "Over 2 years of experience in web development and design, we create custom and functional websites.",
             "CirclesText4": "2Tek offers you top-notch services with installment payment options for a great financial experience.",
             "CirclesText5": "2Tek offers fast connectivity and performance with a focus on efficient response.",
-            "gif": "/images/echipa-en.gif"
+            "gif": "/images/echipa-en.gif",
+            "SliderButton": "View The Website",
+            "WebsiteApisudex": "APISUDEX",
+            "WebsiteAD": "A&D",
+            "WebsiteSA": "SĂNDUȚA ART",
+            "WebsiteBuffy": "BUFFY",
+            "SliderTitle1": "Access our ",
+            "SliderTitle2": "web pages:"
         }
     }
 }

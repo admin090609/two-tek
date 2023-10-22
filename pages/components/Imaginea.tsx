@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import useLanguage from "../../public/LanguageContext";
+import { getTranslatedContent } from "./TranslateRoToRu";
 
 function Slider() {
   const slideRef = useRef<HTMLDivElement | null>(null); // Specificăm tipul aici
@@ -9,6 +11,8 @@ function Slider() {
   const [isVisible1, setIsVisible1] = useState(false);
   const [isVisible2, setIsVisible2] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false); // State pentru a urmări dacă animația a fost deja activată
+  const { language, setLanguage } = useLanguage();
+  const content = getTranslatedContent(language);
 
   const handleNextClick = () => {
     if (slideRef.current) {
@@ -63,14 +67,12 @@ function Slider() {
               isVisible1 ? "fade-in-right" : ""
             }`}
           >
-            Accesează paginile <br /> noastre web:
+            {content.SliderTitle1} <br /> {content.SliderTitle2}
           </h1>
         </div>
         <div
           ref={h2Ref}
-          className={`container ${
-            isVisible1 ? "fade-in-left" : ""
-          }`}
+          className={`container ${isVisible1 ? "fade-in-left" : ""}`}
         >
           <div id="slide" ref={slideRef}>
             <div
@@ -78,7 +80,7 @@ function Slider() {
               style={{ backgroundImage: "url(/images/ad-display.png)" }}
             >
               <div className="content">
-                <div className="name mb-5">A&D Fitness</div>
+                <div className="name mb-5">{content.WebsiteAD}</div>
                 <a
                   className="website mb-6"
                   href="https://adfitness.vercel.app/"
@@ -86,7 +88,7 @@ function Slider() {
                 >
                   <span className="shadow"></span>
                   <span className="edge"></span>
-                  <span className="front text">Vezi Website-ul</span>
+                  <span className="front text">{content.SliderButton}</span>
                 </a>
               </div>
             </div>
@@ -95,7 +97,7 @@ function Slider() {
               style={{ backgroundImage: "url(/images/apisudex-display.png)" }}
             >
               <div className="content">
-                <div className="name mb-5">ApiSudex</div>
+                <div className="name mb-5">{content.WebsiteApisudex}</div>
                 <a
                   className="website mb-6"
                   href="https://apisudex.store/"
@@ -103,7 +105,7 @@ function Slider() {
                 >
                   <span className="shadow"></span>
                   <span className="edge"></span>
-                  <span className="front text">Vezi Website-ul</span>
+                  <span className="front text">{content.SliderButton}</span>
                 </a>
               </div>
             </div>
@@ -112,7 +114,7 @@ function Slider() {
               style={{ backgroundImage: "url(/images/buffy-display.png)" }}
             >
               <div className="content">
-                <div className="name mb-5">Buffy</div>
+                <div className="name mb-5">{content.WebsiteBuffy}</div>
                 <a
                   className="website mb-6"
                   href="https://admin090609.github.io/"
@@ -120,7 +122,7 @@ function Slider() {
                 >
                   <span className="shadow"></span>
                   <span className="edge"></span>
-                  <span className="front text">Vezi Website-ul</span>
+                  <span className="front text">{content.SliderButton}</span>
                 </a>
               </div>
             </div>
@@ -129,7 +131,7 @@ function Slider() {
               style={{ backgroundImage: "url(/images/sanduta-display.png)" }}
             >
               <div className="content">
-                <div className="name mb-5">Sănduța Art</div>
+                <div className="name mb-5">{content.WebsiteSA}</div>
 
                 <a
                   className="website mb-6"
@@ -138,7 +140,7 @@ function Slider() {
                 >
                   <span className="shadow"></span>
                   <span className="edge"></span>
-                  <span className="front text">Vezi Website-ul</span>
+                  <span className="front text">{content.SliderButton}</span>
                 </a>
               </div>
             </div>
