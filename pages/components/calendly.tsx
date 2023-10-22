@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import useLanguage from "../../public/LanguageContext";
 import { getTranslatedContent } from "./TranslateRoToRu";
 
 const CalendlyWidget = () => {
   const [showCalendly, setShowCalendly] = useState(false);
+  const [fadeIn, setFadeIn] = useState(false); // State variable for the fade-in animation
 
   const toggleCalendly = () => {
     setShowCalendly(!showCalendly);
@@ -12,17 +13,23 @@ const CalendlyWidget = () => {
   const { language, setLanguage } = useLanguage();
   const content = getTranslatedContent(language);
 
-  const calendlyStyles: React.CSSProperties = {
-    width: "100vw", // Adjust the width as needed
-    height: "100vh", // Adjust the height as needed
+  useEffect(() => {
+    // Trigger the fade-in animation when the component mounts
+    setFadeIn(true);
+  }, []);
+
+  const calendlyStyles = {
+    width: "100vw",
+    height: "100vh",
     zIndex: 9999,
-    display: showCalendly ? "block" : "none", // Show/hide based on state
+    display: showCalendly ? "block" : "none",
   };
 
+  // Conditionally apply the CSS class for fade-in
+  const containerClassName = `fade-in ${fadeIn ? "visible" : ""}`;
+
   return (
-    <div
-      style={{ position: "fixed", bottom: "0px", right: "0px", zIndex: 9999 }}
-    >
+    <div className={containerClassName}>
       <button
         onClick={toggleCalendly}
         style={{
@@ -31,12 +38,12 @@ const CalendlyWidget = () => {
           color: "#ffffff",
           padding: "10px 20px",
           border: "none",
-          bottom: "20px", // Adjust this to control the distance from the button
+          bottom: "20px",
           right: "20px",
           width: "190px",
           borderRadius: "5px",
           cursor: "pointer",
-          zIndex: 10000, // Ensure the button is on top
+          zIndex: 10000,
         }}
       >
         {content.calendly}
