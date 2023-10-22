@@ -14,7 +14,28 @@ const Review = () => {
   const [isVisible2, setIsVisible2] = useState(false);
   const [isVisible3, setIsVisible3] = useState(false);
   const [isVisible4, setIsVisible4] = useState(false);
-  const [hasAnimated, setHasAnimated] = useState(false); // State pentru a urmări dacă animația a fost deja activată
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  const [reviewData, setReviewData] = useState({
+    title: "",
+    description: "",
+    mainImage: "/images/misha.png",
+  });
+
+  useEffect(() => {
+    const selectedLanguage = localStorage.getItem("selectedLanguage");
+
+    if (selectedLanguage) {
+      setLanguage(selectedLanguage);
+      console.log(`language is ${selectedLanguage}`);
+      const content = getTranslatedContent(selectedLanguage);
+      setReviewData({
+        title: content.ReviewApiSudexTitle,
+        description: content.ReviewApiSudexText,
+        mainImage: "/images/misha.png",
+      });
+    }
+  }, [setLanguage]);
 
   useEffect(() => {
     if (myRef.current && !hasAnimated) {
@@ -64,13 +85,13 @@ const Review = () => {
     }
   }, [hasAnimated]);
 
-  const [reviewData, setReviewData] = useState({
-    title: content.ReviewApiSudexTitle,
-    description: content.ReviewApiSudexText,
-    mainImage: "/images/misha.png",
-  });
-
-  const handleImageClick = (newData: React.SetStateAction<{ title: string; description: string; mainImage: string; }>) => {
+  const handleImageClick = (
+    newData: React.SetStateAction<{
+      title: string;
+      description: string;
+      mainImage: string;
+    }>
+  ) => {
     setReviewData(newData);
   };
 
