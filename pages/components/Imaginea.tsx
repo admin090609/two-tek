@@ -27,7 +27,7 @@ function Slider() {
     <div className="container">
       <div id="slide" ref={slideRef}>
         <div
-          className="item"
+          className="item bg-white"
           style={{ backgroundImage: "url(/images/ad-display.png)" }}
         >
           <div className="content">
@@ -44,7 +44,7 @@ function Slider() {
           </div>
         </div>
         <div
-          className="item"
+          className="item bg-white"
           style={{ backgroundImage: "url(/images/apisudex-display.png)" }}
         >
           <div className="content">
@@ -61,7 +61,7 @@ function Slider() {
           </div>
         </div>
         <div
-          className="item"
+          className="item bg-white"
           style={{ backgroundImage: "url(/images/buffy-display.png)" }}
         >
           <div className="content">
@@ -78,7 +78,7 @@ function Slider() {
           </div>
         </div>
         <div
-          className="item"
+          className="item bg-white"
           style={{ backgroundImage: "url(/images/sanduta-display.png)" }}
         >
           <div className="content">

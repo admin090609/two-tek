@@ -111,6 +111,8 @@ body {
   width: 100%;
   height: 100%;
   box-shadow: none;
+  border-radius: 20px;
+
 }
 
 .item:nth-child(3) {
