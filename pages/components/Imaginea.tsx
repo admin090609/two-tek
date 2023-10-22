@@ -28,50 +28,58 @@ function Slider() {
       <div id="slide" ref={slideRef}>
         <div
           className="item"
-          style={{ backgroundImage: "url(/images/cal.png)" }}
+          style={{ backgroundImage: "url(/images/ad-display.png)" }}
         >
           <div className="content">
-            <div className="name">LUNDEV1</div>
+            <div className="name">A&D Fitness</div>
             <div className="des">
               Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu
             </div>
-            <button>See more</button>
+            <a href="https://adfitness.vercel.app/" target="_blank">
+              Vezi Website-ul
+            </a>
           </div>
         </div>
         <div
           className="item"
-          style={{ backgroundImage: "url(/images/slider.png)" }}
+          style={{ backgroundImage: "url(/images/apisudex-display.png)" }}
         >
           <div className="content">
-            <div className="name">LUNDEV2</div>
+            <div className="name">ApiSudex</div>
             <div className="des">
               Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu
             </div>
-            <button>See more</button>
+            <a href="https://apisudex.store/" target="_blank">
+              Vezi Website-ul
+            </a>
           </div>
         </div>
         <div
           className="item"
-          style={{ backgroundImage: "url(/images/echipa.jpg)" }}
+          style={{ backgroundImage: "url(/images/buffy-display.png)" }}
         >
           <div className="content">
-            <div className="name">LUNDEV3</div>
+            <div className="name">Buffy</div>
             <div className="des">
               Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu
             </div>
-            <button>See more</button>
+            <a href="https://admin090609.github.io/" target="_blank">
+              Vezi Website-ul
+            </a>
           </div>
         </div>
         <div
           className="item"
-          style={{ backgroundImage: "url(/images/sanduta.png)" }}
+          style={{ backgroundImage: "url(/images/sanduta-display.png)" }}
         >
           <div className="content">
-            <div className="name">LUNDEV4</div>
+            <div className="name">S</div>
             <div className="des">
               Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu
             </div>
-            <button>See more</button>
+            <a href="https://sandutart.vercel.app/" target="_blank">
+              Vezi Website-ul
+            </a>
           </div>
         </div>
       </div>
