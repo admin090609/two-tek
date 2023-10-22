@@ -29,7 +29,10 @@ const CalendlyWidget = () => {
   const containerClassName = `fade-in ${fadeIn ? "visible" : ""}`;
 
   return (
-    <div className={containerClassName}>
+    <div
+      className={containerClassName}
+      style={{ position: "fixed", bottom: "0px", right: "0px", zIndex: 9999 }}
+    >
       <button
         onClick={toggleCalendly}
         style={{
