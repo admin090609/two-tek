@@ -45,7 +45,7 @@ function Slider() {
           style={{ backgroundImage: "url(/images/apisudex-display.png)" }}
         >
           <div className="content">
-            <div className="name">LUNDEV2</div>
+            <div className="name">ApiSudex</div>
             <div className="des">
               Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu
             </div>
@@ -59,7 +59,7 @@ function Slider() {
           style={{ backgroundImage: "url(/images/buffy-display.png)" }}
         >
           <div className="content">
-            <div className="name">LUNDEV3</div>
+            <div className="name">Buffy</div>
             <div className="des">
               Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu
             </div>
@@ -73,7 +73,7 @@ function Slider() {
           style={{ backgroundImage: "url(/images/sanduta-display.png)" }}
         >
           <div className="content">
-            <div className="name">LUNDEV4</div>
+            <div className="name">S</div>
             <div className="des">
               Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu
             </div>
