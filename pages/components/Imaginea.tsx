@@ -32,11 +32,14 @@ function Slider() {
         >
           <div className="content">
             <div className="name">A&D Fitness</div>
-            <div className="des">
-              Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu
-            </div>
-            <a href="https://adfitness.vercel.app/" target="_blank">
-              Vezi Website-ul
+            <a
+              className="website"
+              href="https://adfitness.vercel.app/"
+              target="_blank"
+            >
+              <span className="shadow"></span>
+              <span className="edge"></span>
+              <span className="front text">Vezi Website-ul</span>
             </a>
           </div>
         </div>
@@ -46,11 +49,14 @@ function Slider() {
         >
           <div className="content">
             <div className="name">ApiSudex</div>
-            <div className="des">
-              Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu
-            </div>
-            <a href="https://apisudex.store/" target="_blank">
-              Vezi Website-ul
+            <a
+              className="website"
+              href="https://apisudex.store/"
+              target="_blank"
+            >
+              <span className="shadow"></span>
+              <span className="edge"></span>
+              <span className="front text">Vezi Website-ul</span>
             </a>
           </div>
         </div>
@@ -60,11 +66,14 @@ function Slider() {
         >
           <div className="content">
             <div className="name">Buffy</div>
-            <div className="des">
-              Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu
-            </div>
-            <a href="https://admin090609.github.io/" target="_blank">
-              Vezi Website-ul
+            <a
+              className="website"
+              href="https://admin090609.github.io/"
+              target="_blank"
+            >
+              <span className="shadow"></span>
+              <span className="edge"></span>
+              <span className="front text">Vezi Website-ul</span>
             </a>
           </div>
         </div>
@@ -73,12 +82,16 @@ function Slider() {
           style={{ backgroundImage: "url(/images/sanduta-display.png)" }}
         >
           <div className="content">
-            <div className="name">S</div>
-            <div className="des">
-              Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu
-            </div>
-            <a href="https://sandutart.vercel.app/" target="_blank">
-              Vezi Website-ul
+            <div className="name">Sănduța Art</div>
+
+            <a
+              className="website"
+              href="https://sandutart.vercel.app/"
+              target="_blank"
+            >
+              <span className="shadow"></span>
+              <span className="edge"></span>
+              <span className="front text">Vezi Website-ul</span>
             </a>
           </div>
         </div>
