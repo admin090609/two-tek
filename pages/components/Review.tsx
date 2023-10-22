@@ -65,21 +65,13 @@ const Review = () => {
   }, [hasAnimated]);
 
   const [reviewData, setReviewData] = useState({
-    title: `${content.ReviewApiSudexTitle}`,
-    description: `${content.ReviewApiSudexText}`,
+    title: content.ReviewApiSudexTitle,
+    description: content.ReviewApiSudexText,
     mainImage: "/images/misha.png",
   });
 
-  const handleImageClick = (
-    newTitle: string,
-    newDescription: string,
-    newImage: string
-  ) => {
-    setReviewData({
-      title: newTitle,
-      description: newDescription,
-      mainImage: newImage,
-    });
+  const handleImageClick = (newData: React.SetStateAction<{ title: string; description: string; mainImage: string; }>) => {
+    setReviewData(newData);
   };
 
   return (
@@ -109,11 +101,11 @@ ${isVisible3 ? "scale-in-center" : ""}`}
           >
             <div
               onClick={() =>
-                handleImageClick(
-                  `${content.ReviewApiSudexTitle}`,
-                  `${content.ReviewApiSudexText}`,
-                  "/images/misha.png"
-                )
+                handleImageClick({
+                  title: `${content.ReviewApiSudexTitle}`,
+                  description: `${content.ReviewApiSudexText}`,
+                  mainImage: "/images/misha.png",
+                })
               }
               className="rounded-[50px] shadow-md shadow-white hover:scale-[0.9] transition duration-500 ease-in-out cursor-pointer"
             >
@@ -127,11 +119,11 @@ ${isVisible3 ? "scale-in-center" : ""}`}
             </div>
             <div
               onClick={() =>
-                handleImageClick(
-                  `${content.ReviewADTitle}`,
-                  `${content.ReviewADText}`,
-                  "/images/viorel.png"
-                )
+                handleImageClick({
+                  title: `${content.ReviewADTitle}`,
+                  description: `${content.ReviewADText}`,
+                  mainImage: "/images/viorel.png",
+                })
               }
               className="rounded-[50px] shadow-md shadow-white hover:scale-[0.9] transition duration-500 ease-in-out cursor-pointer"
             >
@@ -145,11 +137,11 @@ ${isVisible3 ? "scale-in-center" : ""}`}
             </div>
             <div
               onClick={() =>
-                handleImageClick(
-                  `${content.ReviewSandutaArtTitle}`,
-                  `${content.ReviewSAText}`,
-                  "/images/vasea.png"
-                )
+                handleImageClick({
+                  title: `${content.ReviewSandutaArtTitle}`,
+                  description: `${content.ReviewSAText}`,
+                  mainImage: "/images/vasea.png",
+                })
               }
               className="rounded-[50px] shadow-md shadow-white hover:scale-[0.9] transition duration-500 ease-in-out cursor-pointer"
             >
