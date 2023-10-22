@@ -67,7 +67,7 @@ const Footer = () => {
         <div
           ref={h1Ref}
           className={`flex ml-20  ${
-            isVisible2 ? "tracking-in-expand-fwd-bottom" : ""
+            isVisible2 ? "tracking-in-expand-fwd-bottom1" : ""
           }`}
         >
           <Link
@@ -109,7 +109,7 @@ const Footer = () => {
         <div
           ref={myRef}
           className={`ml-20 text-sm  ${
-            isVisible ? "tracking-in-expand-fwd-bottom" : ""
+            isVisible ? "tracking-in-expand-fwd-bottom1" : ""
           }`}
         >
           <h1>
@@ -120,7 +120,7 @@ const Footer = () => {
         <div
           ref={h1Ref}
           className={`ml-20 text-sm  ${
-            isVisible ? "tracking-in-expand-fwd-bottom" : ""
+            isVisible ? "tracking-in-expand-fwd-bottom1" : ""
           }`}
         >
           <h1 className="font-semibold">{content.FooterContact}</h1>

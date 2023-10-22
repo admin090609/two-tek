@@ -116,7 +116,7 @@ const Parallax1 = () => {
         <h1
           ref={h1Ref}
           className={`text-start text-5xl leading-[60px]  text-[#0B3558] font-semibold
-${isVisible2 ? "animate__animated animate__delay-2s animate__fadeInLeft" : ""}`}
+${isVisible2 ? "animate__animated animate__fadeInLeft" : ""}`}
         >
           {content.BlobsTitle1} <br /> {content.BlobsTitle2}
         </h1>
