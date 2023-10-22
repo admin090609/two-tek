@@ -22,7 +22,7 @@ const Paralax2 = () => {
 
   useEffect(() => {
     const observerOptions = {
-      threshold: 0.1,
+      threshold: 0.0001,
     };
 
     const observer1 = new IntersectionObserver((entries) => {
@@ -92,7 +92,7 @@ const Paralax2 = () => {
         <h1
           ref={h1Ref}
           className={`text-center text-5xl text-[#0B3558] font-semibold ${
-            isVisible ? "tracking-in-contract-bck-top" : ""
+            isVisible ? "slide-in-bck-top" : ""
           }`}
         >
           {content.HowTitle1}{" "}
@@ -102,7 +102,7 @@ const Paralax2 = () => {
         <p
           ref={h2Ref}
           className={`text-center text-2xl mb-20 mt-7 leading-[35px] text-[#637684] ${
-            isVisible ? "tracking-in-contract-bck-bottom" : ""
+            isVisible ? "slide-in-bck-bottom" : ""
           }`}
         >
           În cadrul metodei noastre de lucru, punem accent pe lucru în echipă și
@@ -112,9 +112,9 @@ const Paralax2 = () => {
       </div>
       <div
         ref={div1Ref}
-        className={`flex justify-around items-center mb-12 shadow-xl mr-20 ml-96 rounded-md bg-[#EDEDED] ${
+        className={`flex justify-around items-center mb-12 shadow-xl mr-20 ml-80 py-2 rounded-md bg-[#EDEDED] ${
           isVisible1
-            ? "animate__animated animate__fadeInTopLeft animate__delay-2s"
+            ? "tilt-in-fwd-tl"
             : ""
         }`}
         style={{
@@ -131,7 +131,7 @@ const Paralax2 = () => {
           <Image
             src="/images/search.png"
             alt=""
-            width={250}
+            width={200}
             height={100}
             className="py-5"
           />
@@ -140,9 +140,9 @@ const Paralax2 = () => {
 
       <div
         ref={div2Ref}
-        className={`flex justify-around items-center mb-12 shadow-xl mx-44 ml-20 mr-96 rounded-md bg-[#EDEDED] ${
+        className={`flex justify-around items-center mb-12 shadow-xl mx-44 ml-20 mr-80 py-2 rounded-md bg-[#EDEDED] ${
           isVisible2
-            ? "animate__animated animate__fadeInTopRight animate__delay-2s"
+            ? "tilt-in-fwd-tr"
             : ""
         }`}
         style={{
@@ -159,7 +159,7 @@ const Paralax2 = () => {
           <Image
             src="/images/web.png"
             alt=""
-            width={250}
+            width={200}
             height={100}
             className="py-5"
           />
@@ -168,9 +168,9 @@ const Paralax2 = () => {
 
       <div
         ref={div3Ref}
-        className={`flex justify-around items-center mb-12 shadow-xl mx-44 mr-20 ml-96 rounded-md bg-[#EDEDED] ${
+        className={`flex justify-around items-center mb-12 shadow-xl mx-44 mr-20 ml-80 py-2 rounded-md bg-[#EDEDED] ${
           isVisible3
-            ? "animate__animated animate__fadeInLeft animate__delay-2s"
+            ? "tilt-in-fwd-tl"
             : ""
         }`}
         style={{
@@ -187,7 +187,7 @@ const Paralax2 = () => {
           <Image
             src="/images/mobile.png"
             alt=""
-            width={250}
+            width={200}
             height={100}
             className="py-5"
           />

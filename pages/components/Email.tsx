@@ -8,7 +8,9 @@ import { getTranslatedContent } from "./TranslateRoToRu";
 const Email = () => {
   const myRef = useRef<HTMLDivElement | null>(null);
   const h1Ref = useRef<HTMLDivElement | null>(null);
+  const h2Ref = useRef<HTMLDivElement | null>(null);
   const [isVisible2, setIsVisible2] = useState(false);
+  const [isVisible3, setIsVisible3] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false); // State pentru a urmări dacă animația a fost deja activată
 
@@ -109,23 +111,30 @@ const Email = () => {
       });
       h1Observer.observe(h1Ref.current!); // Use the non-null assertion operator here
     }
+
+    if (h2Ref.current && !hasAnimated) {
+      const h2Observer = new IntersectionObserver((entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsVisible3(true);
+          setHasAnimated(true);
+          h2Observer.unobserve(h2Ref.current!); // Use the non-null assertion operator here
+        }
+      });
+      h2Observer.observe(h2Ref.current!); // Use the non-null assertion operator here
+    }
   }, [hasAnimated]);
 
   return (
     <>
-      <div
-        ref={myRef}
-        className={`${
-          isVisible ? "animate__animated animate__fadeInBottomLeft" : ""
-        }`}
-      >
-        <div className="flex justify-between items-center bg-[#008DFD] mx-56 rounded-md px-20 py-5 mb-10">
+      <div>
+        <div className="flex justify-between items-center bg-gradient-to-r from-black via-black to-gray-800 mx-72 rounded-lg px-16 py-5 mb-16">
           <div
             ref={h1Ref}
             className={`
-${isVisible2 ? "animate__animated animate__fadeInLeft " : ""}`}
+${isVisible2 ? "fade-in-bottom " : ""}`}
           >
-            <h1 className="text-white text-3xl font-semibold mb-3 ">
+            <h1 className="text-white text-3xl font-semibold mb-5 ">
               {content.EmailTitle1} <br /> {content.EmailTitle2}
             </h1>
             <div className="flex items-center">
@@ -139,7 +148,7 @@ ${isVisible2 ? "animate__animated animate__fadeInLeft " : ""}`}
                         pointerEvents: open ? "unset" : "none",
                       }}
                       onSubmit={closeEmailInput}
-                      className="w-80 absolute flex py-1 pl-4 pr-1 border rounded-full"
+                      className="w-20 absolute text-gray-300 flex py-1 pl-4 pr-1 border rounded-full"
                     >
                       <input
                         name="email"
@@ -155,7 +164,7 @@ ${isVisible2 ? "animate__animated animate__fadeInLeft " : ""}`}
                       <a.button
                         type="submit"
                         style={{ scale }}
-                        className="px-4 py-1 text-gray-500 bg-white rounded-full"
+                        className="px-4 py-1 text-black bg-white rounded-full"
                       >
                         {content.EmailSend}
                       </a.button>
@@ -164,7 +173,7 @@ ${isVisible2 ? "animate__animated animate__fadeInLeft " : ""}`}
                     <>
                       <a.button
                         onClick={resetForm}
-                        className="text-white cursor-pointer mt-12 text-sm"
+                        className="text-gray-400 cursor-pointer mt-12 text-sm"
                       >
                         {content.EmailComplete}
                       </a.button>
@@ -177,21 +186,27 @@ ${isVisible2 ? "animate__animated animate__fadeInLeft " : ""}`}
                       opacity,
                       pointerEvents: open ? "none" : "unset",
                     }}
-                    className="absolute px-4 py-2 border rounded-full font-semibold"
+                    className="absolute text-white px-4 py-2 border rounded-full font-semibold"
                   >
                     <a.span style={{ opacity }}>
-                      {formVisible ? `${content.EmailAnounce}` : `${content.EmailThanks}`}
+                      {formVisible
+                        ? `${content.EmailAnounce}`
+                        : `${content.EmailThanks}`}
                     </a.span>
                   </a.button>
                 </div>
-                <div className="text-center font-semibold text-red-600">
+                <div className="text-center text-red-500">
                   {emailError}
                 </div>{" "}
                 {/* Centrare text eroare */}
               </div>
             </div>
           </div>
-          <div>
+          <div
+            ref={h2Ref}
+            className={`
+${isVisible2 ? "fade-in-right " : ""}`}
+          >
             <Image
               src="/images/send.png"
               alt=""
