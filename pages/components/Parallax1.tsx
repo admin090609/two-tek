@@ -183,14 +183,12 @@ ${isVisible5 ? "fade-in-bck" : ""}`}
             45deg,
             #008dfd,
             #00a5d7
-          ); /* Use a gradient background */
+          );
         }
 
         .circle-box.hovered {
           background-color: #0b3558;
           animation-play-state: paused;
-          transform: scale(1.2);
-          border-radius: 70px;
         }
 
         .circle-box .circle-title {
@@ -213,6 +211,10 @@ ${isVisible5 ? "fade-in-bck" : ""}`}
 
         .circle-box-1 {
           animation-name: moveAround1;
+        }
+
+        .circle-box-1:hover{
+          transform: scale(1.6);
         }
 
         .circle-box-2 {
@@ -246,6 +248,7 @@ ${isVisible5 ? "fade-in-bck" : ""}`}
           }
           100% {
             transform: translate(-30px, 30px);
+            
           }
         }
 
