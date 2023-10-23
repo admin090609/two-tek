@@ -139,7 +139,7 @@ ${isVisible4 ? "tilt-in-right-1" : ""}`}
       </div>
       <div
         ref={h4Ref}
-        className={`flex flex-col justify-between text-center items-center text-white
+        className={`flex flex-col justify-between text-center items-center font-semibold text-white
 ${isVisible5 ? "fade-in-bck" : ""}`}
       >
         <div className="flex justify-between mb-10">
@@ -179,11 +179,7 @@ ${isVisible5 ? "fade-in-bck" : ""}`}
           align-items: center;
           cursor: pointer;
           transition: all 0.2s ease-in;
-          background: linear-gradient(
-            45deg,
-            #008dfd,
-            #00a5d7
-          );
+          background-image: linear-gradient(to bottom, #A4BAC8, #91ADC0, #7FA0B8)
         }
 
         .circle-box.hovered {
@@ -213,7 +209,7 @@ ${isVisible5 ? "fade-in-bck" : ""}`}
           animation-name: moveAround1;
         }
 
-        .circle-box-1:hover{
+        .circle-box-1:hover {
           transform: scale(1.6);
         }
 
@@ -248,7 +244,6 @@ ${isVisible5 ? "fade-in-bck" : ""}`}
           }
           100% {
             transform: translate(-30px, 30px);
-            
           }
         }
 
