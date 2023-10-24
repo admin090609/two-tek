@@ -18,7 +18,7 @@
     "@uiw/react-back-to-top": "^1.2.3",
     "animate.css": "^4.1.1",
     "gsap": "^3.12.2",
-    "next": "^13.5.4",
+    "next": "^13.5.6",
     "react-calendly": "^4.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
