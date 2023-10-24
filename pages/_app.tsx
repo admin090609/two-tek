@@ -11,8 +11,9 @@ export default function App({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     const startLoading = () => setLoading(true);
-    const endLoading = () => setLoading(false);
+    const endLoading = () => setLoading(false); 
 
+    
     Router.events.on("routeChangeStart", startLoading);
     Router.events.on("routeChangeComplete", endLoading);
     Router.events.on("routeChangeError", endLoading);
