@@ -33,12 +33,18 @@ const NavBar = () => {
         nav ? "text-focus-in" : "opacity-0 translate-y-[-50px]"
       } transition-all duration-1000 ease-in-out`}
     >
-      <div className="max-w-[1305px] sm:mt-4 sm:w-full bg-gradient-to-r from-[#CFDFEC] via-[#B3C5D3] to-[#97ABBB] flex justify-around items-center sm:p-0 p-5 h-[70px] rounded-[70px] m-auto">
+      <div
+        className="max-w-[1305px] sm:mt-4 sm:w-full bg-gradient-to-b from-[#A4BAC8] via-[#91ADC0] to-[#7FA0B8] flex justify-around items-center sm:p-0 p-5 h-[70px] rounded-[70px] m-auto"
+        style={{ backgroundImage: "linear-gradient(to right, var(--nav_bg1), var(--nav_bg2), var(--nav_bg3))"}}
+      >
         <Link href="/" className="text-4xl sm:p-4 ml-4 font-bold text-focus-in">
           2Tek
         </Link>
 
-        <ul className="hidden sm:flex text-base font-semibold text-white ">
+        <ul
+          className="hidden sm:flex text-base font-semibold text-white "
+          style={{ color: "var(--link_color)" }}
+        >
           <li className="p-4 relative group">
             <div className="group relative tracking-in-expand-fwd-bottom">
               <ScrollLink
@@ -51,7 +57,10 @@ const NavBar = () => {
               >
                 {content.Nav1}
               </ScrollLink>
-              <div className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"></div>
+              <div
+                className="absolute inset-x-0 bottom-0 h-0.5 transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"
+                style={{ background: "var(--link_hover)" }}
+              ></div>
             </div>
           </li>
           <li className="p-4 relative group">
@@ -66,7 +75,10 @@ const NavBar = () => {
               >
                 {content.Nav2}
               </ScrollLink>
-              <div className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"></div>
+              <div
+                className="absolute inset-x-0 bottom-0 h-0.5  transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"
+                style={{ background: "var(--link_hover)" }}
+              ></div>
             </div>
           </li>
           <li className="p-4 relative group">
@@ -81,7 +93,10 @@ const NavBar = () => {
               >
                 {content.Nav3}
               </ScrollLink>
-              <div className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"></div>
+              <div
+                className="absolute inset-x-0 bottom-0 h-0.5 transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"
+                style={{ background: "var(--link_hover)" }}
+              ></div>
             </div>
           </li>
           <li className="p-4 relative group">
@@ -96,7 +111,10 @@ const NavBar = () => {
               >
                 {content.Nav4}
               </ScrollLink>
-              <div className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"></div>
+              <div
+                className="absolute inset-x-0 bottom-0 h-0.5 transform translate-y-0 scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"
+                style={{ background: "var(--link_hover)" }}
+              ></div>
             </div>
           </li>
         </ul>

@@ -86,13 +86,17 @@ function TranslationRoToRu() {
   return (
     <div className="relative">
       <div
-        className={`flex items-center justify-between bg-white px-3 py-2 rounded-full cursor-pointer ${
-          isOpen ? "bg-opacity-100" : "bg-opacity-70"
+        className={`flex items-center justify-between px-3 py-2 rounded-full cursor-pointer ${
+          isOpen ? "" : ""
         } transition-all duration-300`}
         onClick={toggleMenu}
-        style={{ minHeight: "40px" }}
+        style={{
+          minHeight: "40px",
+          color: "var(--translate_color)",
+          background: "var( --translate_bg)",
+        }}
       >
-        <span className="text-gray-700">
+        <span style={{ color: "var(--translate_lang_color)" }}>
           {language === "ro" && Translation.data.ro.language}
           {language === "ru" && Translation.data.ru.language2}
           {language === "en" && Translation.data.en.language3}
@@ -117,13 +121,20 @@ function TranslationRoToRu() {
       <div
         className={`${
           isOpen ? "opacity-100 scale-y-100" : "opacity-0 scale-y-0"
-        } absolute mt-2 w-40 bg-white rounded-lg shadow-lg overflow-hidden z-10 transform origin-top transition-transform duration-300`}
+        } absolute mt-2 w-40 rounded-lg   overflow-hidden z-10 transform origin-top transition-transform duration-300`}
+        style={{ background: "var( --translate_bg)" , boxShadow:" 0px 5px 15px var( --translate_shadow)"}}
       >
-        <ul className="divide-y divide-gray-200">
+        <ul
+          className="divide-y"
+          style={{ borderColor: "var(--translate_line)" }}
+        >
           {language !== "ro" && (
             <li>
               <a
-                className="block px-4 py-2 text-gray-800 hover:bg-gray-100 cursor-pointer"
+                className="block px-4 py-2 ul1 cursor-pointer"
+                style={{
+                  color: "var(--translate_lang_color)",
+                }}
                 onClick={() => handleLanguageChange("ro")}
               >
                 {language === "ro"
@@ -137,7 +148,10 @@ function TranslationRoToRu() {
           {language !== "ru" && (
             <li>
               <a
-                className="block px-4 py-2 text-gray-800 hover:bg-gray-100 cursor-pointer"
+                className="block px-4 ul1 py-2 cursor-pointer"
+                style={{
+                  color: "var(--translate_lang_color)",
+                }}
                 onClick={() => handleLanguageChange("ru")}
               >
                 {language === "ro"
@@ -151,7 +165,10 @@ function TranslationRoToRu() {
           {language !== "en" && (
             <li>
               <a
-                className="block px-4 py-2 text-gray-800 hover:bg-gray-100 cursor-pointer"
+                className="block px-4 py-2 ul1 cursor-pointer"
+                style={{
+                  color: "var(--translate_lang_color)",
+                }}
                 onClick={() => handleLanguageChange("en")}
               >
                 {language === "ro"
