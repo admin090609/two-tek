@@ -2,7 +2,7 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { useEffect, useState } from "react";
 import { Router } from "next/router";
-import Loading from "./components/Loading";
+import Loading from "./loading";
 import { LanguageProvider } from "../public/LanguageContext";
 
 
