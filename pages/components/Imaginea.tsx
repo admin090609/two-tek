@@ -60,12 +60,13 @@ function Slider() {
   return (
     <>
       <div>
-        <div className="mt-16 mb-20">
+        <div className="mt-16 mb-10">
           <h1
             ref={h1Ref}
-            className={`text-5xl leading-tight  text-[#0B3558] text-start font-bold mb-5 ${
+            className={`text-5xl leading-tight text-start font-bold ${
               isVisible1 ? "fade-in-right" : ""
             }`}
+            style={{ color: "var(--carousel_p)" }}
           >
             {content.SliderTitle1} <br /> {content.SliderTitle2}
           </h1>
@@ -76,8 +77,8 @@ function Slider() {
         >
           <div id="slide" ref={slideRef}>
             <div
-              className="item bg-white"
-              style={{ backgroundImage: "url(/images/ad-display.png)" }}
+              className="item border-t-gray-300 border-[1px] "
+              style={{ backgroundImage: "url(/images/sanduta-display.png)", backgroundColor:"var(--cont_bg)" }}
             >
               <div className="content">
                 <div className="name mb-5">{content.WebsiteAD}</div>
@@ -93,8 +94,8 @@ function Slider() {
               </div>
             </div>
             <div
-              className="item bg-white"
-              style={{ backgroundImage: "url(/images/apisudex-display.png)" }}
+              className="item border-t-gray-300 border-[1px]"
+              style={{ backgroundImage: "url(/images/sanduta-display.png)", backgroundColor:"var(--cont_bg)" }}
             >
               <div className="content">
                 <div className="name mb-5">{content.WebsiteApisudex}</div>
@@ -110,8 +111,11 @@ function Slider() {
               </div>
             </div>
             <div
-              className="item bg-white"
-              style={{ backgroundImage: "url(/images/buffy-display.png)" }}
+              className="item border-t-gray-300 border-[1px]"
+              style={{
+                backgroundImage: "url(/images/sanduta-display.png)",
+                backgroundColor: "var(--cont_bg)",
+              }}
             >
               <div className="content">
                 <div className="name mb-5">{content.WebsiteBuffy}</div>
@@ -127,8 +131,11 @@ function Slider() {
               </div>
             </div>
             <div
-              className="item bg-white"
-              style={{ backgroundImage: "url(/images/sanduta-display.png)" }}
+              className="item border-t-gray-300 border-[1px]"
+              style={{
+                backgroundImage: "url(/images/sanduta-display.png)",
+                backgroundColor: "var(--cont_bg)",
+              }}
             >
               <div className="content">
                 <div className="name mb-5">{content.WebsiteSA}</div>

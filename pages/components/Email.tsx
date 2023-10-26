@@ -128,7 +128,13 @@ const Email = () => {
   return (
     <>
       <div>
-        <div className="flex justify-between items-center bg-gradient-to-r from-black via-black to-gray-800 mx-72 rounded-lg px-16 py-5 mb-16">
+        <div
+          className="flex justify-between items-center mx-72 rounded-lg px-16 py-5 mb-16"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, var(--eamil_bg1), var(--eamil_bg2), var(--eamil_bg3))",
+          }}
+        >
           <div
             ref={h1Ref}
             className={`
@@ -195,9 +201,7 @@ ${isVisible2 ? "fade-in-bottom " : ""}`}
                     </a.span>
                   </a.button>
                 </div>
-                <div className="text-center text-red-500">
-                  {emailError}
-                </div>{" "}
+                <div className="text-center text-red-500">{emailError}</div>{" "}
                 {/* Centrare text eroare */}
               </div>
             </div>

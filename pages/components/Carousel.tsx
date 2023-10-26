@@ -88,24 +88,29 @@ const Carousel = () => {
       <div className="mt-32 mb-20  flex-col justify-evenly mx-32 items-center">
         <h1
           ref={h1Ref}
-          className={` text-center text-4xl mb-7 font-semibold text-[#0B3558]
+          className={` text-center text-4xl mb-7 font-semibold 
 ${isVisible2 ? "tracking-in-expand-fwd-top" : ""}`}
+          style={{ color: "var( --carousel_h1)" }}
         >
           {content.CarouselTitle}
         </h1>
         <hr
           ref={h2Ref}
-          className={` bg-[#008DFD] h-1 rounded-xl flex justify-center items-center mb-7 mx-[25vw]
+          className={` h-1 rounded-xl flex justify-center items-center mb-7 mx-[25vw]
 ${isVisible3 ? "tracking-in-expand" : ""}`}
+          style={{ background: "var(--carousel_hr)" }}
         />
 
         <p
           ref={h3Ref}
-          className={`text-[#0B3558] text-xl text-center mx-[19vw]
+          className={` text-xl text-center mx-[19vw]
 ${isVisible4 ? "tilt-in-left-1" : ""}`}
+          style={{ color: "var(--carousel_h1)" }}
         >
           {content.CarouselText1}
-          <span className="text-[#008DFD] font-semibold">
+          <span className=" font-semibold"
+          style={{ color: "var(--carousel_hr)" }}
+          >
             {" "}
             {content.CarouselText2}
           </span>

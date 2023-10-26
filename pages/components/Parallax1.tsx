@@ -112,11 +112,12 @@ const Parallax1 = () => {
 
   return (
     <>
-      <div className="mb-32 mt-32 flex justify-evenly mx-32 items-center">
+      <div className="mb-32 mt-44 flex justify-evenly mx-32 items-center">
         <h1
           ref={h1Ref}
-          className={`text-start text-5xl leading-[60px]  text-[#0B3558] font-semibold
+          className={`text-start text-5xl leading-[60px]  font-semibold
 ${isVisible2 ? "animate__animated animate__fadeInLeft" : ""}`}
+          style={{ color: "var(--carousel_h1)" }}
         >
           {content.BlobsTitle1} <br /> {content.BlobsTitle2}
         </h1>
@@ -127,8 +128,9 @@ ${isVisible3 ? "tracking-in-expand" : ""}`}
         />
         <p
           ref={h3Ref}
-          className={`text-[#0B3558] text-xl text-start
+          className={` text-xl text-start
 ${isVisible4 ? "tilt-in-right-1" : ""}`}
+          style={{ color: "var(--carousel_h1)" }}
         >
           {content.BlobsText1} <br /> {content.BlobsText2} <br />
           <span className="text-[#008DFD] font-semibold">
@@ -148,11 +150,15 @@ ${isVisible5 ? "fade-in-bck" : ""}`}
               key={index}
               className={`circle-box circle-box-${
                 index + 1
-              } shadow-lg shadow-gray border-2 ${
+              } shadow-md shadow-white border-[1px] ${
                 hoveredCircle === index ? "hovered" : ""
               }`}
               onMouseEnter={() => handleCircleHover(index)}
               onMouseLeave={handleCircleLeave}
+              style={{
+                backgroundImage:
+                  "linear-gradient(to bottom, var(--nav_bg1), var(--nav_bg2), var(--nav_bg3))",
+              }}
             >
               {hoveredCircle !== index && ( // Only render title if it's not hovered
                 <div className="circle-title ">{circle.title}</div>
@@ -168,7 +174,6 @@ ${isVisible5 ? "fade-in-bck" : ""}`}
         .circle-box {
           width: 230px;
           height: 230px;
-          background-color: #008dfd;
           border-radius: 50%;
           margin-right: 5rem;
           animation: moveAround 5s linear infinite alternate;
@@ -179,12 +184,12 @@ ${isVisible5 ? "fade-in-bck" : ""}`}
           align-items: center;
           cursor: pointer;
           transition: all 0.2s ease-in;
-          background-image: linear-gradient(to bottom, #A4BAC8, #91ADC0, #7FA0B8)
         }
 
         .circle-box.hovered {
-          background-color: #0b3558;
+          background-color: #a4bac8;
           animation-play-state: paused;
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
 
         .circle-box .circle-title {

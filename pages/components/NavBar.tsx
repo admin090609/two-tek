@@ -34,8 +34,8 @@ const NavBar = () => {
       } transition-all duration-1000 ease-in-out`}
     >
       <div
-        className="max-w-[1305px] sm:mt-4 sm:w-full bg-gradient-to-b from-[#A4BAC8] via-[#91ADC0] to-[#7FA0B8] flex justify-around items-center sm:p-0 p-5 h-[70px] rounded-[70px] m-auto"
-        style={{ backgroundImage: "linear-gradient(to right, var(--nav_bg1), var(--nav_bg2), var(--nav_bg3))"}}
+        className="max-w-[1305px] sm:mt-4 sm:w-full flex justify-around items-center sm:p-0 p-5 h-[70px] rounded-[70px] m-auto"
+        style={{ backgroundImage: "linear-gradient(to bottom, var(--nav_bg1), var(--nav_bg2), var(--nav_bg3))"}}
       >
         <Link href="/" className="text-4xl sm:p-4 ml-4 font-bold text-focus-in">
           2Tek
