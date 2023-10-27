@@ -4,6 +4,7 @@ import Image from "next/image";
 import "animate.css";
 import useLanguage from "../../public/LanguageContext";
 import { getTranslatedContent } from "./TranslateRoToRu";
+import React from "react";
 
 const Email = () => {
   const myRef = useRef<HTMLDivElement | null>(null);
