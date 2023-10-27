@@ -112,23 +112,24 @@ const Parallax1 = () => {
 
   return (
     <>
-      <div className="mb-32 mt-44 flex justify-evenly mx-32 items-center">
+      <div className="mb-32 mt-24 lg:mt-44 lg:flex justify-evenly mx-2 lg:mx-32 items-center">
         <h1
           ref={h1Ref}
-          className={`text-start text-5xl leading-[60px]  font-semibold
+          className={`lg:text-start text-center text-2xl mb-5 sm:mb-0 lg:text-5xl max-w-[350px] lg:leading-[60px]  font-semibold
 ${isVisible2 ? "animate__animated animate__fadeInLeft" : ""}`}
           style={{ color: "var(--carousel_h1)" }}
         >
-          {content.BlobsTitle1} <br /> {content.BlobsTitle2}
+          {content.BlobsTitle1} {content.BlobsTitle2}
         </h1>
         <hr
           ref={h2Ref}
-          className={`bg-[#008DFD] h-1 rounded-xl rotate-90 w-24
+          className={` h-1 rounded-xl lg:rotate-90 flex justify-center items-center lg:block lg:mx-0 mx-[12vw] mb-5 sm:mb-0 lg:w-24
 ${isVisible3 ? "tracking-in-expand" : ""}`}
+          style={{ background: "var(--carousel_hr)" }}
         />
         <p
           ref={h3Ref}
-          className={` text-xl text-start
+          className={` lg:text-xl lg:text-start text-center lg:mx-0 mx-10
 ${isVisible4 ? "tilt-in-right-1" : ""}`}
           style={{ color: "var(--carousel_h1)" }}
         >
@@ -189,7 +190,8 @@ ${isVisible5 ? "fade-in-bck" : ""}`}
         .circle-box.hovered {
           background-color: #a4bac8;
           animation-play-state: paused;
-          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+            0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
 
         .circle-box .circle-title {

@@ -57,7 +57,7 @@
   --eamil_bg3: #2d3748;
   --loading_bg: white;
   --loading_blob: black;
-  --scrol_bg: #85A4BB;
+  --scrol_bg: #85a4bb;
 }
 
 [data-theme="dark"] {
@@ -113,7 +113,6 @@
   --loading_bg: black;
   --loading_blob: white;
   --scrol_bg: #303030;
-
 }
 
 * {
@@ -156,11 +155,21 @@ body {
   overflow: hidden;
   white-space: nowrap;
 }
+@media screen and (max-width: 768px) {
+  .logo-slider-container {
+    width: 90%;
+  }
+}
 
 .logo-slider {
   display: flex;
   align-items: center;
   animation: slideRightToLeft 17.5s linear infinite;
+}
+@media screen and (max-width: 768px) {
+  .logo-slider {
+    animation: slideRightToLeft 10s linear infinite; /* Redu timpul de animație pentru dispozitive mobile */
+  }
 }
 
 .logo-slider.paused {
@@ -186,6 +195,14 @@ body {
   margin-right: 200px;
   margin-left: 100px;
   /* Spațierea dintre logo-uri */
+}
+
+@media screen and (max-width: 768px) {
+  .logo-slider img {
+    width: 50px; /* Redu lățimea imaginilor pentru dispozitive mobile */
+    margin-right: 55px; /* Mărește marginul dintre logo-uri pentru dispozitive mobile */
+    margin-left: 55px; /* Mărește marginul dintre logo-uri pentru dispozitive mobile */
+  }
 }
 
 @keyframes slideRightToLeft {

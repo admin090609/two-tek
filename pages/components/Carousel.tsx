@@ -85,10 +85,10 @@ const Carousel = () => {
 
   return (
     <>
-      <div className="mt-32 mb-20  flex-col justify-evenly mx-32 items-center">
+      <div className=" mt-24 lg:mt-32 mb-10 lg:mb-20 flex-col justify-evenly mx-2  lg:mx-32 items-center">
         <h1
           ref={h1Ref}
-          className={` text-center text-4xl mb-7 font-semibold 
+          className={` text-center text-2xl sm:text-5xl  lg:text-4xl mb-5 sm:mb-7 font-semibold 
 ${isVisible2 ? "tracking-in-expand-fwd-top" : ""}`}
           style={{ color: "var( --carousel_h1)" }}
         >
@@ -96,14 +96,14 @@ ${isVisible2 ? "tracking-in-expand-fwd-top" : ""}`}
         </h1>
         <hr
           ref={h2Ref}
-          className={` h-1 rounded-xl flex justify-center items-center mb-7 mx-[25vw]
+          className={` h-1 rounded-xl flex justify-center items-center mb-5 mx-[12vw] sm:mb-7 lg:mx-[25vw]
 ${isVisible3 ? "tracking-in-expand" : ""}`}
           style={{ background: "var(--carousel_hr)" }}
         />
 
         <p
           ref={h3Ref}
-          className={` text-xl text-center mx-[19vw]
+          className={` sm:text-2xl lg:text-xl text-center sm:mx-[8vw] lg:mx-[19vw]
 ${isVisible4 ? "tilt-in-left-1" : ""}`}
           style={{ color: "var(--carousel_h1)" }}
         >
@@ -118,7 +118,7 @@ ${isVisible4 ? "tilt-in-left-1" : ""}`}
       </div>
       <div>
         <div ref={myRef} className={`${isVisible ? "tilt-in-right-2" : ""}`}>
-          <div className="mt-12 logo-slider-container ">
+          <div className=" sm:mt-12 logo-slider-container ">
             <div
               className={`logo-slider ${isAnimationPaused ? "paused" : ""}`}
               onMouseEnter={handleMouseEnter}
