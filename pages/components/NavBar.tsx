@@ -36,12 +36,12 @@ const NavBar = () => {
 
   return (
     <div
-      className={`left-0 top-0 w-full z-10 mt-5 text-black ${
+      className={`left-0 top-0 w-full mt-5 text-black z-bug ${
         nav ? "text-focus-in" : "opacity-0 translate-y-[-50px]"
       } transition-all duration-1000 ease-in-out`}
     >
       <div
-        className="max-w-[1305px] sm:mt-4 sm:w-full flex justify-between items-center sm:p-0 p-5 h-[70px] rounded-[70px] m-auto"
+        className="max-w-[1305px] sm:mt-4 sm:w-full flex justify-evenly items-center sm:p-0 p-5 h-[70px] rounded-[70px] m-auto"
         style={{
           backgroundImage:
             "linear-gradient(to bottom, var(--nav_bg1), var(--nav_bg2), var(--nav_bg3))",
@@ -49,7 +49,7 @@ const NavBar = () => {
       >
         <Link
           href="/"
-          className="text-4xl sm:p-4 ml-10 font-bold text-focus-in"
+          className="text-4xl sm:p-4 font-bold text-focus-in -ml-20 lg:ml-0"
         >
           2Tek
         </Link>
@@ -62,7 +62,7 @@ const NavBar = () => {
           />
         ) : (
           <AiOutlineMenu
-            className="text-4xl sm:p-4 ml-4 cursor-pointer md:block lg:hidden"
+            className="text-4xl sm:p-4 -mr-20 cursor-pointer md:block lg:hidden"
             onClick={toggleMenu}
             size={20}
           />
@@ -70,7 +70,7 @@ const NavBar = () => {
 
         {/* Navigation links for PC */}
         <ul
-          className="hidden md:flex text-base font-semibold text-white"
+          className="hidden lg:flex text-base font-semibold text-white"
           style={{ color: "var(--link_color)" }}
         >
           <li className="p-4 relative group">
@@ -149,12 +149,13 @@ const NavBar = () => {
 
         {/* Mobile menu */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-0 left-0 right-0 p-5 text-white bg-black z-100">
+          <div className="md:hidden absolute top-[-3vh] left-0 right-0 p-5 text-white bg-black h-[100vh] flex justify-center items-center text-center">
             <AiOutlineClose
-              className="text-4xl cursor-pointer absolute top-4 right-4"
+              className="text-4xl cursor-pointer absolute right-[18.5vw] top-[6.5vh]"
               onClick={closeMenu}
+              size={24}
             />
-            <ul>
+            <ul className="flex flex-col justify-center items-center text-center">
               <li className="my-2">
                 <ScrollLink
                   to="horizontal"
@@ -204,9 +205,7 @@ const NavBar = () => {
                 </ScrollLink>
               </li>
               <li className="my-2">
-                <div className="mr-5">
                   <TranslateRoToRu />
-                </div>
               </li>
               <li className="my-2">
               <Color />
@@ -215,7 +214,7 @@ const NavBar = () => {
           </div>
         )}
 
-        <div className="lg:flex items-center mr-10 md:hidden sm:hidden">
+        <div className="lg:flex items-center hidden">
           <div className="mr-5">
             <TranslateRoToRu />
           </div>
