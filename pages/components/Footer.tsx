@@ -64,10 +64,10 @@ const Footer = () => {
   }, [hasAnimated]);
   return (
     <>
-      <div className="flex items-center justify-around p-10 text-center mb-10">
+      <div className="flex flex-col md:flex-row items-center md:justify-around justify-center p-10 text-center mb-10">
         <div
           ref={h1Ref}
-          className={`flex ml-20  ${
+          className={`flex md:ml-20  mb-8 md:mb-0 ${
             isVisible2 ? "tracking-in-expand-fwd-bottom1" : ""
           }`}
         >
@@ -115,9 +115,19 @@ const Footer = () => {
             />
           </Link>
         </div>
+
+        <div
+          ref={h1Ref}
+          className={`md:ml-20 text-sm mb-6 md:mb-0 ${
+            isVisible ? "tracking-in-expand-fwd-bottom1" : ""
+          }`}
+        >
+          <h1 className="font-semibold">{content.FooterContact}</h1>
+          <p className="text-xs underline ">two2tek@gmail.com</p>
+        </div>
         <div
           ref={myRef}
-          className={`ml-20 text-sm  ${
+          className={`md:ml-20 text-sm  ${
             isVisible ? "tracking-in-expand-fwd-bottom1" : ""
           }`}
         >
@@ -125,15 +135,6 @@ const Footer = () => {
             {content.FooterRealized} <span className="font-semibold">2Tek</span>
           </h1>
           <p className="text-xs">© 2023 {content.FooterRights}</p>
-        </div>
-        <div
-          ref={h1Ref}
-          className={`ml-20 text-sm  ${
-            isVisible ? "tracking-in-expand-fwd-bottom1" : ""
-          }`}
-        >
-          <h1 className="font-semibold">{content.FooterContact}</h1>
-          <p className="text-xs underline ">two2tek@gmail.com</p>
         </div>
       </div>
     </>

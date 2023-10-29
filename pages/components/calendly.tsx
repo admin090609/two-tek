@@ -33,22 +33,22 @@ const CalendlyWidget = () => {
       className={containerClassName}
       style={{ position: "fixed", bottom: "0px", right: "0px", zIndex: 9999 }}
     >
-      <button
-        onClick={toggleCalendly}
-        style={{
-          position: "absolute",
-          background: "#008DFD",
-          color: "#ffffff",
-          padding: "10px 20px",
-          border: "none",
-          bottom: "20px",
-          right: "20px",
-          width: "190px",
-          borderRadius: "5px",
-          cursor: "pointer",
-          zIndex: 10000,
-        }}
-      >
+        <button
+          onClick={toggleCalendly}
+          style={{
+            position: "absolute",
+            background: "#008DFD",
+            color: "#ffffff",
+            padding: "10px 20px",
+            border: "none",
+            bottom: "20px",
+            right: "20px",
+            width: "190px",
+            borderRadius: "5px",
+            cursor: "pointer",
+            zIndex: 10000,
+          }}
+        >
         {content.calendly}
       </button>
       <div style={calendlyStyles}>

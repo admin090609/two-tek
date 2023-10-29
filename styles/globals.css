@@ -1883,6 +1883,21 @@ body {
   font-size: 15px;
 }
 
+@media only screen and (max-width: 768px) {
+  .scroll-button {
+    background-color: var(--scroll_buttin_bg);
+    color: var(--scroll_color);
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+  }
+}
+
 .website {
   position: relative;
   border: none;

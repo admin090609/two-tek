@@ -37,7 +37,7 @@ const ScrollToTopButton = () => {
     >
       <div className="scroll-button">
         <Image
-          className="w-[20px] h-[20px]"
+          className="md:w-[20px] md:h-[20px] w-[17.5px] md:h-[17.5px]"
           src="/images/scroll.png"
           alt=""
           width={512}

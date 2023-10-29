@@ -133,7 +133,7 @@ const Email = () => {
           className={`
 ${
   isVisible2
-    ? "fade-in-bottom flex justify-between items-center mx-72 rounded-lg px-16 py-5 mb-16"
+    ? "fade-in-bottom flex lg:flex-row flex-col lg:justify-between justify-center items-center mx-6 lg:mx-72 rounded-lg px-4 lg:px-16 py-5 mb-16 gap-4 lg:gap-0"
     : ""
 }`}
           style={{
@@ -142,7 +142,7 @@ ${
           }}
           ref={h1Ref}
         >
-          <div className="flex items-center w-[50%] mt-10 ml-20">
+          <div className="flex items-center lg:w-[50%] mt-10 lg:ml-20">
             <iframe
               className="border-transparent w-[200%] h-[260px]"
               src="https://noteforms.com/forms/mail-oakabe"
@@ -150,7 +150,7 @@ ${
           </div>{" "}
           <div className="justify-center flex-col items-center flex">
             
-            <Image src="/images/send.png" alt="send" width={1016} height={904} className="w-[30%]" />
+            <Image src="/images/send.png" alt="send" width={1016} height={904} className="w-[30%] hidden lg:flex" />
           </div>
         </div>
       </div>

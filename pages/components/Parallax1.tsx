@@ -241,11 +241,13 @@ const Parallax1 = () => {
           width: 120px;
           height: 120px;
           margin-right: 2rem;
+
         }
 
         @media (max-width: 767px) and {
           .circle-box {
             margin-right: 0;
+            
           }
         }
 
@@ -274,6 +276,7 @@ const Parallax1 = () => {
 
         .circle-box-1 {
           animation-name: moveAround1;
+          
         }
 
         .circle-box-1:hover {
