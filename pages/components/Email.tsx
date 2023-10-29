@@ -130,103 +130,30 @@ const Email = () => {
     <>
       <div>
         <div
-          className="flex justify-between items-center mx-72 rounded-lg px-16 py-5 mb-16"
+          className={`
+${
+  isVisible2
+    ? "fade-in-bottom flex justify-between items-center mx-72 rounded-lg px-16 py-5 mb-16"
+    : ""
+}`}
           style={{
             backgroundImage:
               "linear-gradient(to right, var(--eamil_bg1), var(--eamil_bg2), var(--eamil_bg3))",
           }}
+          ref={h1Ref}
         >
-          <div
-            ref={h1Ref}
-            className={`
-${isVisible2 ? "fade-in-bottom " : ""}`}
-          >
-            <h1 className="text-white text-3xl font-semibold mb-5 ">
-              {content.EmailTitle1} <br /> {content.EmailTitle2}
-            </h1>
-            <div className="flex items-center">
-              <div className="relative w-[80%]">
-                <div className="relative flex justify-center h-12">
-                  {formVisible ? (
-                    <a.form
-                      style={{
-                        width,
-                        opacity: opacity.to((o) => 1 - o),
-                        pointerEvents: open ? "unset" : "none",
-                      }}
-                      onSubmit={closeEmailInput}
-                      className="w-20 absolute text-gray-300 flex py-1 pl-4 pr-1 border rounded-full"
-                    >
-                      <input
-                        name="email"
-                        type="email"
-                        className="focus:outline-none flex-grow bg-transparent "
-                        placeholder="Email Address"
-                        value={emailValue}
-                        onChange={(e) => {
-                          setEmailValue(e.target.value);
-                          setEmailError("");
-                        }}
-                      />
-                      <a.button
-                        type="submit"
-                        style={{ scale }}
-                        className="px-4 py-1 text-black bg-white rounded-full"
-                      >
-                        {content.EmailSend}
-                      </a.button>
-                    </a.form>
-                  ) : (
-                    <>
-                      <a.button
-                        onClick={resetForm}
-                        className="text-gray-400 cursor-pointer mt-12 text-sm"
-                      >
-                        {content.EmailComplete}
-                      </a.button>
-                    </>
-                  )}
-                  <a.button
-                    onClick={openEmailInput}
-                    style={{
-                      width,
-                      opacity,
-                      pointerEvents: open ? "none" : "unset",
-                    }}
-                    className="absolute text-white px-4 py-2 border rounded-full font-semibold"
-                  >
-                    <a.span style={{ opacity }}>
-                      {formVisible
-                        ? `${content.EmailAnounce}`
-                        : `${content.EmailThanks}`}
-                    </a.span>
-                  </a.button>
-                </div>
-                <div className="text-center text-red-500">{emailError}</div>{" "}
-                {/* Centrare text eroare */}
-              </div>
-            </div>
-          </div>
-          <div
-            ref={h2Ref}
-            className={`
-${isVisible2 ? "fade-in-right " : ""}`}
-          >
-            <Image
-              src="/images/send.png"
-              alt=""
-              width={200}
-              height={100}
-              className="object-contain"
-            />
+          <div className="flex items-center w-[50%] mt-10 ml-20">
+            <iframe
+              className="border-transparent w-[200%] h-[260px]"
+              src="https://noteforms.com/forms/mail-oakabe"
+            ></iframe>
+          </div>{" "}
+          <div className="justify-center flex-col items-center flex">
+            
+            <Image src="/images/send.png" alt="send" width={1016} height={904} className="w-[30%]" />
           </div>
         </div>
       </div>
-      <iframe
-        className="border-transparent w-full"
-        height="270px"
-        src="https://noteforms.com/forms/mail-oakabe"
-      ></iframe>
     </>
   );
 };

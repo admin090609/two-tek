@@ -41,7 +41,7 @@ const NavBar = () => {
       } transition-all duration-1000 ease-in-out`}
     >
       <div
-        className="max-w-[1305px] sm:mt-4 sm:w-full flex justify-between items-center sm:p-0 p-5 h-[70px] rounded-[70px] m-auto"
+        className="max-w-[1305px] sm:mt-4 sm:w-full flex justify-evenly items-center sm:p-0 p-5 h-[70px] rounded-[70px] m-auto"
         style={{
           backgroundImage:
             "linear-gradient(to bottom, var(--nav_bg1), var(--nav_bg2), var(--nav_bg3))",
@@ -49,7 +49,7 @@ const NavBar = () => {
       >
         <Link
           href="/"
-          className="text-4xl sm:p-4 ml-10 font-bold text-focus-in"
+          className="text-4xl sm:p-4 font-bold text-focus-in"
         >
           2Tek
         </Link>
@@ -215,7 +215,7 @@ const NavBar = () => {
           </div>
         )}
 
-        <div className="lg:flex items-center mr-10 md:hidden sm:hidden">
+        <div className="lg:flex items-center md:hidden sm:hidden">
           <div className="mr-5">
             <TranslateRoToRu />
           </div>

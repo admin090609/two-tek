@@ -52,9 +52,9 @@
   --buttons_bg: white;
   --cont_bg: white;
   --name_color: white;
-  --eamil_bg1: #000000;
-  --eamil_bg2: #000000;
-  --eamil_bg3: #2d3748;
+  --eamil_bg1: #191919;
+  --eamil_bg2: #191919;
+  --eamil_bg3: #2c2c2c;
   --loading_bg: white;
   --loading_blob: black;
   --scrol_bg: #85a4bb;
@@ -107,9 +107,9 @@
   --buttons_bg: black;
   --cont_bg: black;
   --name_color: #007acc;
-  --eamil_bg1: #323232;
-  --eamil_bg2: #323232;
-  --eamil_bg3: #11141a;
+  --eamil_bg1: #191919;
+  --eamil_bg2: #191919;
+  --eamil_bg3: #2c2c2c;
   --loading_bg: black;
   --loading_blob: white;
   --scrol_bg: #303030;
@@ -1935,8 +1935,4 @@ body {
 
 .website:focus:not(:focus-visible) {
   outline: none;
-}
-
-.z-bug{
-  z-index: 999;
 }
