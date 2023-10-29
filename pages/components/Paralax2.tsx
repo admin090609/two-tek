@@ -125,7 +125,7 @@ const Paralax2 = () => {
             {content.HowBoxTitle1}
           </h1>
           <p
-            className="sm:text-xl text-center sm:text-start  sm:leading-normal"
+            className="sm:text-xl text-center sm:text-start sm:mb-0 mb-2 sm:leading-normal"
             style={{ color: "var(--paralax_p)" }}
           >
             {content.HowBoxText}
@@ -157,7 +157,7 @@ const Paralax2 = () => {
             {content.HowBoxTitlev2}
           </h1>
           <p
-            className="sm:text-xl text-center sm:text-start sm:leading-normal"
+            className="sm:text-xl text-center sm:text-start sm:mb-0 mb-2 sm:leading-normal"
             style={{ color: "var(--paralax_p)" }}
           >
             {content.HowBoxTextv2}
@@ -189,7 +189,7 @@ const Paralax2 = () => {
             {content.HowBoxTitlev3}
           </h1>
           <p
-            className="sm:text-xl text-center sm:text-start sm:leading-normal"
+            className="sm:text-xl text-center sm:text-start sm:mb-0 mb-2 sm:leading-normal"
             style={{ color: "var(--paralax_p)" }}
           >
             {content.HowBoxTextv3}

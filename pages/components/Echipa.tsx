@@ -67,7 +67,7 @@ const Echipa = () => {
   return (
     <>
       <div className="flex flex-col sm:flex-row mt-24 sm:mt-44 justify-around items-center">
-        <div className="sm:max-w-lg">
+        <div className="sm:max-w-lg mb-5 sm:mb-0">
           <h1
             ref={h1Ref}
             className={`sm:text-6xl text-center text-2xl sm:text-start font-bold mb-5 ${
@@ -80,7 +80,7 @@ const Echipa = () => {
           </h1>
           <p
             ref={h2Ref}
-            className={` sm:text-lg text-center sm:text-start ${
+            className={` sm:text-lg text-center px-3 sm:text-start ${
               isVisible2 ? "slide-in-blurred-right" : ""
             }`}
             style={{ color: "var(--carousel_p)" }}
@@ -92,7 +92,7 @@ const Echipa = () => {
           <div className="flex">
             <div
               ref={h3Ref}
-              className={`p-4 mr-10
+              className={`p-4 sm:mr-10
 ${isVisible3 ? "slide-in-elliptic-right-fwd " : ""}`}
             >
               <Image
@@ -115,7 +115,7 @@ ${isVisible3 ? "slide-in-elliptic-right-fwd " : ""}`}
                           alt=""
                           width={200}
                           height={200}
-                          className="w-[20px] h-[20px] mt-[7.85px] ml-[7.25px]"
+                          className="w-[10px] h-[10px] sm:w-[20px] sm:h-[20px] mt-[7.85px] ml-[7.25px]"
                         />
                       </Link>
                     </div>
@@ -129,7 +129,7 @@ ${isVisible3 ? "slide-in-elliptic-right-fwd " : ""}`}
                           alt=""
                           width={200}
                           height={200}
-                          className="w-[22.5px] h-[22.5px] mt-[3.5px] ml-[6px]"
+                          className="w-[12.5px] h-[12.5px] sm:w-[22.5px] sm:h-[22.5px] mt-[3.5px] ml-[6px]"
                         />
                       </Link>
                     </div>
@@ -167,7 +167,7 @@ ${isVisible4 ? "slide-in-elliptic-left-fwd " : ""}`}
                           alt=""
                           width={200}
                           height={200}
-                          className="w-[20px] h-[20px] mt-[7.85px] ml-[7.25px]"
+                          className="w-[10px] h-[10px] sm:w-[20px] sm:h-[20px] mt-[7.85px] ml-[7.25px]"
                         />
                       </Link>
                     </div>
@@ -181,7 +181,7 @@ ${isVisible4 ? "slide-in-elliptic-left-fwd " : ""}`}
                           alt=""
                           width={200}
                           height={200}
-                          className="w-[22.5px] h-[22.5px] mt-[3.5px] ml-[6px]"
+                          className="w-[12.5px] h-[12.5px] sm:w-[22.5px] sm:h-[22.5px] mt-[3.5px] ml-[6px]"
                         />
                       </Link>
                     </div>
