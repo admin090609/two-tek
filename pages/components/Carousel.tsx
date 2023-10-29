@@ -20,6 +20,7 @@ const darkThemeLogoData = [
 ];
 
 const Carousel = () => {
+  const [theme, setTheme] = useState('');
   const myRef = useRef<HTMLDivElement | null>(null);
   const h1Ref = useRef<HTMLDivElement | null>(null);
   const h2Ref = useRef<HTMLHRElement | null>(null); // Update this line
@@ -33,7 +34,15 @@ const Carousel = () => {
 
   const { language, setLanguage } = useLanguage();
   const content = getTranslatedContent(language);
-  const theme = document.querySelector("body")?.getAttribute("data-theme");
+
+  useEffect(() => {
+    // You can perform the DOM manipulation after the component is mounted.
+    const bodyTheme = document.querySelector("body")?.getAttribute("data-theme");
+    if (bodyTheme) {
+      setTheme(bodyTheme);
+    }
+  }, []);
+
   useEffect(() => {
     if (myRef.current && !hasAnimated) {
       const observer = new IntersectionObserver((entries) => {

@@ -6,6 +6,7 @@ import useLanguage from "../../public/LanguageContext";
 import { getTranslatedContent } from "./TranslateRoToRu";
 
 const Footer = () => {
+  const [theme, setTheme] = useState('');
   const [hoverStates, setHoverStates] = useState([false, false, false, false]);
   const myRef = useRef<HTMLDivElement | null>(null);
   const h1Ref = useRef<HTMLDivElement | null>(null);
@@ -17,8 +18,13 @@ const Footer = () => {
 
   const { language, setLanguage } = useLanguage();
   const content = getTranslatedContent(language);
-  const theme = document.querySelector("body")?.getAttribute("data-theme");
-
+  useEffect(() => {
+    // You can perform the DOM manipulation after the component is mounted.
+    const bodyTheme = document.querySelector("body")?.getAttribute("data-theme");
+    if (bodyTheme) {
+      setTheme(bodyTheme);
+    }
+  }, []);
   const handleIconHover = (index: number, isHovered: boolean) => {
     const newHoverStates = [...hoverStates];
     newHoverStates[index] = isHovered;
