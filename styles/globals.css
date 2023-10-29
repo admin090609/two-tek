@@ -295,7 +295,7 @@ body {
 
 .item:nth-child(2) .content {
   display: flex;
-  z-index: 11111;
+  z-index: 200;
   align-items: center;
 }
 
@@ -1959,4 +1959,8 @@ body {
 
 .website:focus:not(:focus-visible) {
   outline: none;
+}
+
+.z-bug{
+  z-index: 999;
 }

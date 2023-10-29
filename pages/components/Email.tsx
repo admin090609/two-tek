@@ -222,6 +222,11 @@ ${isVisible2 ? "fade-in-right " : ""}`}
           </div>
         </div>
       </div>
+      <iframe
+        className="border-transparent w-full"
+        height="270px"
+        src="https://noteforms.com/forms/mail-oakabe"
+      ></iframe>
     </>
   );
 };
