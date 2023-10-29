@@ -19,7 +19,7 @@ function Info() {
 
   return (
     <div
-      className={`mt-32 lg:mt-20 text-center relative ${
+      className={`lg:mt-22 mt-10 lg:mt-20 text-center relative px-4 md:px-8 lg:px-0 ${
         showComponent ? "text-focus-in" : "opacity-0 translate-y-[-50px]"
       }`}
     >
@@ -32,7 +32,7 @@ function Info() {
             alt=""
             layout="fill" // This allows the image to fill its container
             objectFit="cover" // This ensures the image covers the entire container
-            className="rounded-3xl sm:rounded-none lg:rounded-3xl"
+            className="rounded-3xl"
           />
         </div>
         <div

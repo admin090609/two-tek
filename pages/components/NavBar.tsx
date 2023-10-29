@@ -36,7 +36,7 @@ const NavBar = () => {
 
   return (
     <div
-      className={`left-0 top-0 w-full mt-5 text-black z-bug ${
+      className={`left-0 top-0 w-full mt-5 text-black z-bug px-4 md:px-8 ${
         nav ? "text-focus-in" : "opacity-0 translate-y-[-50px]"
       } transition-all duration-1000 ease-in-out`}
     >
@@ -47,22 +47,19 @@ const NavBar = () => {
             "linear-gradient(to bottom, var(--nav_bg1), var(--nav_bg2), var(--nav_bg3))",
         }}
       >
-        <Link
-          href="/"
-          className="text-4xl sm:p-4 font-bold text-focus-in -ml-20 lg:ml-0"
-        >
+        <div className="text-4xl sm:p-4 font-bold text-focus-in -ml-20 md:-ml-40 lg:ml-0">
           2Tek
-        </Link>
+        </div>
 
         {isMenuOpen ? (
           <AiOutlineClose
-            className="text-4x sm:p-4 -mr-20 cursor-pointer md:block lg:hidden z-10"
+            className="text-4xl -mr-20 md:-mr-40 lg:mr-0 cursor-pointer flex lg:hidden z-10"
             onClick={closeMenu}
             size={20}
           />
         ) : (
           <AiOutlineMenu
-            className="text-4xl sm:p-4 -mr-20 cursor-pointer md:block lg:hidden"
+            className="text-4xl -mr-20 md:-mr-40 lg:mr-0 cursor-pointer flex lg:hidden"
             onClick={toggleMenu}
             size={20}
           />
@@ -149,8 +146,8 @@ const NavBar = () => {
 
         {/* Mobile menu */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-[-3vh] left-0 right-0 p-5 text-white bg-gray-700 h-[100vh] flex justify-center items-center text-center">
-            <ul className="flex flex-col justify-center items-center text-center">
+          <div className="lg:hidden absolute top-[-3vh] left-0 right-0 text-white bg-gray-700 h-[102vh] flex justify-center items-center text-center">
+            <ul className="flex flex-col justify-center items-center text-center gap-4 md:text-2xl">
               <li className="my-2">
                 <ScrollLink
                   to="horizontal"
@@ -200,10 +197,10 @@ const NavBar = () => {
                 </ScrollLink>
               </li>
               <li className="my-2">
-                  <TranslateRoToRu />
+                <TranslateRoToRu />
               </li>
               <li className="my-2">
-              <Color />
+                <Color />
               </li>
             </ul>
           </div>

@@ -60,7 +60,7 @@ function Slider() {
   return (
     <>
       <div>
-        <div className="mt-16 mb-10 -z-10">
+        <div className="mt-16 mb-10">
           <h1
             ref={h1Ref}
             className={`text-5xl leading-tight text-start font-bold ${
