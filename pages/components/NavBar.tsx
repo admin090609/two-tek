@@ -147,8 +147,8 @@ const NavBar = () => {
         {/* Mobile menu */}
         {isMenuOpen && (
           <div className="lg:hidden absolute top-[-3vh] left-0 right-0 text-white bg-gray-700 h-[102vh] flex justify-center items-center text-center">
-            <ul className="flex flex-col justify-center items-center text-center gap-4 md:text-2xl">
-              <li className="my-2">
+            <ul className="flex flex-col justify-center items-center text-center gap-4 md:text-2xl ">
+              <li className="my-2 tracking-in-expand-fwd-bottom">
                 <ScrollLink
                   to="horizontal"
                   spy={true}
@@ -160,7 +160,7 @@ const NavBar = () => {
                   {content.Nav1}
                 </ScrollLink>
               </li>
-              <li className="my-2">
+              <li className="my-2 tracking-in-expand-fwd-bottom">
                 <ScrollLink
                   to="echipa"
                   spy={true}
@@ -172,7 +172,7 @@ const NavBar = () => {
                   {content.Nav2}
                 </ScrollLink>
               </li>
-              <li className="my-2">
+              <li className="my-2 tracking-in-expand-fwd-bottom">
                 <ScrollLink
                   to="proiecte"
                   spy={true}
@@ -184,7 +184,7 @@ const NavBar = () => {
                   {content.Nav3}
                 </ScrollLink>
               </li>
-              <li className="my-2">
+              <li className="my-2 tracking-in-expand-fwd-bottom">
                 <ScrollLink
                   to="feedback"
                   spy={true}
@@ -196,10 +196,10 @@ const NavBar = () => {
                   {content.Nav4}
                 </ScrollLink>
               </li>
-              <li className="my-2">
+              <li className="my-2 tracking-in-expand-fwd-bottom">
                 <TranslateRoToRu />
               </li>
-              <li className="my-2">
+              <li className="my-2 tracking-in-expand-fwd-bottom">
                 <Color />
               </li>
             </ul>

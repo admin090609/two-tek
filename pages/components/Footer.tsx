@@ -17,6 +17,7 @@ const Footer = () => {
 
   const { language, setLanguage } = useLanguage();
   const content = getTranslatedContent(language);
+  const theme = document.querySelector("body")?.getAttribute("data-theme");
 
   const handleIconHover = (index: number, isHovered: boolean) => {
     const newHoverStates = [...hoverStates];
@@ -76,7 +77,11 @@ const Footer = () => {
           >
             <Image
               src={
-                hoverStates[0]
+                theme === "dark" && hoverStates[0]
+                  ? "/images/instagram_hover.png"
+                  : theme === "dark"
+                  ? "/images/instagram-dark.png"
+                  : hoverStates[0]
                   ? "/images/instagram_hover.png"
                   : "/images/instagram.png"
               }
@@ -94,7 +99,11 @@ const Footer = () => {
           >
             <Image
               src={
-                hoverStates[1]
+                theme === "dark" && hoverStates[1]
+                  ? "/images/tik-tok-dark.png"
+                  : theme === "dark"
+                  ? "/images/tik-tok-dark_hover.png"
+                  : hoverStates[1]
                   ? "/images/tik-tok_hover.png"
                   : "/images/tik-tok.png"
               }

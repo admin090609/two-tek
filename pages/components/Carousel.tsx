@@ -6,13 +6,21 @@ import useLanguage from "../../public/LanguageContext";
 import { getTranslatedContent } from "./TranslateRoToRu";
 
 const logoData = [
-  { src: "/images/sanduta.png", link: "" },
+  { src: "/images/sanduta.png", link: "https://sandutart.vercel.app/" },
   { src: "/images/buffy.png", link: "https://admin090609.github.io/" },
   { src: "/images/a&d.png", link: "https://adfitness.vercel.app/" },
   { src: "/images/apisudex.png", link: "https://apisudex.store/" },
 ];
 
+const darkThemeLogoData = [
+  { src: "/images/sanduta.png", link: "https://sandutart.vercel.app/" },
+  { src: "/images/buffy-dark.png", link: "https://admin090609.github.io/" },
+  { src: "/images/a&d.png", link: "https://adfitness.vercel.app/" },
+  { src: "/images/apisudex.png", link: "https://apisudex.store/" },
+];
+
 const Carousel = () => {
+  const theme = document.querySelector("body")?.getAttribute("data-theme");
   const myRef = useRef<HTMLDivElement | null>(null);
   const h1Ref = useRef<HTMLDivElement | null>(null);
   const h2Ref = useRef<HTMLHRElement | null>(null); // Update this line
@@ -124,22 +132,21 @@ ${isVisible4 ? "tilt-in-left-1" : ""}`}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
-              {logoData.map((logo, index) => (
-                <div key={index} className="logo-slide">
-                  <Link href={logo.link} target="_blank">
-                    <div className="w-100 h-100">
-                      {/* Set the dimensions here */}
-                      <Image
-                        width={100}
-                        height={100}
-                        src={logo.src}
-                        alt=""
-                        className="object-contain"
-                      />
-                    </div>
-                  </Link>
+             {logoData.map((logo, index) => (
+            <div key={index} className="logo-slide">
+              <Link href={logo.link} target="_blank">
+                <div className="w-100 h-100">
+                  <Image
+                    width={100}
+                    height={100}
+                    src={theme === "dark" ? darkThemeLogoData[index].src : logo.src}
+                    alt=""
+                    className="object-contain"
+                  />
                 </div>
-              ))}
+              </Link>
+            </div>
+          ))}
             </div>
             <div
               className={`logo-slider ${isAnimationPaused ? "paused" : ""}`}
@@ -147,21 +154,20 @@ ${isVisible4 ? "tilt-in-left-1" : ""}`}
               onMouseLeave={handleMouseLeave}
             >
               {logoData.map((logo, index) => (
-                <div key={index} className="logo-slide">
-                  <Link href={logo.link} target="_blank">
-                    <div className="w-100 h-100">
-                      {/* Set the dimensions here */}
-                      <Image
-                        width={100}
-                        height={100}
-                        src={logo.src}
-                        alt=""
-                        className="object-contain"
-                      />
-                    </div>
-                  </Link>
+            <div key={index} className="logo-slide">
+              <Link href={logo.link} target="_blank">
+                <div className="w-100 h-100">
+                  <Image
+                    width={100}
+                    height={100}
+                    src={theme === "dark" ? darkThemeLogoData[index].src : logo.src}
+                    alt=""
+                    className="object-contain"
+                  />
                 </div>
-              ))}
+              </Link>
+            </div>
+          ))}
             </div>
           </div>
         </div>

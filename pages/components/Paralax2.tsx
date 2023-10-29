@@ -135,9 +135,9 @@ const Paralax2 = () => {
           <Image
             src="/images/search.png"
             alt=""
-            width={200}
-            height={100}
-            className="sm:py-5"
+            width={1024}
+            height={1024}
+            className="sm:py-5 w-[12.5vw]"
           />
         </div>
       </div>
@@ -167,9 +167,9 @@ const Paralax2 = () => {
           <Image
             src="/images/web.png"
             alt=""
-            width={200}
-            height={100}
-            className="sm:py-5"
+            width={1024}
+            height={1024}
+            className="sm:py-5 w-[12.5vw]"
           />
         </div>
       </div>
@@ -199,9 +199,9 @@ const Paralax2 = () => {
           <Image
             src="/images/mobile.png"
             alt=""
-            width={200}
-            height={100}
-            className="sm:py-5"
+            width={1024}
+            height={1024}
+            className="sm:py-5 w-[12.5vw]"
           />
         </div>
       </div>

@@ -97,7 +97,7 @@ const Review = () => {
 
   return (
     <>
-      <div className="flex justify-between items-center bg-black text-black p-20">
+      <div className="flex justify-around items-center bg-black text-black p-20">
         <div>
           <div className=" bg-white p-10 rounded-bl-[20%] rounded-tr-[20%] rounded-md shadow-md shadow-white mb-10">
             <h1
@@ -133,9 +133,9 @@ ${isVisible3 ? "scale-in-center" : ""}`}
               <Image
                 src="/images/misha.png"
                 alt=""
-                width={150}
-                height={10}
-                className="rounded-[50%] "
+                width={307}
+                height={298}
+                className="rounded-[50%] w-[9vw]"
               />
             </div>
             <div
@@ -151,9 +151,9 @@ ${isVisible3 ? "scale-in-center" : ""}`}
               <Image
                 src="/images/viorel.png"
                 alt=""
-                width={150}
-                height={10}
-                className="rounded-[50%] "
+                width={307}
+                height={298}
+                className="rounded-[50%] w-[9vw]"
               />
             </div>
             <div
@@ -169,19 +169,18 @@ ${isVisible3 ? "scale-in-center" : ""}`}
               <Image
                 src="/images/vasea.png"
                 alt=""
-                width={150}
-                height={10}
-                className="rounded-[50%] "
+                width={307}
+                height={298}
+                className="rounded-[50%] w-[9vw]"
               />
             </div>
           </div>
         </div>
         <div
           ref={h3Ref}
-          className={`
-${isVisible4 ? "tilt-in-fwd-br" : ""}`}
+          className={`${isVisible4 ? "tilt-in-fwd-br" : ""}`}
         >
-          <Image src={reviewData.mainImage} alt="" width={300} height={10} />
+          <Image src={reviewData.mainImage} alt="" width={307} height={298} />
         </div>
       </div>
     </>

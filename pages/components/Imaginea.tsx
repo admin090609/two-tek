@@ -78,7 +78,7 @@ function Slider() {
           <div id="slide" ref={slideRef}>
             <div
               className="item border-t-gray-300 border-[1px] "
-              style={{ backgroundImage: "url(/images/sanduta-display.png)", backgroundColor:"var(--cont_bg)" }}
+              style={{ backgroundImage: "url(/images/ad-display.png)", backgroundColor:"var(--cont_bg)" }}
             >
               <div className="content">
                 <div className="name mb-5">{content.WebsiteAD}</div>
@@ -95,7 +95,7 @@ function Slider() {
             </div>
             <div
               className="item border-t-gray-300 border-[1px]"
-              style={{ backgroundImage: "url(/images/ad-display.png)", backgroundColor:"var(--cont_bg)" }}
+              style={{ backgroundImage: "url(/images/apisudex-display.png)", backgroundColor:"var(--cont_bg)" }}
             >
               <div className="content">
                 <div className="name mb-5">{content.WebsiteApisudex}</div>
@@ -113,7 +113,7 @@ function Slider() {
             <div
               className="item border-t-gray-300 border-[1px]"
               style={{
-                backgroundImage: "url(/images/apisudex-display.png)",
+                backgroundImage: "url(/images/buffy-display.png)",
                 backgroundColor: "var(--cont_bg)",
               }}
             >
@@ -133,7 +133,7 @@ function Slider() {
             <div
               className="item border-t-gray-300 border-[1px]"
               style={{
-                backgroundImage: "url(/images/buffy-display.png)",
+                backgroundImage: "url(/images/sanduta-display.png)",
                 backgroundColor: "var(--cont_bg)",
               }}
             >
