@@ -88,7 +88,7 @@ const Paralax2 = () => {
 
   return (
     <>
-      <div className=" mt-96 sm:mt-64 sm:mx-64">
+      <div className=" mt-72 sm:mt-64 sm:mx-64">
         <h1
           ref={h1Ref}
           className={`text-center text-2xl sm:text-5xl font-semibold ${
@@ -102,7 +102,7 @@ const Paralax2 = () => {
         </h1>
         <p
           ref={h2Ref}
-          className={`text-center sm:text-2xl mb-10 sm:mb-20 sm:mt-7 mt-5 sm:leading-[35px] ${
+          className={`text-center sm:text-2xl mb-10 sm:mb-20 sm:mt-7 px-2 mt-5 sm:leading-[35px] ${
             isVisible ? "slide-in-bck-bottom" : ""
           }`}
           style={{ color: "var(--carousel_p)" }}

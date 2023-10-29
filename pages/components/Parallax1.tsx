@@ -134,7 +134,7 @@ const Parallax1 = () => {
       <div className=" mb-10 sm:mb-20 mt-24 lg:mt-44 sm:flex justify-evenly mx-2 sm:mx-10 lg:mx-32 items-center">
         <h1
           ref={h1Ref}
-          className={`sm:text-start text-center text-2xl mb-5 sm:mb-7 sm:text-5xl max-w-[350px] sm:leading-[60px]  font-semibold
+          className={`sm:text-start text-center text-2xl mb-5 sm:mb-7 sm:text-5xl sm:max-w-[350px] sm:leading-[60px]  font-semibold
             ${isVisible2 ? "animate__animated animate__fadeInLeft" : ""}`}
           style={{ color: "var(--carousel_h1)" }}
         >
