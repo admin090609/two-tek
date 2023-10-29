@@ -7,7 +7,7 @@ const Parallax1 = () => {
   const [hoveredCircle, setHoveredCircle] = useState<number | null>(null);
   const myRef = useRef<HTMLDivElement | null>(null);
   const h1Ref = useRef<HTMLDivElement | null>(null);
-  const h2Ref = useRef<HTMLHRElement | null>(null); // Update this line
+  const h2Ref = useRef<HTMLHRElement | null>(null);
   const h3Ref = useRef<HTMLDivElement | null>(null);
   const h4Ref = useRef<HTMLDivElement | null>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -15,7 +15,7 @@ const Parallax1 = () => {
   const [isVisible3, setIsVisible3] = useState(false);
   const [isVisible4, setIsVisible4] = useState(false);
   const [isVisible5, setIsVisible5] = useState(false);
-  const [hasAnimated, setHasAnimated] = useState(false); // State pentru a urmări dacă animația a fost deja activată
+  const [hasAnimated, setHasAnimated] = useState(false);
 
   const { language, setLanguage } = useLanguage();
   const content = getTranslatedContent(language);
@@ -27,10 +27,10 @@ const Parallax1 = () => {
         if (entry.isIntersecting) {
           setIsVisible(true);
           setHasAnimated(true);
-          observer.unobserve(myRef.current!); // Use the non-null assertion operator here
+          observer.unobserve(myRef.current!);
         }
       });
-      observer.observe(myRef.current!); // Use the non-null assertion operator here
+      observer.observe(myRef.current!);
     }
 
     if (h1Ref.current && !hasAnimated) {
@@ -39,10 +39,10 @@ const Parallax1 = () => {
         if (entry.isIntersecting) {
           setIsVisible2(true);
           setHasAnimated(true);
-          h1Observer.unobserve(h1Ref.current!); // Use the non-null assertion operator here
+          h1Observer.unobserve(h1Ref.current!);
         }
       });
-      h1Observer.observe(h1Ref.current!); // Use the non-null assertion operator here
+      h1Observer.observe(h1Ref.current!);
     }
     if (h2Ref.current && !hasAnimated) {
       const h2Observer = new IntersectionObserver((entries) => {
@@ -50,10 +50,10 @@ const Parallax1 = () => {
         if (entry.isIntersecting) {
           setIsVisible3(true);
           setHasAnimated(true);
-          h2Observer.unobserve(h2Ref.current!); // Use the non-null assertion operator here
+          h2Observer.unobserve(h2Ref.current!);
         }
       });
-      h2Observer.observe(h2Ref.current!); // Use the non-null assertion operator here
+      h2Observer.observe(h2Ref.current!);
     }
     if (h3Ref.current && !hasAnimated) {
       const h3Observer = new IntersectionObserver((entries) => {
@@ -61,10 +61,10 @@ const Parallax1 = () => {
         if (entry.isIntersecting) {
           setIsVisible4(true);
           setHasAnimated(true);
-          h3Observer.unobserve(h3Ref.current!); // Use the non-null assertion operator here
+          h3Observer.unobserve(h3Ref.current!);
         }
       });
-      h3Observer.observe(h3Ref.current!); // Use the non-null assertion operator here
+      h3Observer.observe(h3Ref.current!);
     }
     if (h4Ref.current && !hasAnimated) {
       const h4Observer = new IntersectionObserver((entries) => {
@@ -72,10 +72,10 @@ const Parallax1 = () => {
         if (entry.isIntersecting) {
           setIsVisible5(true);
           setHasAnimated(true);
-          h4Observer.unobserve(h4Ref.current!); // Use the non-null assertion operator here
+          h4Observer.unobserve(h4Ref.current!);
         }
       });
-      h4Observer.observe(h4Ref.current!); // Use the non-null assertion operator here
+      h4Observer.observe(h4Ref.current!);
     }
   }, [hasAnimated]);
 
@@ -110,27 +110,47 @@ const Parallax1 = () => {
     setHoveredCircle(null);
   };
 
+  // Determine screen size using client-side logic
+  const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+      setIsMobile(screenWidth < 768);
+      setIsTablet(screenWidth >= 768 && screenWidth <= 1024);
+    };
+
+    handleResize(); // Initial size check
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
-      <div className="mb-32 mt-24 lg:mt-44 lg:flex justify-evenly mx-2 lg:mx-32 items-center">
+      <div className=" mb-10 sm:mb-20 mt-24 lg:mt-44 sm:flex justify-evenly mx-2 sm:mx-10 lg:mx-32 items-center">
         <h1
           ref={h1Ref}
-          className={`lg:text-start text-center text-2xl mb-5 sm:mb-0 lg:text-5xl max-w-[350px] lg:leading-[60px]  font-semibold
-${isVisible2 ? "animate__animated animate__fadeInLeft" : ""}`}
+          className={`sm:text-start text-center text-2xl mb-5 sm:mb-7 sm:text-5xl max-w-[350px] sm:leading-[60px]  font-semibold
+            ${isVisible2 ? "animate__animated animate__fadeInLeft" : ""}`}
           style={{ color: "var(--carousel_h1)" }}
         >
           {content.BlobsTitle1} {content.BlobsTitle2}
         </h1>
         <hr
           ref={h2Ref}
-          className={` h-1 rounded-xl lg:rotate-90 flex justify-center items-center lg:block lg:mx-0 mx-[12vw] mb-5 sm:mb-0 lg:w-24
-${isVisible3 ? "tracking-in-expand" : ""}`}
+          className={` h-1 rounded-xl sm:rotate-90 flex justify-center items-center sm:block sm:mx-0 mx-[12vw] mb-5 sm:mb-0 sm:w-24
+            ${isVisible3 ? "tracking-in-expand" : ""}`}
           style={{ background: "var(--carousel_hr)" }}
         />
         <p
           ref={h3Ref}
-          className={` lg:text-xl lg:text-start text-center lg:mx-0 mx-10
-${isVisible4 ? "tilt-in-right-1" : ""}`}
+          className={`sm:text-xl sm:text-start text-center ${
+            isVisible4 ? "tilt-in-right-1" : ""
+          }`}
           style={{ color: "var(--carousel_h1)" }}
         >
           {content.BlobsText1} <br /> {content.BlobsText2} <br />
@@ -143,40 +163,68 @@ ${isVisible4 ? "tilt-in-right-1" : ""}`}
       <div
         ref={h4Ref}
         className={`flex flex-col justify-between text-center items-center font-semibold text-white
-${isVisible5 ? "fade-in-bck" : ""}`}
+          ${isVisible5 ? "fade-in-bck" : ""}`}
       >
-        <div className="flex justify-between mb-10">
-          {circleData.map((circle, index) => (
-            <div
-              key={index}
-              className={`circle-box circle-box-${
-                index + 1
-              } shadow-md shadow-white border-[1px] ${
-                hoveredCircle === index ? "hovered" : ""
-              }`}
-              onMouseEnter={() => handleCircleHover(index)}
-              onMouseLeave={handleCircleLeave}
-              style={{
-                backgroundImage:
-                  "linear-gradient(to bottom, var(--nav_bg1), var(--nav_bg2), var(--nav_bg3))",
-              }}
-            >
-              {hoveredCircle !== index && ( // Only render title if it's not hovered
-                <div className="circle-title ">{circle.title}</div>
-              )}
-              {hoveredCircle === index && (
-                <div className="circle-description">{circle.description}</div>
-              )}
-            </div>
-          ))}
-        </div>
+        {isTablet ? (
+          <div className="sm:flex justify-between mb-10">
+            {circleData.map((circle, index) => (
+              <div
+                key={index}
+                className={`circle-box circle-box-${
+                  index + 1
+                } shadow-md shadow-white border-[1px]
+                  ${hoveredCircle === index ? "hovered" : ""}
+                  tablet-circle-box`}
+                onMouseEnter={() => handleCircleHover(index)}
+                onMouseLeave={handleCircleLeave}
+                style={{
+                  backgroundImage:
+                    "linear-gradient(to bottom, var(--nav_bg1), var(--nav_bg2), var(--nav_bg3)",
+                }}
+              >
+                <div className={`circle-title`}>{circle.title}</div>
+                {hoveredCircle === index && (
+                  <div className={`circle-description`}>
+                    {circle.description}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="sm:flex justify-between mb-10">
+            {circleData.map((circle, index) => (
+              <div
+                key={index}
+                className={`circle-box circle-box-${
+                  index + 1
+                } shadow-md shadow-white border-[1px]
+                  ${hoveredCircle === index ? "hovered" : ""}
+                  ${isMobile ? "mobile" : ""}`}
+                onMouseEnter={() => handleCircleHover(index)}
+                onMouseLeave={handleCircleLeave}
+                style={{
+                  backgroundImage:
+                    "linear-gradient(to bottom, var(--nav_bg1), var(--nav_bg2), var(--nav_bg3)",
+                }}
+              >
+                <div className={`circle-title`}>{circle.title}</div>
+                {hoveredCircle === index && (
+                  <div className={`circle-description`}>
+                    {circle.description}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
       </div>
       <style jsx>{`
         .circle-box {
-          width: 230px;
-          height: 230px;
+          width: ${isMobile ? "160px" : "210px"};
+          height: ${isMobile ? "160px" : "210px"};
           border-radius: 50%;
-          margin-right: 5rem;
+          margin-right: 4rem;
           animation: moveAround 5s linear infinite alternate;
           position: relative;
           display: flex;
@@ -185,6 +233,20 @@ ${isVisible5 ? "fade-in-bck" : ""}`}
           align-items: center;
           cursor: pointer;
           transition: all 0.2s ease-in;
+          margin-bottom: 20px;
+        }
+
+        .tablet-circle-box {
+          // CSS specific for tablet circles
+          width: 120px;
+          height: 120px;
+          margin-right: 2rem;
+        }
+
+        @media (max-width: 767px) and {
+          .circle-box {
+            margin-right: 0;
+          }
         }
 
         .circle-box.hovered {
@@ -194,13 +256,7 @@ ${isVisible5 ? "fade-in-bck" : ""}`}
             0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
 
-        .circle-box .circle-title {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .circle-box .circle-description {
+        .circle-description {
           display: none;
           background-color: transparent;
           padding: 20px;
@@ -208,8 +264,12 @@ ${isVisible5 ? "fade-in-bck" : ""}`}
           color: white;
         }
 
-        .circle-box.hovered .circle-description {
+        .circle-description-visible {
           display: block;
+        }
+
+        .circle-box.mobile .circle-description {
+          display: none; // Ascunde descrierea pe telefon
         }
 
         .circle-box-1 {
@@ -238,10 +298,21 @@ ${isVisible5 ? "fade-in-bck" : ""}`}
 
         @keyframes moveAround1 {
           0% {
-            transform: translate(70px, 10px);
+            transform: translate(30px, 10px);
           }
           100% {
-            transform: translate(30px, -30px);
+            transform: translate(10px, -40px);
+          }
+        }
+
+        @media (max-width: 767px) {
+          @keyframes moveAround1 {
+            0% {
+              transform: translate(50%, 20px); /* Pornire din partea dreapta */
+            }
+            100% {
+              transform: translate(0, 0); /* Se mișcă spre stânga */
+            }
           }
         }
 
@@ -250,7 +321,18 @@ ${isVisible5 ? "fade-in-bck" : ""}`}
             transform: translate(0, 2px);
           }
           100% {
-            transform: translate(-30px, 30px);
+            transform: translate(-20px, 30px);
+          }
+        }
+
+        @media (max-width: 767px) {
+          @keyframes moveAround2 {
+            0% {
+              transform: translateX(-50px) translateY(-30px); /* Pleacă de la stânga pe orizontală */
+            }
+            100% {
+              transform: translateX(-50px) translateY(0); /* Se mișcă doar pe verticală */
+            }
           }
         }
 
@@ -259,7 +341,18 @@ ${isVisible5 ? "fade-in-bck" : ""}`}
             transform: translate(0, -10px);
           }
           100% {
-            transform: translate(-73px, 3px);
+            transform: translate(-50px, 3px);
+          }
+        }
+
+        @media (max-width: 767px) {
+          @keyframes moveAround3 {
+            0% {
+              transform: translateX(110px) translateY(-170px); /* Pornire din partea dreapta și sus */
+            }
+            100% {
+              transform: translateX(130px) translateY(-190px); /* Se mișcă doar pe verticală spre jos */
+            }
           }
         }
 
@@ -271,6 +364,16 @@ ${isVisible5 ? "fade-in-bck" : ""}`}
             transform: translate(-30px, -10px);
           }
         }
+        @media (max-width: 767px) {
+          @keyframes moveAround4 {
+            0% {
+              transform: translateX(100px) translateY(-190px); /* Pornire din partea dreapta și sus */
+            }
+            100% {
+              transform: translateX(130px) translateY(-170px); /* Se mișcă doar pe verticală spre jos */
+            }
+          }
+        }
 
         @keyframes moveAround5 {
           0% {
@@ -278,6 +381,16 @@ ${isVisible5 ? "fade-in-bck" : ""}`}
           }
           100% {
             transform: translate(20px, -30px);
+          }
+        }
+        @media (max-width: 767px) {
+          @keyframes moveAround5 {
+            0% {
+              transform: translateX(-60px) translateY(-370px); /* Pornire din partea dreapta și sus */
+            }
+            100% {
+              transform: translateX(-50px) translateY(-390px); /* Se mișcă doar pe verticală spre jos */
+            }
           }
         }
       `}</style>

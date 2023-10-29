@@ -161,6 +161,12 @@ body {
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .logo-slider-container {
+    width: 60%;
+  }
+}
+
 .logo-slider {
   display: flex;
   align-items: center;
@@ -1697,6 +1703,14 @@ body {
   color: var(--card_color);
 }
 
+@media (max-width: 768px) {
+  .card {
+    width: 135px;
+    height: 168.5px;
+    margin-top: -168px;
+  }
+}
+
 .card-blur {
   position: absolute;
   height: 100%;
@@ -1726,6 +1740,14 @@ body {
   bottom: 100px;
   margin: auto;
   z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .connections {
+    width: 135px;
+    height: 168.5px;
+    margin-top: -168px;
+  }
 }
 
 .connection {
@@ -1760,6 +1782,8 @@ body {
   padding-top: 5px;
   color: var(--name_color);
 }
+
+
 
 .job {
   color: var(--job_color);

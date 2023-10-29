@@ -66,20 +66,23 @@ const Echipa = () => {
 
   return (
     <>
-      <div className="flex mt-44 justify-around items-center">
-        <div className="max-w-lg">
+      <div className="flex flex-col sm:flex-row mt-24 sm:mt-44 justify-around items-center">
+        <div className="sm:max-w-lg">
           <h1
             ref={h1Ref}
-            className={`text-6xl font-bold mb-5 ${
+            className={`sm:text-6xl text-center text-2xl sm:text-start font-bold mb-5 ${
               isVisible1 ? "scale-up-left" : ""
             }`}
             style={{ color: "var(--carousel_h1)" }}
           >
-            {content.EchipaTitle1} <br /> {content.EchipaTitle2}
+            {content.EchipaTitle1} <br className={`hidden sm:inline-block`} />
+            {content.EchipaTitle2}
           </h1>
           <p
             ref={h2Ref}
-            className={` text-lg ${isVisible2 ? "slide-in-blurred-right" : ""}`}
+            className={` sm:text-lg text-center sm:text-start ${
+              isVisible2 ? "slide-in-blurred-right" : ""
+            }`}
             style={{ color: "var(--carousel_p)" }}
           >
             {content.EchipaText}
