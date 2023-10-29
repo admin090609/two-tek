@@ -20,7 +20,6 @@ const darkThemeLogoData = [
 ];
 
 const Carousel = () => {
-  const theme = document.querySelector("body")?.getAttribute("data-theme");
   const myRef = useRef<HTMLDivElement | null>(null);
   const h1Ref = useRef<HTMLDivElement | null>(null);
   const h2Ref = useRef<HTMLHRElement | null>(null); // Update this line
@@ -34,7 +33,7 @@ const Carousel = () => {
 
   const { language, setLanguage } = useLanguage();
   const content = getTranslatedContent(language);
-
+  const theme = document.querySelector("body")?.getAttribute("data-theme");
   useEffect(() => {
     if (myRef.current && !hasAnimated) {
       const observer = new IntersectionObserver((entries) => {
@@ -116,8 +115,9 @@ ${isVisible4 ? "tilt-in-left-1" : ""}`}
           style={{ color: "var(--carousel_h1)" }}
         >
           {content.CarouselText1}
-          <span className=" font-semibold"
-          style={{ color: "var(--carousel_hr)" }}
+          <span
+            className=" font-semibold"
+            style={{ color: "var(--carousel_hr)" }}
           >
             {" "}
             {content.CarouselText2}
@@ -132,21 +132,25 @@ ${isVisible4 ? "tilt-in-left-1" : ""}`}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
-             {logoData.map((logo, index) => (
-            <div key={index} className="logo-slide">
-              <Link href={logo.link} target="_blank">
-                <div className="w-100 h-100">
-                  <Image
-                    width={100}
-                    height={100}
-                    src={theme === "dark" ? darkThemeLogoData[index].src : logo.src}
-                    alt=""
-                    className="object-contain"
-                  />
+              {logoData.map((logo, index) => (
+                <div key={index} className="logo-slide">
+                  <Link href={logo.link} target="_blank">
+                    <div className="w-100 h-100">
+                      <Image
+                        width={100}
+                        height={100}
+                        src={
+                          theme === "dark"
+                            ? darkThemeLogoData[index].src
+                            : logo.src
+                        }
+                        alt=""
+                        className="object-contain"
+                      />
+                    </div>
+                  </Link>
                 </div>
-              </Link>
-            </div>
-          ))}
+              ))}
             </div>
             <div
               className={`logo-slider ${isAnimationPaused ? "paused" : ""}`}
@@ -154,20 +158,24 @@ ${isVisible4 ? "tilt-in-left-1" : ""}`}
               onMouseLeave={handleMouseLeave}
             >
               {logoData.map((logo, index) => (
-            <div key={index} className="logo-slide">
-              <Link href={logo.link} target="_blank">
-                <div className="w-100 h-100">
-                  <Image
-                    width={100}
-                    height={100}
-                    src={theme === "dark" ? darkThemeLogoData[index].src : logo.src}
-                    alt=""
-                    className="object-contain"
-                  />
+                <div key={index} className="logo-slide">
+                  <Link href={logo.link} target="_blank">
+                    <div className="w-100 h-100">
+                      <Image
+                        width={100}
+                        height={100}
+                        src={
+                          theme === "dark"
+                            ? darkThemeLogoData[index].src
+                            : logo.src
+                        }
+                        alt=""
+                        className="object-contain"
+                      />
+                    </div>
+                  </Link>
                 </div>
-              </Link>
-            </div>
-          ))}
+              ))}
             </div>
           </div>
         </div>
