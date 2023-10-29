@@ -56,7 +56,7 @@ const NavBar = () => {
 
         {isMenuOpen ? (
           <AiOutlineClose
-            className="text-4xl sm:p-4 ml-4 cursor-pointer md:block lg:hidden"
+            className="text-4x sm:p-4 -mr-20 cursor-pointer md:block lg:hidden z-10"
             onClick={closeMenu}
             size={20}
           />
@@ -149,12 +149,7 @@ const NavBar = () => {
 
         {/* Mobile menu */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-[-3vh] left-0 right-0 p-5 text-white bg-black h-[100vh] flex justify-center items-center text-center">
-            <AiOutlineClose
-              className="text-4xl cursor-pointer absolute right-[18.5vw] top-[6.5vh]"
-              onClick={closeMenu}
-              size={24}
-            />
+          <div className="md:hidden absolute top-[-3vh] left-0 right-0 p-5 text-white bg-gray-700 h-[100vh] flex justify-center items-center text-center">
             <ul className="flex flex-col justify-center items-center text-center">
               <li className="my-2">
                 <ScrollLink
