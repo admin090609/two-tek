@@ -88,7 +88,7 @@ const Paralax2 = () => {
 
   return (
     <>
-      <div className=" mt-72 sm:mt-64 sm:mx-64">
+      <div className=" mt-72 sm:mt-64 sm:mx-64 p-4 md:p-8 lg:p-0">
         <h1
           ref={h1Ref}
           className={`text-center text-2xl sm:text-5xl font-semibold ${
@@ -112,7 +112,7 @@ const Paralax2 = () => {
       </div>
       <div
         ref={div1Ref}
-        className={`flex sm:flex-row flex-col justify-around items-center mx-2 sm:mx-0 mb-12 sm:mr-20 sm:ml-80 p-4 rounded-md ${
+        className={`flex sm:flex-row flex-col justify-around items-center mx-4 md:mx-8 lg:mx-0 mb-12 sm:mr-20 sm:ml-80 p-4 py-8 rounded-md ${
           isVisible1 ? "tilt-in-fwd-tl" : ""
         }`}
         style={{
@@ -137,14 +137,14 @@ const Paralax2 = () => {
             alt=""
             width={1024}
             height={1024}
-            className="sm:py-5 w-[12.5vw]"
+            className="sm:py-5"
           />
         </div>
       </div>
 
       <div
         ref={div2Ref}
-        className={`flex sm:flex-row flex-col justify-around items-center mb-12 shadow-xl mx-2 sm:mx-44 sm:ml-20 sm:mr-80 p-4 rounded-md ${
+        className={`flex sm:flex-row flex-col justify-around items-center mb-12 shadow-xl mx-4 md:mx-8 lg:mx-0 sm:mx-44 sm:ml-20 sm:mr-80 p-4 py-8 rounded-md ${
           isVisible2 ? "tilt-in-fwd-tr" : ""
         }`}
         style={{
@@ -169,14 +169,14 @@ const Paralax2 = () => {
             alt=""
             width={1024}
             height={1024}
-            className="sm:py-5 w-[12.5vw]"
+            className="sm:py-5"
           />
         </div>
       </div>
 
       <div
         ref={div3Ref}
-        className={`flex sm:flex-row flex-col justify-around items-center mb-12 shadow-xl mx-2 sm:mx-44 sm:mr-20 sm:ml-80 p-4 rounded-md   ${
+        className={`flex sm:flex-row flex-col justify-around items-center mb-12 shadow-xl mx-4 md:mx-8 lg:mx-0 sm:mx-44 sm:mr-20 sm:ml-80 p-4 py-8 rounded-md   ${
           isVisible3 ? "tilt-in-fwd-tl" : ""
         }`}
         style={{
@@ -201,7 +201,7 @@ const Paralax2 = () => {
             alt=""
             width={1024}
             height={1024}
-            className="sm:py-5 w-[12.5vw]"
+            className="sm:py-5"
           />
         </div>
       </div>

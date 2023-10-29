@@ -233,12 +233,27 @@ body {
 
 .container {
   position: relative;
-  width: 1000px;
-  height: 620px;
+  width: 52vw;
+  height: 68vh;
   padding: 50px;
   background-color: var(--container_bg);
   box-shadow: 0 30px 50px var(--container_shadow);
   border-radius: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 90vw;
+    height: 68vh;
+    padding: 50px;
+    background-color: var(--container_bg);
+    box-shadow: 0 30px 50px var(--container_shadow);
+    border-radius: 20px;
+  }
 }
 
 #slide {
@@ -261,6 +276,23 @@ body {
   box-shadow: 0 30px 50px var(--item_shadow);
 }
 
+@media screen and (max-width: 768px) {
+  .item {
+    width: 160px;
+    height: 200px;
+    background-position: 16% 50%;
+    display: inline-block;
+    transition: 0.5s;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 130%;
+    transform: translate(0%, -50%);
+    border-radius: 20px;
+    box-shadow: 0 30px 50px var(--item_shadow);
+  }
+}
+
 .item:nth-child(1),
 .item:nth-child(2) {
   left: 0;
@@ -274,15 +306,15 @@ body {
 }
 
 .item:nth-child(3) {
-  left: 50%;
+  left: 0%;
 }
 
 .item:nth-child(4) {
-  left: calc(50% + 220px);
+  left: 180px;
 }
 
 .item:nth-child(5) {
-  left: calc(50% + 440px);
+  left: calc(50% + 240px);
 }
 
 .item:nth-child(n + 6) {
@@ -300,6 +332,18 @@ body {
   display: none;
   font-family: system-ui;
 }
+@media screen and (max-width: 768px) {
+  .item .content {
+    position: absolute;
+    top: 8%;
+    left: 10%;
+    text-align: left;
+    color: var(--item_content);
+    transform: translate(0, -50%);
+    display: none;
+    font-family: system-ui;
+  }
+}
 
 .item:nth-child(2) .content {
   display: flex;
@@ -314,6 +358,17 @@ body {
   animation: showcontent 1s ease-in-out 1 forwards;
   margin-right: 20px;
 }
+
+@media screen and (max-width: 768px) {
+  .item .name {
+    font-size: 30px;
+    font-weight: bold;
+    opacity: 0;
+    animation: showcontent 1s ease-in-out 1 forwards;
+    margin-right: 20px;
+  }
+}
+
 
 .item .des {
   margin: 20px 0;
@@ -1950,6 +2005,22 @@ body {
   transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
 }
 
+@media only screen and (max-width: 768px) {
+  .front {
+    display: block;
+    position: relative;
+    padding: 8px 10px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-size: 0.9rem;
+    color: white;
+    background: var(--front_bg);
+    will-change: transform;
+    transform: translateY(-2px);
+    transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+  }
+}
+
 .website:hover {
   filter: brightness(110%);
 }
@@ -1978,7 +2049,7 @@ body {
   outline: none;
 }
 
-.z-bug{
+.z-bug {
   position: relative;
   z-index: 10000;
 }
