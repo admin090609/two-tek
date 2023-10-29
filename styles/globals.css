@@ -1963,3 +1963,8 @@ body {
 .website:focus:not(:focus-visible) {
   outline: none;
 }
+
+.z-bug{
+  position: relative;
+  z-index: 10000;
+}
