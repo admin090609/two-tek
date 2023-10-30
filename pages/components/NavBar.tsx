@@ -8,6 +8,7 @@ import { Link as ScrollLink } from "react-scroll";
 import TranslateRoToRu from "./TranslateRoToRu";
 import useLanguage from "../../public/LanguageContext";
 import { getTranslatedContent } from "./TranslateRoToRu";
+import Image from "next/image";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
@@ -36,34 +37,34 @@ const NavBar = () => {
 
   return (
     <div
-      className={`left-0 top-0 w-full mt-5 text-black z-bug px-4 md:px-8 ${
+      className={`left-0 top-0 w-full mt-0 md:mt-5 text-black z-bug px-0 md:px-8 ${
         nav ? "text-focus-in" : "opacity-0 translate-y-[-50px]"
       } transition-all duration-1000 ease-in-out`}
     >
       <div
-        className="max-w-[1305px] sm:mt-4 sm:w-full flex justify-evenly items-center sm:p-0 p-5 h-[70px] rounded-[70px] m-auto"
+        className="md:max-w-[1305px] max-w-[768px] sm:mt-4 sm:w-full flex justify-evenly items-center md:p-5 p-0 h-[70px] md:rounded-[70px] rounded-0 m-auto"
         style={{
           backgroundImage:
             "linear-gradient(to bottom, var(--nav_bg1), var(--nav_bg2), var(--nav_bg3))",
         }}
       >
-        <div className="text-4xl sm:p-4 font-bold text-focus-in -ml-20 md:-ml-40 lg:ml-0">
+        <div className="text-4xl sm:p-4 font-bold text-focus-in -ml-14 md:-ml-40 lg:ml-0">
           2Tek
         </div>
 
-        {isMenuOpen ? (
-          <AiOutlineClose
-            className="text-4xl -mr-20 md:-mr-40 lg:mr-0 cursor-pointer flex lg:hidden z-10"
-            onClick={closeMenu}
-            size={20}
+        <div className="block md:hidden">
+          <input
+            id="checkbox2"
+            type="checkbox"
+            checked={isMenuOpen}
+            onChange={toggleMenu}
           />
-        ) : (
-          <AiOutlineMenu
-            className="text-4xl -mr-20 md:-mr-40 lg:mr-0 cursor-pointer flex lg:hidden"
-            onClick={toggleMenu}
-            size={20}
-          />
-        )}
+          <label className="toggle-burger toggle2" htmlFor="checkbox2">
+            <div id="bar4" className="bars"></div>
+            <div id="bar5" className="bars"></div>
+            <div id="bar6" className="bars"></div>
+          </label>
+        </div>
 
         {/* Navigation links for PC */}
         <ul
@@ -146,9 +147,16 @@ const NavBar = () => {
 
         {/* Mobile menu */}
         {isMenuOpen && (
-          <div className="lg:hidden absolute top-[-3vh] left-0 right-0 text-white bg-gray-700 h-[102vh] flex justify-center items-center text-center tracking-in-expand-fwd-bottom">
+          <div className="lg:hidden absolute top-[-3vh] w-[80vw] right-0 text-white bg-gray-700 h-[110vh] flex justify-center items-center text-center lg-hidden-menu">
             <ul className="flex flex-col justify-center items-center text-center gap-4 md:text-2xl ">
-              <li className="my-2 tracking-in-expand-fwd-bottom">
+              <li className="my-2 flex items-center">
+                <Image
+                  src="/images/performance.png"
+                  alt="Icon"
+                  width={94}
+                  height={94}
+                  className="w-8 mr-2"
+                />
                 <ScrollLink
                   to="horizontal"
                   spy={true}
@@ -160,7 +168,14 @@ const NavBar = () => {
                   {content.Nav1}
                 </ScrollLink>
               </li>
-              <li className="my-2 tracking-in-expand-fwd-bottom">
+              <li className="my-2 flex items-center">
+                <Image
+                  src="/images/team.png"
+                  alt="Icon"
+                  width={94}
+                  height={94}
+                  className="w-8 mr-2"
+                />
                 <ScrollLink
                   to="echipa"
                   spy={true}
@@ -172,7 +187,14 @@ const NavBar = () => {
                   {content.Nav2}
                 </ScrollLink>
               </li>
-              <li className="my-2 tracking-in-expand-fwd-bottom">
+              <li className="my-2 flex items-center">
+              <Image
+                  src="/images/projects.png"
+                  alt="Icon"
+                  width={94}
+                  height={94}
+                  className="w-8 mr-2"
+                />
                 <ScrollLink
                   to="proiecte"
                   spy={true}
@@ -184,7 +206,14 @@ const NavBar = () => {
                   {content.Nav3}
                 </ScrollLink>
               </li>
-              <li className="my-2 tracking-in-expand-fwd-bottom">
+              <li className="my-2 flex items-center">
+              <Image
+                  src="/images/feedback.png"
+                  alt="Icon"
+                  width={94}
+                  height={94}
+                  className="w-8 mr-2"
+                />
                 <ScrollLink
                   to="feedback"
                   spy={true}
@@ -196,21 +225,18 @@ const NavBar = () => {
                   {content.Nav4}
                 </ScrollLink>
               </li>
-              <li className="my-2 tracking-in-expand-fwd-bottom">
+              <li className="my-2">
                 <TranslateRoToRu />
-              </li>
-              <li className="my-2 tracking-in-expand-fwd-bottom">
-                <Color />
               </li>
             </ul>
           </div>
         )}
 
-        <div className="lg:flex items-center hidden">
-          <div className="mr-5">
+        <div className="flex items-center ">
+          <div className="mr-5 hidden md:block">
             <TranslateRoToRu />
           </div>
-          <div>
+          <div className="-mr-[6vw] md:mr-0">
             <Color />
           </div>
         </div>
