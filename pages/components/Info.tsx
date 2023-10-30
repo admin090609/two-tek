@@ -7,7 +7,7 @@ import { getTranslatedContent } from "./TranslateRoToRu";
 function Info() {
   const [showComponent, setShowComponent] = useState(false);
   const [theme, setTheme] = useState("");
-
+  const [isMobile, setIsMobile] = useState(false);
   const { language, setLanguage } = useLanguage();
   const content = getTranslatedContent(language);
 
@@ -16,6 +16,20 @@ function Info() {
     const timeout = setTimeout(() => {
       setShowComponent(true);
     }, 500);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+      setIsMobile(screenWidth < 768);
+    };
+
+    handleResize(); // Initial size check
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   useEffect(() => {
@@ -55,11 +69,11 @@ function Info() {
               {content.LandingTitleCircle}
             </span>
             <br />
-            {content.LandingTitle3}
+            {isMobile ? content.LandingTitle3Mobile : content.LandingTitle3}
           </p>
           <Link href="tel:+37368548789" className="text-shadow-pop-left">
             <button
-              className={`sm:px-8 ml-[-8px] px-3 py-1 sm:py-2 text-[14px] sm:text-lg sm:tracking-wider font-semibold mb-5 text-black bg-white rounded-[50px] hover:bg-opacity-70 hover:scale-[1.08] transition duration-500 ease-in-out ${
+              className={`sm:px-8 ml-[-8px] px-3 py-2 text-[14px] sm:text-lg sm:tracking-wider font-semibold mb-5 text-black bg-white rounded-[50px] hover:bg-opacity-70 hover:scale-[1.08] transition duration-500 ease-in-out ${
                 showComponent ? "text-shadow-pop-left" : ""
               }ease-linear duration-500`}
             >
