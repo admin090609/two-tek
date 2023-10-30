@@ -70,10 +70,10 @@ const Footer = () => {
   }, [hasAnimated]);
   return (
     <>
-      <div className="flex flex-col md:flex-row items-center md:justify-around justify-center p-10 text-center mb-10">
+      <div className="flex flex-col-reverse  md:flex-row items-center md:justify-around justify-center p-10 text-center mb-10">
         <div
           ref={h1Ref}
-          className={`flex md:ml-20  mb-8 md:mb-0 ${
+          className={`flex md:ml-20 mt-5 md:mb-0 ${
             isVisible2 ? "tracking-in-expand-fwd-bottom1" : ""
           }`}
         >
@@ -124,7 +124,7 @@ const Footer = () => {
 
         <div
           ref={h1Ref}
-          className={`md:ml-20 text-sm mb-6 md:mb-0 ${
+          className={`md:ml-20 text-sm mt-5 md:mb-0 ${
             isVisible ? "tracking-in-expand-fwd-bottom1" : ""
           }`}
         >
@@ -133,7 +133,7 @@ const Footer = () => {
         </div>
         <div
           ref={myRef}
-          className={`md:ml-20 text-sm  ${
+          className={`md:ml-20  text-sm  ${
             isVisible ? "tracking-in-expand-fwd-bottom1" : ""
           }`}
         >

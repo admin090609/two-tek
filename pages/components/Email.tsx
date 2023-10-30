@@ -130,29 +130,17 @@ const Email = () => {
     <>
       <div>
         <div
-          className={`
-${
-  isVisible2
-    ? "fade-in-bottom flex lg:flex-row flex-col lg:justify-between justify-center items-center mx-6 lg:mx-72 rounded-lg px-4 lg:px-16 py-5 mb-16 gap-4 lg:gap-0"
-    : ""
-}`}
-          style={{
-            backgroundImage:
-              "linear-gradient(to right, var(--eamil_bg1), var(--eamil_bg2), var(--eamil_bg3))",
-          }}
+          className={` flex justify-center items-center mx-6  rounded-lg lg:mx-[34vw] bg-[#191919] mb-16 gap-4 lg:gap-0
+${isVisible2 ? "fade-in-bottom" : ""}`}
           ref={h1Ref}
         >
-          <div className="flex items-center lg:w-[50%] mt-10 lg:ml-20">
+          <div className="flex mt-10">
             <iframe
               className="border-transparent w-[200%] h-[260px]"
               src="https://noteforms.com/forms/mail-oakabe"
             ></iframe>
-          </div>{" "}
-          <div className="justify-center flex-col items-center flex">
-            
-            <Image src="/images/send.png" alt="send" width={1016} height={904} className="w-[30%] hidden lg:flex" />
           </div>
-        </div>
+        </div>{" "}
       </div>
     </>
   );

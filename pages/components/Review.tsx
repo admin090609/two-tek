@@ -97,19 +97,19 @@ const Review = () => {
 
   return (
     <>
-      <div className="flex justify-around items-center bg-black text-black p-20">
+      <div className="flex justify-around items-center bg-black border-white border-y-[.1px] text-black p-7 sm:p-20">
         <div>
           <div className=" bg-white p-10 rounded-bl-[20%] rounded-tr-[20%] rounded-md shadow-md shadow-white mb-10">
             <h1
               ref={myRef}
-              className={`text-start font-semibold text-4xl mb-5
+              className={`text-start font-semibold text-xl sm:text-4xl mb-5
 ${isVisible ? "fade-in-top " : ""}`}
             >
               {reviewData.title}
             </h1>
             <p
               ref={h1Ref}
-              className={`text-start text-xl max-w-[700px]
+              className={`text-start sm:text-xl sm:max-w-[700px]
 ${isVisible2 ? "fade-in-left" : ""}`}
             >
               {reviewData.description}
@@ -128,14 +128,14 @@ ${isVisible3 ? "scale-in-center" : ""}`}
                   mainImage: "/images/misha.png",
                 })
               }
-              className="rounded-[50px] shadow-md shadow-white hover:scale-[0.9] transition duration-500 ease-in-out cursor-pointer"
+              className="rounded-[50px]  shadow-md shadow-white hover:scale-[0.9] transition duration-500 ease-in-out cursor-pointer"
             >
               <Image
                 src="/images/misha.png"
                 alt=""
                 width={307}
                 height={298}
-                className="rounded-[50%] w-[9vw]"
+                className="rounded-[50%] w-[24vw] sm:w-[9vw]"
               />
             </div>
             <div
@@ -146,14 +146,14 @@ ${isVisible3 ? "scale-in-center" : ""}`}
                   mainImage: "/images/viorel.png",
                 })
               }
-              className="rounded-[50px] shadow-md shadow-white hover:scale-[0.9] transition duration-500 ease-in-out cursor-pointer"
+              className="rounded-[50px]  shadow-md shadow-white hover:scale-[0.9] transition duration-500 ease-in-out cursor-pointer"
             >
               <Image
                 src="/images/viorel.png"
                 alt=""
                 width={307}
                 height={298}
-                className="rounded-[50%] w-[9vw]"
+                className="rounded-[50%] w-[24vw] sm:w-[9vw]"
               />
             </div>
             <div
@@ -164,21 +164,21 @@ ${isVisible3 ? "scale-in-center" : ""}`}
                   mainImage: "/images/vasea.png",
                 })
               }
-              className="rounded-[50px] shadow-md shadow-white hover:scale-[0.9] transition duration-500 ease-in-out cursor-pointer"
+              className="rounded-[50px]  shadow-md shadow-white hover:scale-[0.9] transition duration-500 ease-in-out cursor-pointer"
             >
               <Image
                 src="/images/vasea.png"
                 alt=""
                 width={307}
                 height={298}
-                className="rounded-[50%] w-[9vw]"
+                className="rounded-[50%] w-[24vw] sm:w-[9vw]"
               />
             </div>
           </div>
         </div>
         <div
           ref={h3Ref}
-          className={`${isVisible4 ? "tilt-in-fwd-br" : ""}`}
+          className={` hidden sm:block ${isVisible4 ? "tilt-in-fwd-br" : ""}`}
         >
           <Image src={reviewData.mainImage} alt="" width={307} height={298} />
         </div>

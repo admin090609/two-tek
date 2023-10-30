@@ -59,11 +59,11 @@ function Slider() {
 
   return (
     <>
-      <div className="mb-24">
-        <div className="mt-16 mb-24">
+      <div className="mb-52 sm:mb-0">
+        <div className="sm:mt-16 mt-8 mb-5 sm:mb-10">
           <h1
             ref={h1Ref}
-            className={`text-5xl leading-tight text-start font-bold ${
+            className={`sm:text-5xl text-3xl leading-tight sm:text-start text-center font-bold ${
               isVisible1 ? "fade-in-right" : ""
             }`}
             style={{ color: "var(--carousel_p)" }}
@@ -81,7 +81,7 @@ function Slider() {
               style={{ backgroundImage: "url(/images/ad-display.png)", backgroundColor:"var(--cont_bg)" }}
             >
               <div className="content">
-                <div className="name mb-5">{content.WebsiteAD}</div>
+                <div className="name1 mb-3">{content.WebsiteAD}</div>
                 <a
                   className="website mb-6"
                   href="https://adfitness.vercel.app/"
@@ -98,7 +98,7 @@ function Slider() {
               style={{ backgroundImage: "url(/images/apisudex-display.png)", backgroundColor:"var(--cont_bg)" }}
             >
               <div className="content">
-                <div className="name mb-5">{content.WebsiteApisudex}</div>
+                <div className="name1 mb-3">{content.WebsiteApisudex}</div>
                 <a
                   className="website mb-6"
                   href="https://apisudex.store/"
@@ -118,7 +118,7 @@ function Slider() {
               }}
             >
               <div className="content">
-                <div className="name mb-5">{content.WebsiteBuffy}</div>
+                <div className="name1 mb-3">{content.WebsiteBuffy}</div>
                 <a
                   className="website mb-6"
                   href="https://admin090609.github.io/"
@@ -138,7 +138,7 @@ function Slider() {
               }}
             >
               <div className="content">
-                <div className="name mb-5">{content.WebsiteSA}</div>
+                <div className="name1 mb-3">{content.WebsiteSA}</div>
 
                 <a
                   className="website mb-6"
