@@ -50,7 +50,7 @@ const NavBar = () => {
       >
         <div className="text-4xl sm:p-4 font-bold text-focus-in -ml-14 md:-ml-40 lg:ml-0">
         <Image
-                  src="/images/logo-text.png"
+                  src="/images/Logo-text.png"
                   alt="Icon"
                   width={2000}
                   height={2000}
