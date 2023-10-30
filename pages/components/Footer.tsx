@@ -106,7 +106,7 @@ const Footer = () => {
             <Image
               src={
                 theme === "dark" && hoverStates[1]
-                  ? "/images/tik-tok-dark.png"
+                  ? "/images/tik-tok_hover.png"
                   : theme === "dark"
                   ? "/images/tik-tok-dark_hover.png"
                   : hoverStates[1]

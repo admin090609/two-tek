@@ -6,6 +6,7 @@ import { getTranslatedContent } from "./TranslateRoToRu";
 
 function Info() {
   const [showComponent, setShowComponent] = useState(false);
+  const [theme, setTheme] = useState("");
 
   const { language, setLanguage } = useLanguage();
   const content = getTranslatedContent(language);
@@ -17,6 +18,16 @@ function Info() {
     }, 500);
   }, []);
 
+  useEffect(() => {
+    // You can perform the DOM manipulation after the component is mounted.
+    const bodyTheme = document
+      .querySelector("body")
+      ?.getAttribute("data-theme");
+    if (bodyTheme) {
+      setTheme(bodyTheme);
+    }
+  }, []);
+
   return (
     <div
       className={`lg:mt-22 mt-10 lg:mt-20 text-center relative px-4 md:px-8 lg:px-0 ${
@@ -24,11 +35,9 @@ function Info() {
       }`}
     >
       <div className="lg:w-[70vw] mx-2 sm:mx-auto relative">
-        <div
-          className=" overflow-hidden h-[500px]  sm:w-[100%] sm:h-[500px]"
-        >
+        <div className=" overflow-hidden h-[500px]  sm:w-[100%] sm:h-[500px]">
           <Image
-            src="/images/slider.jpg"
+            src={theme === "dark" ? "/images/image.jpg" : "/images/slider.jpg"}
             alt=""
             layout="fill" // This allows the image to fill its container
             objectFit="cover" // This ensures the image covers the entire container

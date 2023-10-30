@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+
 
 const Color = () => {
+
+  const router = useRouter();
+
   const setDarkMode = () => {
     document.querySelector("body")?.setAttribute("data-theme", "dark");
     localStorage.setItem("selectedTheme", "dark");
@@ -20,8 +25,10 @@ const Color = () => {
       document.querySelector("body")?.getAttribute("data-theme") === "dark";
     if (isDark) {
       setLightMode();
+      router.reload();
     } else {
       setDarkMode();
+      router.reload();
     }
   };
 
