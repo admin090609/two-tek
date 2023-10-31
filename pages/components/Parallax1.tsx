@@ -234,6 +234,7 @@ const Parallax1 = () => {
           cursor: pointer;
           transition: all 0.2s ease-in;
           margin-bottom: 20px;
+          padding: 0 20px;
         }
 
         .tablet-circle-box {
