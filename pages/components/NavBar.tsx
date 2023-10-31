@@ -42,17 +42,23 @@ const NavBar = () => {
       } transition-all duration-1000 ease-in-out`}
     >
       <div
-        className="md:max-w-[1305px] max-w-[768px] sm:mt-4 sm:w-full flex justify-evenly items-center md:p-5 p-0 h-[70px] md:rounded-[70px] rounded-0 m-auto"
+        className="lg:max-w-[1305px] max-w-[768px] sm:mt-4 sm:w-full flex justify-evenly items-center md:p-5 p-0 h-[70px] md:rounded-[70px] rounded-0 m-auto"
         style={{
           backgroundImage:
             "linear-gradient(to bottom, var(--nav_bg1), var(--nav_bg2), var(--nav_bg3))",
         }}
       >
         <div className="text-4xl sm:p-4 font-bold text-focus-in -ml-14 md:-ml-40 lg:ml-0">
-          2Tek
+        <Image
+                  src="/images/Logo-text.png"
+                  alt="Icon"
+                  width={2000}
+                  height={2000}
+                  className="w-[130px]"
+                />
         </div>
 
-        <div className="block md:hidden">
+        <div className="block lg:hidden">
           <input
             id="checkbox2"
             type="checkbox"
@@ -147,7 +153,7 @@ const NavBar = () => {
 
         {/* Mobile menu */}
         {isMenuOpen && (
-          <div className="lg:hidden absolute top-[-3vh] w-[80vw] right-0 text-white bg-gray-700 h-[110vh] flex justify-center items-center text-center lg-hidden-menu">
+          <div className="lg:hidden absolute top-[-3vh] w-[80vw] right-0 text-white bg-gray-700 h-[100vh] flex justify-center items-center text-center lg-hidden-menu">
             <ul className="flex flex-col justify-center items-center text-center gap-4 md:text-2xl ">
               <li className="my-2 flex items-center">
                 <Image
@@ -233,10 +239,10 @@ const NavBar = () => {
         )}
 
         <div className="flex items-center ">
-          <div className="mr-5 hidden md:block">
+          <div className="mr-5 hidden lg:block">
             <TranslateRoToRu />
           </div>
-          <div className="-mr-[6vw] md:mr-0">
+          <div className="-mr-[4vw] md:mr-0">
             <Color />
           </div>
         </div>
