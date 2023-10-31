@@ -247,7 +247,7 @@ const Parallax1 = () => {
         @media (max-width: 767px) and {
           .circle-box {
             margin-right: 0;
-            
+            margin-bottom:0;
           }
         }
 

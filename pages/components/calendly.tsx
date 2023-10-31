@@ -12,6 +12,8 @@ const CalendlyWidget = () => {
 
   const { language, setLanguage } = useLanguage();
   const content = getTranslatedContent(language);
+  const [isMobile, setIsMobile] = useState(false);
+
 
   useEffect(() => {
     // Trigger the fade-in animation when the component mounts
@@ -49,7 +51,7 @@ const CalendlyWidget = () => {
             zIndex: 10000,
           }}
         >
-        {content.calendly}
+        {isMobile ? content.calendlyMobile : content.calendly}
       </button>
       <div style={calendlyStyles}>
         <iframe
