@@ -110,99 +110,82 @@ const Paralax2 = () => {
           {content.HowText}
         </p>
       </div>
-      <div
-        ref={div1Ref}
-        className={`flex sm:flex-row flex-col justify-around items-center mx-4 md:mx-8 lg:mx-0 mb-12 sm:mr-20 sm:ml-80 p-4 py-8 rounded-md ${
-          isVisible1 ? "tilt-in-fwd-tl" : ""
-        }`}
-        style={{
-          background:
-            "linear-gradient(120deg, var(--carousel_gradient1), var(--carousel_gradient2))", // Keep the original colors or change them as needed
-        }}
-      >
-        <div className="sm:max-w-2xl hover:-translate-y-1 transition duration-500 ease-in-out">
-          <h1 className="sm:text-3xl text-2xl text-center sm:text-start font-bold mb-5 sm:leading-tight">
+      <div className="lg:flex lg:flex-wrap block justify-center">
+        <div
+          ref={div1Ref}
+          className={`lg:w-[34%] w-full h-[full] mx-6 sm:mx-0 rounded-xl sm:p-4 ${
+            isVisible1 ? "tilt-in-fwd-tl" : ""
+          }`}
+          style={{
+            background:
+              "linear-gradient(120deg, var(--carousel_gradient1), var(--carousel_gradient2))", // Keep the original colors or change them as needed
+          }}
+        >
+          <div className="sm:text-3xl text-2xl text-start font-bold pt-6 pl-6 sm:leading-tight">
             {content.HowBoxTitle1}
-          </h1>
-          <p
-            className="sm:text-xl text-center sm:text-start sm:mb-0 mb-2 sm:leading-normal"
-            style={{ color: "var(--paralax_p)" }}
-          >
-            {content.HowBoxText}
-          </p>
+          </div>
+          <div className="flex items-center">
+            <div
+              className="sm:text-xl text-justify sm:mb-0 mb-2 p-6 sm:leading-normal"
+              style={{ color: "var(--paralax_p)" }}
+            >
+              {content.HowBoxText}
+            </div>
+            <div className="lg:w-[100vw] w-[23%] rounded-[50%] circle-shape sm:w-[7.5%] float-rigth text-center">
+              <Image src="/images/search.png" width={1024} height={1024} alt="" />
+            </div>
+          </div>
         </div>
-        <div className="sm:w-[20%] w-[60%]">
-          <Image
-            src="/images/search.png"
-            alt=""
-            width={1024}
-            height={1024}
-            className="sm:py-5"
-          />
-        </div>
-      </div>
-
-      <div
-        ref={div2Ref}
-        className={`flex sm:flex-row flex-col justify-around items-center mb-12 shadow-xl mx-4 md:mx-8 lg:mx-0 sm:mx-44 sm:ml-20 sm:mr-80 p-4 py-8 rounded-md ${
-          isVisible2 ? "tilt-in-fwd-tr" : ""
-        }`}
-        style={{
-          background:
-            "linear-gradient(120deg, var(--carousel_gradient1), var(--carousel_gradient2))", // Keep the original colors or change them as needed
-        }}
-      >
-        <div className="sm:max-w-2xl hover:-translate-y-1 transition duration-500 ease-in-out">
-          <h1 className="sm:text-3xl font-bold  text-2xl text-center sm:text-start  mb-5 leading-normal">
+        <div
+          ref={div2Ref}
+          className={`lg:w-[34%] h-[full] sm:mx-0 sm:ml-20 rounded-xl sm:p-4 ${
+            isVisible2 ? "tilt-in-fwd-tr" : ""
+          }`}
+          style={{
+            background:
+              "linear-gradient(120deg, var(--carousel_gradient1), var(--carousel_gradient2))", // Keep the original colors or change them as needed
+          }}
+        >
+          <div className="sm:text-3xl text-2xl text-start  font-bold pt-6 pl-6  sm:leading-tight">
             {content.HowBoxTitlev2}
-          </h1>
-          <p
-            className="sm:text-xl text-center sm:text-start sm:mb-0 mb-2 sm:leading-normal"
-            style={{ color: "var(--paralax_p)" }}
-          >
-            {content.HowBoxTextv2}
-          </p>
+          </div>
+          <div className="flex">
+            <div
+              className="sm:text-xl text-justify sm:mb-0 mb-2 p-6 sm:leading-normal"
+              style={{ color: "var(--paralax_p)" }}
+            >
+              {content.HowBoxTextv2}
+            </div>
+            <div className="lg:w-[100%] w-[25%] sm:w-[7.5%] right-0 mr-4 sm:mr-7">
+              <Image src="/images/web.png" width={100} height={10} alt="" />
+            </div>
+          </div>
         </div>
-        <div className="sm:w-[20%] w-[60%]">
-          <Image
-            src="/images/web.png"
-            alt=""
-            width={1024}
-            height={1024}
-            className="sm:py-5"
-          />
-        </div>
-      </div>
-
-      <div
-        ref={div3Ref}
-        className={`flex sm:flex-row flex-col justify-around items-center mb-12 shadow-xl mx-4 md:mx-8 lg:mx-0 sm:mx-44 sm:mr-20 sm:ml-80 p-4 py-8 rounded-md   ${
-          isVisible3 ? "tilt-in-fwd-tl" : ""
-        }`}
-        style={{
-          background:
-            "linear-gradient(120deg, var(--carousel_gradient1), var(--carousel_gradient2))", // Keep the original colors or change them as needed
-        }}
-      >
-        <div className="sm:max-w-2xl hover:-translate-y-1 transition duration-500 ease-in-out ">
-          <h1 className="sm:text-3xl font-bold mb-5  text-2xl text-center sm:text-start  leading-normal">
+        <div
+          ref={div3Ref}
+          className={`lg:w-[34%] h-[full] m-2 mt-10 rounded-xl p-4  ${
+            isVisible3 ? "tilt-in-fwd-tl" : ""
+          }`}
+          style={{
+            background:
+              "linear-gradient(120deg, var(--carousel_gradient1), var(--carousel_gradient2))", // Keep the original colors or change them as needed
+          }}
+        >
+          <div className="sm:text-3xl text-2xl text-center sm:text-start font-bold pt-6 pl-6 max-w-[390px] sm:leading-tight">
+            {" "}
             {content.HowBoxTitlev3}
-          </h1>
-          <p
-            className="sm:text-xl text-center sm:text-start sm:mb-0 mb-2 sm:leading-normal"
-            style={{ color: "var(--paralax_p)" }}
-          >
-            {content.HowBoxTextv3}
-          </p>
-        </div>
-        <div className="sm:w-[20%] w-[60%]">
-          <Image
-            src="/images/mobile.png"
-            alt=""
-            width={1024}
-            height={1024}
-            className="sm:py-5"
-          />
+          </div>
+          <div className="flex">
+            <div
+              className="sm:text-xl text-jstify sm:text-start sm:mb-0 mb-2 p-6 sm:leading-normal"
+              style={{ color: "var(--paralax_p)" }}
+            >
+              {content.HowBoxTextv3}
+            </div>
+            <div className="lg:w-[100%] w-[15%] sm:w-[7.5%] right-0 mr-4">
+              <Image src="/images/mobile.png" width={100} height={10} alt="" />
+            </div>
+          </div>
         </div>
       </div>
     </>

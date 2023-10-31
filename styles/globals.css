@@ -125,6 +125,10 @@
   padding: 0;
 }
 
+.circle-shape{
+  shape-outside: circle();
+}
+
 body {
   color: var(--body_color);
   background-color: var(--body_background);
