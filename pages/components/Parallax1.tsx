@@ -4,7 +4,9 @@ import useLanguage from "../../public/LanguageContext";
 import { getTranslatedContent } from "./TranslateRoToRu";
 
 const Parallax1 = () => {
-  const [hoveredCircle, setHoveredCircle] = useState<number | null>(null);
+  const [hoveredCircleIndex, setHoveredCircleIndex] = useState<number | null>(
+    null
+  );
   const myRef = useRef<HTMLDivElement | null>(null);
   const h1Ref = useRef<HTMLDivElement | null>(null);
   const h2Ref = useRef<HTMLHRElement | null>(null);
@@ -103,11 +105,14 @@ const Parallax1 = () => {
   ];
 
   const handleCircleHover = (index: number) => {
-    setHoveredCircle(index);
+    if (!isMobile) {
+      setHoveredCircleIndex(index);
+    }
   };
+  
 
   const handleCircleLeave = () => {
-    setHoveredCircle(null);
+    setHoveredCircleIndex(null);
   };
 
   // Determine screen size using client-side logic
@@ -133,10 +138,10 @@ const Parallax1 = () => {
 
   return (
     <>
-      <div className=" mb-10 sm:mb-20 mt-24 lg:mt-44 sm:flex justify-evenly mx-2 sm:mx-10 lg:mx-32 items-center">
+      <div className=" mb-20 sm:mb-20 mt-24 lg:mt-44 sm:flex justify-evenly mx-2 sm:mx-10 lg:mx-32 items-center">
         <h1
           ref={h1Ref}
-          className={`sm:text-start text-center text-2xl mb-5 sm:mb-7 sm:text-5xl sm:max-w-[350px] sm:leading-[60px]  font-semibold
+          className={`sm:text-start text-center text-2xl mb-5 sm:mb-7 sm:text-5xl sm:max-w-[350px] sm:leading-[60px] font-semibold
             ${
               isVisible2 && !isMobileOrTablet
                 ? "animate__animated animate__fadeInLeft animate__delay-2s "
@@ -171,32 +176,71 @@ const Parallax1 = () => {
         className={`flex flex-col justify-between text-center items-center font-semibold text-white
           ${isVisible5 ? "fade-in-bck" : ""}`}
       >
-        {isTablet ? (
-          <div className="sm:flex justify-between mb-10">
-            {circleData.map((circle, index) => (
-              <div
-                key={index}
-                className={`circle-box circle-box-${
-                  index + 1
-                } shadow-md shadow-white border-[1px]
-                  ${hoveredCircle === index ? "hovered" : ""}
-                  tablet-circle-box`}
-                onMouseEnter={() => handleCircleHover(index)}
-                onMouseLeave={handleCircleLeave}
-                style={{
-                  backgroundImage:
-                    "linear-gradient(to bottom, var(--nav_bg1), var(--nav_bg2), var(--nav_bg3)",
-                }}
-              >
-                <div className={`circle-title`}>{circle.title}</div>
-                {hoveredCircle === index && (
-                  <div className={`circle-description`}>
-                    {circle.description}
+        {isMobile ? (
+          <>
+            <div className="flex justify-between">
+              {circleData.slice(0, 3).map((circle, index) => (
+                <div
+                  key={index}
+                  className={`circle-box circle-box-${
+                    index + 1
+                  } shadow-md shadow-white border-[1px]
+                    ${hoveredCircleIndex === index ? "hovered" : ""}
+                    mobile-circle-box`}
+                  onMouseEnter={() => handleCircleHover(index)}
+                  onMouseLeave={handleCircleLeave}
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(to bottom, var(--nav_bg1), var(--nav_bg2), var(--nav_bg3)",
+                  }}
+                >
+                  <div
+                    className={`circle-title ${
+                      hoveredCircleIndex === index ? "hidden" : ""
+                    }`}
+                  >
+                    {circle.title}
                   </div>
-                )}
-              </div>
-            ))}
-          </div>
+                  {hoveredCircleIndex === index && (
+                    <div className={`circle-description`}>
+                      {circle.description}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+            <div className="flex justify-between mb-10">
+              {circleData.slice(3, 5).map((circle, index) => (
+                <div
+                  key={index + 3}
+                  className={`circle-box circle-box-${
+                    index + 4
+                  } shadow-md shadow-white border-[1px]
+                    ${hoveredCircleIndex === index + 3 ? "hovered" : ""}
+                    mobile-circle-box`}
+                  onMouseEnter={() => handleCircleHover(index + 3)}
+                  onMouseLeave={handleCircleLeave}
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(to bottom, var(--nav_bg1), var(--nav_bg2), var(--nav_bg3)",
+                  }}
+                >
+                  <div
+                    className={`circle-title ${
+                      hoveredCircleIndex === index + 3 ? "hidden" : ""
+                    }`}
+                  >
+                    {circle.title}
+                  </div>
+                  {hoveredCircleIndex === index + 3 && (
+                    <div className={`circle-description`}>
+                      {circle.description}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </>
         ) : (
           <div className="sm:flex justify-between mb-10">
             {circleData.map((circle, index) => (
@@ -205,7 +249,7 @@ const Parallax1 = () => {
                 className={`circle-box circle-box-${
                   index + 1
                 } shadow-md shadow-white border-[1px]
-                  ${hoveredCircle === index ? "hovered" : ""}
+                  ${hoveredCircleIndex === index ? "hovered" : ""}
                   ${isMobile ? "mobile" : ""}`}
                 onMouseEnter={() => handleCircleHover(index)}
                 onMouseLeave={handleCircleLeave}
@@ -214,8 +258,14 @@ const Parallax1 = () => {
                     "linear-gradient(to bottom, var(--nav_bg1), var(--nav_bg2), var(--nav_bg3)",
                 }}
               >
-                <div className={`circle-title`}>{circle.title}</div>
-                {hoveredCircle === index && (
+                <div
+                  className={`circle-title ${
+                    hoveredCircleIndex === index ? "hidden" : ""
+                  }`}
+                >
+                  {circle.title}
+                </div>
+                {hoveredCircleIndex === index && (
                   <div className={`circle-description`}>
                     {circle.description}
                   </div>
@@ -227,14 +277,14 @@ const Parallax1 = () => {
       </div>
       <style jsx>{`
         .circle-box {
-          width: ${isMobile ? "160px" : "210px"};
-          height: ${isMobile ? "160px" : "210px"};
+          width: ${isMobile ? "120px" : "210px"};
+          height: ${isMobile ? "120px" : "210px"};
           border-radius: 50%;
           margin-right: 4rem;
           animation: moveAround 5s linear infinite alternate;
           position: relative;
           display: flex;
-          flex-direction: column;
+          flex-direction: row;
           justify-content: center;
           align-items: center;
           cursor: pointer;
@@ -243,17 +293,23 @@ const Parallax1 = () => {
           padding: 0 20px;
         }
 
+        @media (max-width: 728px) {
+          .circle-box {
+            margin-right: 3vw;
+            margin-left: 2vw;
+            margin-bottom: 0;
+          }
+        }
+
+        .circle-box.mobile .circle-description {
+          display: none;
+        }
+        
+
         .tablet-circle-box {
-          // CSS specific for tablet circles
           width: 120px;
           height: 120px;
           margin-right: 2rem;
-        }
-
-        @media (max-width: 767px) and {
-          .circle-box {
-            margin-right: 0;
-          }
         }
 
         .circle-box.hovered {
@@ -266,25 +322,28 @@ const Parallax1 = () => {
         .circle-description {
           display: none;
           background-color: transparent;
-          padding: 20px;
+          padding: 10px; /* Ajustați padding-ul pentru a face textul să încapă */
           text-align: center;
           color: white;
+          font-size: 14px; /* Reduceti dimensiunea fontului la valoarea dorita */
+          font-weight: 400;
         }
+        
 
-        .circle-description-visible {
+        .circle-description.visible {
           display: block;
         }
 
-        .circle-box.mobile .circle-description {
-          display: none; // Ascunde descrierea pe telefon
+        .circle-box-1:hover .circle-description,
+        .circle-box-2:hover .circle-description,
+        .circle-box-3:hover .circle-description,
+        .circle-box-4:hover .circle-description,
+        .circle-box-5:hover .circle-description {
+          display: block;
         }
 
         .circle-box-1 {
           animation-name: moveAround1;
-        }
-
-        .circle-box-1:hover {
-          transform: scale(1.6);
         }
 
         .circle-box-2 {
@@ -315,10 +374,10 @@ const Parallax1 = () => {
         @media (max-width: 720px) {
           @keyframes moveAround1 {
             0% {
-              transform: translate(50%, 20px); /* Pornire din partea dreapta */
+              transform: translate(30px, 10px);
             }
             100% {
-              transform: translate(0, 0); /* Se mișcă spre stânga */
+              transform: translate(10px, -10px); // Modificați această valoare
             }
           }
         }
@@ -335,10 +394,10 @@ const Parallax1 = () => {
         @media (max-width: 720px) {
           @keyframes moveAround2 {
             0% {
-              transform: translateX(-50px) translateY(-30px); /* Pleacă de la stânga pe orizontală */
+              transform: translate(0, 2px);
             }
             100% {
-              transform: translateX(-50px) translateY(0); /* Se mișcă doar pe verticală */
+              transform: translate(-10px, 15px); // Modificați această valoare
             }
           }
         }
@@ -355,10 +414,10 @@ const Parallax1 = () => {
         @media (max-width: 720px) {
           @keyframes moveAround3 {
             0% {
-              transform: translateX(110px) translateY(-170px); /* Pornire din partea dreapta și sus */
+              transform: translate(0, -10px);
             }
             100% {
-              transform: translateX(130px) translateY(-190px); /* Se mișcă doar pe verticală spre jos */
+              transform: translate(-20px, 3px); // Modificați această valoare
             }
           }
         }
@@ -374,10 +433,10 @@ const Parallax1 = () => {
         @media (max-width: 720px) {
           @keyframes moveAround4 {
             0% {
-              transform: translateX(100px) translateY(-190px); /* Pornire din partea dreapta și sus */
+              transform: translate(0, 0);
             }
             100% {
-              transform: translateX(130px) translateY(-170px); /* Se mișcă doar pe verticală spre jos */
+              transform: translate(-10px, -5px); // Modificați această valoare
             }
           }
         }
@@ -393,10 +452,10 @@ const Parallax1 = () => {
         @media (max-width: 720px) {
           @keyframes moveAround5 {
             0% {
-              transform: translateX(-60px) translateY(-370px); /* Pornire din partea dreapta și sus */
+              transform: translate(0, 0);
             }
             100% {
-              transform: translateX(-50px) translateY(-390px); /* Se mișcă doar pe verticală spre jos */
+              transform: translate(10px, 0px); // Modificați această valoare
             }
           }
         }

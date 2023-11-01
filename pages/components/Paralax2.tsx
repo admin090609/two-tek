@@ -88,7 +88,7 @@ const Paralax2 = () => {
 
   return (
     <>
-      <div className=" mt-72 sm:mt-64 sm:mx-64 p-4 md:p-8 lg:p-0">
+      <div className="mt-20 sm:mt-64 sm:mx-64 p-4 md:p-8 lg:p-0">
         <h1
           ref={h1Ref}
           className={`text-center text-2xl sm:text-5xl font-semibold ${
@@ -164,11 +164,11 @@ const Paralax2 = () => {
           }}
         >
           <div className=" circle2 "></div>
-          <h1 className="sm:text-3xl text-2xl text-start font-bold pt-6 pl-6 max-w-[390px] sm:leading-tight">
+          <h1 className="sm:text-3xl text-2xl text-start font-bold pt-3 pl-3  sm:leading-tight">
             {content.HowBoxTitlev3}
           </h1>
           <p
-            className="sm:text-xl sm:mb-0 mb-2 p-6 sm:leading-normal"
+            className="sm:text-xl sm:mb-0 mb-2 p-3 sm:leading-normal"
             style={{ color: "var(--paralax_p)" }}
           >
             {content.HowBoxTextv3}
