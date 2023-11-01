@@ -110,7 +110,7 @@ ${isVisible ? "fade-in-top " : ""}`}
             <p
               ref={h1Ref}
               className={`text-start sm:text-xl sm:max-w-[700px]
-${isVisible2 ? "fade-in-left" : ""}`}
+${isVisible2 ? "fade-in-left1" : ""}`}
             >
               {reviewData.description}
             </p>

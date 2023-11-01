@@ -113,12 +113,14 @@ const Parallax1 = () => {
   // Determine screen size using client-side logic
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
+  const [isMobileOrTablet, setIsMobileOrTablet] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
       const screenWidth = window.innerWidth;
       setIsMobile(screenWidth < 768);
       setIsTablet(screenWidth >= 768 && screenWidth <= 1024);
+      setIsMobileOrTablet(screenWidth < 1024);
     };
 
     handleResize(); // Initial size check
@@ -135,7 +137,11 @@ const Parallax1 = () => {
         <h1
           ref={h1Ref}
           className={`sm:text-start text-center text-2xl mb-5 sm:mb-7 sm:text-5xl sm:max-w-[350px] sm:leading-[60px]  font-semibold
-            ${isVisible2 ? "animate__animated animate__fadeInLeft" : ""}`}
+            ${
+              isVisible2 && !isMobileOrTablet
+                ? "animate__animated animate__fadeInLeft animate__delay-2s "
+                : ""
+            }`}
           style={{ color: "var(--carousel_h1)" }}
         >
           {content.BlobsTitle1} {content.BlobsTitle2}
@@ -242,13 +248,11 @@ const Parallax1 = () => {
           width: 120px;
           height: 120px;
           margin-right: 2rem;
-
         }
 
         @media (max-width: 767px) and {
           .circle-box {
             margin-right: 0;
-            margin-bottom:0;
           }
         }
 
@@ -277,7 +281,6 @@ const Parallax1 = () => {
 
         .circle-box-1 {
           animation-name: moveAround1;
-          
         }
 
         .circle-box-1:hover {
@@ -309,7 +312,7 @@ const Parallax1 = () => {
           }
         }
 
-        @media (max-width: 767px) {
+        @media (max-width: 720px) {
           @keyframes moveAround1 {
             0% {
               transform: translate(50%, 20px); /* Pornire din partea dreapta */
@@ -329,7 +332,7 @@ const Parallax1 = () => {
           }
         }
 
-        @media (max-width: 767px) {
+        @media (max-width: 720px) {
           @keyframes moveAround2 {
             0% {
               transform: translateX(-50px) translateY(-30px); /* Pleacă de la stânga pe orizontală */
@@ -349,7 +352,7 @@ const Parallax1 = () => {
           }
         }
 
-        @media (max-width: 767px) {
+        @media (max-width: 720px) {
           @keyframes moveAround3 {
             0% {
               transform: translateX(110px) translateY(-170px); /* Pornire din partea dreapta și sus */
@@ -368,7 +371,7 @@ const Parallax1 = () => {
             transform: translate(-30px, -10px);
           }
         }
-        @media (max-width: 767px) {
+        @media (max-width: 720px) {
           @keyframes moveAround4 {
             0% {
               transform: translateX(100px) translateY(-190px); /* Pornire din partea dreapta și sus */
@@ -387,7 +390,7 @@ const Parallax1 = () => {
             transform: translate(20px, -30px);
           }
         }
-        @media (max-width: 767px) {
+        @media (max-width: 720px) {
           @keyframes moveAround5 {
             0% {
               transform: translateX(-60px) translateY(-370px); /* Pornire din partea dreapta și sus */

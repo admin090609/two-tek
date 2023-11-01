@@ -74,7 +74,7 @@ const Footer = () => {
         <div
           ref={h1Ref}
           className={`flex md:ml-20 mt-5 md:mb-0 ${
-            isVisible2 ? "tracking-in-expand-fwd-bottom1" : ""
+            isVisible2 ? "" : ""
           }`}
         >
           <Link
@@ -125,7 +125,7 @@ const Footer = () => {
         <div
           ref={h1Ref}
           className={`md:ml-20 text-sm mt-5 md:mb-0 ${
-            isVisible ? "tracking-in-expand-fwd-bottom1" : ""
+            isVisible ? "" : ""
           }`}
         >
           <h1 className="font-semibold">{content.FooterContact}</h1>
@@ -134,7 +134,7 @@ const Footer = () => {
         <div
           ref={myRef}
           className={`md:ml-20  text-sm  ${
-            isVisible ? "tracking-in-expand-fwd-bottom1" : ""
+            isVisible ? "" : ""
           }`}
         >
           <h1>

@@ -122,11 +122,11 @@ const Paralax2 = () => {
           }}
         >
           <div className=" circle "></div>
-          <h1 className="sm:text-3xl text-2xl text-start font-bold pt-6 sm:leading-tight">
+          <h1 className="sm:text-3xl text-2xl text-start font-bold pl-6 pt-6 sm:leading-tight">
             {content.HowBoxTitle1}
           </h1>
           <p
-            className="sm:text-xl   sm:mb-0 mb-2 p-6 sm:leading-normal"
+            className="sm:text-xl sm:mb-0 mb-2 p-6 sm:leading-normal"
             style={{ color: "var(--paralax_p)" }}
           >
             {content.HowBoxText}
@@ -147,7 +147,7 @@ const Paralax2 = () => {
             {content.HowBoxTitlev2}
           </h1>
           <p
-            className="sm:text-xl text-justify sm:mb-0 mb-2 p-6 sm:leading-normal"
+            className="sm:text-xl sm:mb-0 mb-2 p-6 sm:leading-normal"
             style={{ color: "var(--paralax_p)" }}
           >
             {content.HowBoxTextv2}
@@ -164,11 +164,11 @@ const Paralax2 = () => {
           }}
         >
           <div className=" circle2 "></div>
-          <h1 className="sm:text-3xl text-2xl text-center sm:text-start font-bold pt-6 pl-6 max-w-[390px] sm:leading-tight">
+          <h1 className="sm:text-3xl text-2xl text-start font-bold pt-6 pl-6 max-w-[390px] sm:leading-tight">
             {content.HowBoxTitlev3}
           </h1>
           <p
-            className="sm:text-xl text-justify sm:mb-0 mb-2 p-6 sm:leading-normal"
+            className="sm:text-xl sm:mb-0 mb-2 p-6 sm:leading-normal"
             style={{ color: "var(--paralax_p)" }}
           >
             {content.HowBoxTextv3}
