@@ -141,9 +141,9 @@ const Parallax1 = () => {
       <div className=" mb-20 sm:mb-20 mt-24 lg:mt-44 sm:flex justify-evenly mx-2 sm:mx-10 lg:mx-32 items-center">
         <h1
           ref={h1Ref}
-          className={`sm:text-start text-center text-2xl mb-5 sm:mb-7 sm:text-5xl sm:max-w-[350px] sm:leading-[60px] font-semibold
+          className={`sm:text-start text-center text-2xl mb-5 lg:mb-7 sm:text-[43px] sm:leading-[50px] lg:text-5xl lg:max-w-[350px] lg:leading-[60px] font-semibold
             ${
-              isVisible2 && !isMobileOrTablet
+              isVisible2 && !isMobileOrTablet && !isTablet
                 ? "animate__animated animate__fadeInLeft animate__delay-2s "
                 : ""
             }`}
@@ -153,7 +153,7 @@ const Parallax1 = () => {
         </h1>
         <hr
           ref={h2Ref}
-          className={` h-1 rounded-xl sm:rotate-90 flex justify-center items-center sm:block sm:mx-0 mx-[12vw] mb-5 sm:mb-0 sm:w-24
+          className={` h-1 rounded-xl sm:rotate-90 flex justify-center items-center sm:block sm:mx-0 mx-[12vw] mb-5 sm:mb-0 sm:w-56 lg:w-24
             ${isVisible3 ? "tracking-in-expand" : ""}`}
           style={{ background: "var(--carousel_hr)" }}
         />
@@ -277,8 +277,8 @@ const Parallax1 = () => {
       </div>
       <style jsx>{`
         .circle-box {
-          width: ${isMobile ? "120px" : "210px"};
-          height: ${isMobile ? "120px" : "210px"};
+          width: ${isMobile ? "110px" : "210px"};
+          height: ${isMobile ? "110px" : "210px"};
           border-radius: 50%;
           margin-right: 4rem;
           animation: moveAround 5s linear infinite alternate;
@@ -295,7 +295,7 @@ const Parallax1 = () => {
 
         @media (max-width: 728px) {
           .circle-box {
-            margin-right: 3vw;
+            margin-right: 2vw;
             margin-left: 2vw;
             margin-bottom: 0;
           }
@@ -303,13 +303,6 @@ const Parallax1 = () => {
 
         .circle-box.mobile .circle-description {
           display: none;
-        }
-        
-
-        .tablet-circle-box {
-          width: 120px;
-          height: 120px;
-          margin-right: 2rem;
         }
 
         .circle-box.hovered {
@@ -417,7 +410,7 @@ const Parallax1 = () => {
               transform: translate(0, -10px);
             }
             100% {
-              transform: translate(-20px, 3px); // Modificați această valoare
+              transform: translate(-30px, 3px); // Modificați această valoare
             }
           }
         }

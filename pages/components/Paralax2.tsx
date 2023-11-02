@@ -88,7 +88,7 @@ const Paralax2 = () => {
 
   return (
     <>
-      <div className="mt-20 sm:mt-64 sm:mx-64 p-4 md:p-8 lg:p-0">
+      <div className="mt-20 lg:mt-64 sm:mx-64 p-4 md:p-8 lg:p-0">
         <h1
           ref={h1Ref}
           className={`text-center text-2xl sm:text-5xl font-semibold ${
@@ -110,10 +110,10 @@ const Paralax2 = () => {
           {content.HowText}
         </p>
       </div>
-      <div className="lg:flex lg:flex-wrap block justify-center">
+      <div className="lg:flex sm:flex-wrap block justify-center">
         <div
           ref={div1Ref}
-          className={`lg:w-[34%] w-full mx-6 sm:mx-0 rounded-xl sm:p-4 ${
+          className={`lg:w-[34%]  w-[full] rounded-xl sm:p-4 ${
             isVisible1 ? "tilt-in-fwd-tl" : ""
           }`}
           style={{
@@ -122,11 +122,11 @@ const Paralax2 = () => {
           }}
         >
           <div className=" circle "></div>
-          <h1 className="sm:text-3xl text-2xl text-start font-bold pl-6 pt-6 sm:leading-tight">
+          <h1 className="sm:text-3xl text-2xl text-start font-bold pl-3 sm:pl-6 pt-6 sm:leading-tight">
             {content.HowBoxTitle1}
           </h1>
           <p
-            className="sm:text-xl sm:mb-0 mb-2 p-6 sm:leading-normal"
+            className="sm:text-xl sm:mb-0 mb-2 p-3 sm:p-6 sm:leading-normal"
             style={{ color: "var(--paralax_p)" }}
           >
             {content.HowBoxText}
@@ -134,7 +134,7 @@ const Paralax2 = () => {
         </div>
         <div
           ref={div2Ref}
-          className={`lg:w-[34%] h-[full] sm:mx-0 sm:ml-20 rounded-xl sm:p-4 ${
+          className={`lg:w-[34%] w-[full] sm:mt-0 mt-8 sm:mx-0 sm:ml-20 rounded-xl sm:p-4 ${
             isVisible2 ? "tilt-in-fwd-tr" : ""
           }`}
           style={{
@@ -143,11 +143,11 @@ const Paralax2 = () => {
           }}
         >
           <div className=" circle1 "></div>
-          <h1 className="sm:text-3xl text-2xl text-start font-bold pt-6 pl-6 sm:leading-tight">
+          <h1 className="sm:text-3xl text-2xl text-start font-bold pt-6 pl-3 sm:pl-6 sm:leading-tight">
             {content.HowBoxTitlev2}
           </h1>
           <p
-            className="sm:text-xl sm:mb-0 mb-2 p-6 sm:leading-normal"
+            className="sm:text-xl sm:mb-0 mb-2 p-3 sm:p-6 sm:leading-normal"
             style={{ color: "var(--paralax_p)" }}
           >
             {content.HowBoxTextv2}
@@ -155,7 +155,7 @@ const Paralax2 = () => {
         </div>
         <div
           ref={div3Ref}
-          className={`lg:w-[34%] h-[full] m-2 mt-10 rounded-xl p-4  ${
+          className={`lg:w-[34%] h-[full] mt-8 sm:mt-10 rounded-xl p-4  ${
             isVisible3 ? "tilt-in-fwd-tl" : ""
           }`}
           style={{

@@ -168,6 +168,14 @@ body {
   margin: 60px 20px 50px 0;
 }
 
+@media (max-width: 767px) {
+  .circle {
+    width: 150px;
+    height: 150px;
+    margin: 30px 10px 20px 0;
+  }
+}
+
 .circle1 {
   background-image: url("/images/web.png");
   width: 200px;
@@ -179,6 +187,14 @@ body {
   margin: 60px 20px 40px 0;
 }
 
+@media (max-width: 767px) {
+  .circle1 {
+    width: 150px;
+    height: 150px;
+    margin: 30px 20px 20px 0;
+  }
+}
+
 .circle2 {
   background-image: url("/images/mobile.png");
   width: 200px;
@@ -188,6 +204,15 @@ body {
   float: right;
   shape-outside: circle();
   margin: 60px 20px 50px 10px;
+}
+
+@media (max-width: 767px) {
+  .circle2 {
+    width: 150px;
+    height: 150px;
+    margin: 20px 10px 20px 0;
+
+  }
 }
 
 .logo-slider-container {
@@ -297,7 +322,7 @@ body {
 
 #slide {
   width: max-content;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .item {
@@ -317,16 +342,16 @@ body {
 
 @media screen and (max-width: 768px) {
   .item {
-    width: 160px;
-    height: 200px;
-    background-position: 20% 50%;
+    width: 37vw;
+    height: 20vh;
+    background-position: 40% 50%;
     display: inline-block;
     transition: 0.5s;
     background-size: cover;
     position: absolute;
     z-index: 1;
     top: 130%;
-    transform: translate(-115%, -70%);
+    transform: translate(-123%, -70%);
     border-radius: 20px;
     box-shadow: 0 30px 50px var(--item_shadow);
   }
@@ -348,18 +373,37 @@ body {
   left: 50%;
 }
 
+@media screen and (max-width: 768px) {
+  .item:nth-child(3){
+    left: 55%;
+  }
+}
+
 .item:nth-child(4) {
   left: calc(50% + 220px);
+}
+
+@media screen and (max-width: 768px) {
+  .item:nth-child(4){
+    left: calc(45% + 220px);
+  }
 }
 
 .item:nth-child(5) {
   left: calc(50% + 440px);
 }
 
+@media screen and (max-width: 768px) {
+  .item:nth-child(5){
+    left: calc(45% + 440px);
+  }
+}
+
 .item:nth-child(n + 6) {
   display: none;
   font-family: system-ui;
 }
+
 
 .item .content {
   position: absolute;
@@ -1025,7 +1069,8 @@ body {
 .tracking-in-expand {
   -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1)
     2.5s both;
-  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) 2.5s both;
+  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) 2.5s
+    both;
 }
 
 @-webkit-keyframes tracking-in-expand {
@@ -1279,8 +1324,8 @@ body {
 }
 
 .slide-in-blurred-right {
-  -webkit-animation: slide-in-blurred-right 1s cubic-bezier(0.23, 1, 0.32, 1) 2.5s
-    both;
+  -webkit-animation: slide-in-blurred-right 1s cubic-bezier(0.23, 1, 0.32, 1)
+    2.5s both;
   animation: slide-in-blurred-right 0.6s cubic-bezier(0.23, 1, 0.32, 1) 0.5s
     both;
 }
@@ -1336,8 +1381,8 @@ body {
 }
 
 .tilt-in-fwd-tl {
-  -webkit-animation: tilt-in-fwd-tl 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-    2s both;
+  -webkit-animation: tilt-in-fwd-tl 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2s
+    both;
   animation: tilt-in-fwd-tl 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2s both;
 }
 
@@ -1515,7 +1560,7 @@ body {
 }
 
 @media screen and (max-width: 1024px) {
-  .slide-in-elliptic-left-fwd  {
+  .slide-in-elliptic-left-fwd {
     -webkit-animation: none; /* Dezactivează animația pe dispozitive mobile și tablete */
     animation: none;
   }
@@ -1789,8 +1834,8 @@ body {
 }
 
 .tilt-in-fwd-br {
-  -webkit-animation: tilt-in-fwd-br 1.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2.3s
-    both;
+  -webkit-animation: tilt-in-fwd-br 1.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    2.3s both;
   animation: tilt-in-fwd-br 1.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2.3s both;
 }
 
@@ -1839,8 +1884,8 @@ body {
 }
 
 .fade-in-bottom {
-  -webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1)
-    2s both;
+  -webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) 2s
+    both;
   animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) 2s both;
 }
 
@@ -1988,6 +2033,7 @@ body {
 
 .card {
   position: absolute;
+  cursor: pointer;
   border-radius: 20px;
   width: 250px;
   height: 311.5px;
@@ -2003,9 +2049,7 @@ body {
 
 @media (max-width: 768px) {
   .card {
-    width: 41.5vw;
-    height: 29vh;
-    margin-top: -29vh;
+   display: none;
   }
 }
 
