@@ -97,12 +97,12 @@ const Review = () => {
 
   return (
     <>
-      <div className="flex justify-around items-center bg-black border-white border-y-[.1px] text-black p-7 sm:p-20">
+      <div className="flex sm:mt-32 justify-around items-center bg-black border-white border-y-[.1px] text-black p-7 lg:p-20">
         <div>
           <div className=" bg-white p-10 rounded-bl-[20%] rounded-tr-[20%] rounded-md shadow-md shadow-white mb-10">
             <h1
               ref={myRef}
-              className={`text-start font-semibold text-xl sm:text-4xl mb-5
+              className={`text-start font-semibold text-xl sm:text-3xl lg:text-4xl mb-5
 ${isVisible ? "fade-in-top " : ""}`}
             >
               {reviewData.title}
@@ -135,7 +135,7 @@ ${isVisible3 ? "scale-in-center" : ""}`}
                 alt=""
                 width={307}
                 height={298}
-                className="rounded-[50%] w-[24vw] sm:w-[9vw]"
+                className="rounded-[50%] w-[24vw] sm:w-[17vw] lg:w-[9vw]"
               />
             </div>
             <div
@@ -153,7 +153,7 @@ ${isVisible3 ? "scale-in-center" : ""}`}
                 alt=""
                 width={307}
                 height={298}
-                className="rounded-[50%] w-[24vw] sm:w-[9vw]"
+                className="rounded-[50%] w-[24vw] sm:w-[17vw] lg:w-[9vw]"
               />
             </div>
             <div
@@ -171,7 +171,7 @@ ${isVisible3 ? "scale-in-center" : ""}`}
                 alt=""
                 width={307}
                 height={298}
-                className="rounded-[50%] w-[24vw] sm:w-[9vw]"
+                className="rounded-[50%] w-[24vw] sm:w-[17vw] lg:w-[9vw]"
               />
             </div>
           </div>

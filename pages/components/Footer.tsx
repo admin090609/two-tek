@@ -70,7 +70,7 @@ const Footer = () => {
   }, [hasAnimated]);
   return (
     <>
-      <div className="flex flex-col-reverse  md:flex-row items-center md:justify-around justify-center p-10 text-center mb-10">
+      <div className="flex flex-col-reverse  md:flex-row items-center md:justify-around justify-center sm:py-10 lg:p-10 text-center mb-10">
         <div
           ref={h1Ref}
           className={`flex md:ml-20 mt-5 md:mb-0 ${
