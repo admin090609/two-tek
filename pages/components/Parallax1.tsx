@@ -143,8 +143,8 @@ const Parallax1 = () => {
           ref={h1Ref}
           className={`sm:text-start text-center text-2xl mb-5 lg:mb-7 sm:text-[43px] sm:leading-[50px] lg:text-5xl lg:max-w-[350px] lg:leading-[60px] font-semibold
             ${
-              isVisible2 && !isMobileOrTablet && !isTablet
-                ? "animate__animated animate__fadeInLeft animate__delay-2s "
+              isVisible2 && !isMobileOrTablet
+                ? "fade-in-left "
                 : ""
             }`}
           style={{ color: "var(--carousel_h1)" }}
@@ -298,6 +298,15 @@ const Parallax1 = () => {
             margin-right: 2vw;
             margin-left: 2vw;
             margin-bottom: 0;
+          }
+        }
+        
+        @media (max-width: 1024px) {
+          .circle-box {
+            margin-right: 2vw;
+            margin-left: 2vw;
+            width: 110px;
+            height:110px;
           }
         }
 

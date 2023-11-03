@@ -88,7 +88,7 @@ const Paralax2 = () => {
 
   return (
     <>
-      <div className="mt-20 lg:mt-64 lg:mx-64 p-4 md:p-8 lg:p-0">
+      <div className="mt-20 sm:mt-0 lg:mt-64 lg:mx-64 p-4 md:p-8 lg:p-0">
         <h1
           ref={h1Ref}
           className={`text-center text-2xl sm:text-5xl font-semibold ${
