@@ -144,7 +144,7 @@ const Parallax1 = () => {
           className={`sm:text-start text-center text-2xl mb-5 lg:mb-7 sm:text-[43px] sm:leading-[50px] lg:text-5xl lg:max-w-[350px] lg:leading-[60px] font-semibold
             ${
               isVisible2 && !isMobileOrTablet
-                ? "fade-in-left "
+                ? "tilt-in-right-1 "
                 : ""
             }`}
           style={{ color: "var(--carousel_h1)" }}
