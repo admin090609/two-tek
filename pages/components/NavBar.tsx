@@ -37,9 +37,8 @@ const NavBar = () => {
 
   return (
     <div
-      className={`left-0 top-0 w-full mt-0 md:mt-5 text-black z-bug px-0 md:px-8 ${
-        nav ? "text-focus-in" : "opacity-0 translate-y-[-50px]"
-      } transition-all duration-1000 ease-in-out`}
+      className={`left-0 top-0 w-full mt-0 md:mt-5 text-black z-bug px-0 md:px-8 ${nav ? "text-focus-in" : "opacity-0 translate-y-[-50px]"
+        } transition-all duration-1000 ease-in-out`}
     >
       <div
         className="lg:max-w-[1305px] max-w-[768px] sm:mt-4 sm:w-full flex justify-evenly items-center md:p-5 p-0 h-[70px] md:rounded-[70px] rounded-0 m-auto"
@@ -49,13 +48,13 @@ const NavBar = () => {
         }}
       >
         <div className="text-4xl sm:p-4 font-bold text-focus-in -ml-14 md:-ml-40 lg:ml-0">
-        <Image
-                  src="/images/Logo-text.png"
-                  alt="Icon"
-                  width={2000}
-                  height={2000}
-                  className="w-[130px]"
-                />
+          <Image
+            src="/images/Logo-text.png"
+            alt="Icon"
+            width={2000}
+            height={2000}
+            className=" w-[100px] sm:w-[130px]"
+          />
         </div>
 
         <div className="block lg:hidden">
@@ -153,7 +152,11 @@ const NavBar = () => {
 
         {/* Mobile menu */}
         {isMenuOpen && (
-          <div className="lg:hidden absolute top-[-3vh] w-[80vw] right-0 text-white bg-gray-700 h-[100vh] flex justify-center items-center text-center lg-hidden-menu">
+          <div className="lg:hidden absolute top-[-3vh] w-[75vw] right-0 text-white h-[100vh] flex justify-center items-center text-center lg-hidden-menu"
+            style={{
+              backgroundImage:
+                "linear-gradient(to bottom, var(--nav_bg1), var(--nav_bg2), var(--nav_bg3))",
+            }}>
             <ul className="flex flex-col justify-center items-center text-center gap-4 md:text-2xl ">
               <li className="my-2 flex items-center">
                 <Image
@@ -194,7 +197,7 @@ const NavBar = () => {
                 </ScrollLink>
               </li>
               <li className="my-2 flex items-center">
-              <Image
+                <Image
                   src="/images/projects.png"
                   alt="Icon"
                   width={94}
@@ -213,7 +216,7 @@ const NavBar = () => {
                 </ScrollLink>
               </li>
               <li className="my-2 flex items-center">
-              <Image
+                <Image
                   src="/images/feedback.png"
                   alt="Icon"
                   width={94}
