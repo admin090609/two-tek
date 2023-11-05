@@ -13,6 +13,7 @@ import ScrollUpButton from "./components/ScrollUpButton";
 import Loading from "./loading"; // Ensure the correct import path
 import NavBar from "./components/NavBar"; // Import the NavBar component
 
+
 export default function Home() {
   const [contentLoaded, setContentLoaded] = useState(false);
 

@@ -86,7 +86,7 @@ function TranslationRoToRu() {
   return (
     <div className="relative">
       <div
-        className={`flex items-center justify-between px-3 py-2 rounded-full cursor-pointer ${
+        className={`flex items-center justify-between sm:px-4 lg:px-3 px-3 py-2 rounded-full cursor-pointer ${
           isOpen ? "" : ""
         } transition-all duration-300`}
         onClick={toggleMenu}
@@ -102,12 +102,12 @@ function TranslationRoToRu() {
           {language === "en" && Translation.data.en.language3}
         </span>
         <svg
-          className={`h-4 w-4 transform transition-transform ${
+          className={`h-4 w-4 ml-2 lg:ml-0 transform transition-transform ${
             isOpen ? "rotate-180" : "rotate-0"
           }`}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
-          fill="currentColor"
+          fill="var(  --arrow)"
         >
           <path
             fillRule="evenodd"
@@ -121,7 +121,7 @@ function TranslationRoToRu() {
       <div
         className={`${
           isOpen ? "opacity-100 scale-y-100" : "opacity-0 scale-y-0"
-        } absolute mt-2 w-40 rounded-lg   overflow-hidden z-10 transform origin-top transition-transform duration-300`}
+        } absolute mt-2 sm:w-40 rounded-lg   overflow-hidden z-10 transform origin-top transition-transform duration-300`}
         style={{ background: "var( --translate_bg)" , boxShadow:" 0px 5px 15px var( --translate_shadow)"}}
       >
         <ul
@@ -131,7 +131,7 @@ function TranslationRoToRu() {
           {language !== "ro" && (
             <li>
               <a
-                className="block px-4 py-2 ul1 cursor-pointer"
+                className="block lg:px-4 lg:py-2 ul1 cursor-pointer"
                 style={{
                   color: "var(--translate_lang_color)",
                 }}
@@ -148,7 +148,7 @@ function TranslationRoToRu() {
           {language !== "ru" && (
             <li>
               <a
-                className="block px-4 ul1 py-2 cursor-pointer"
+                className="block lg:px-4 lg:py-2 ul1 cursor-pointer"
                 style={{
                   color: "var(--translate_lang_color)",
                 }}
@@ -165,7 +165,7 @@ function TranslationRoToRu() {
           {language !== "en" && (
             <li>
               <a
-                className="block px-4 py-2 ul1 cursor-pointer"
+                className="block lg:px-4 lg:py-2 ul1 cursor-pointer"
                 style={{
                   color: "var(--translate_lang_color)",
                 }}

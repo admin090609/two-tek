@@ -97,7 +97,7 @@ const Review = () => {
 
   return (
     <>
-      <div className="flex sm:mt-80 lg:mt-32 justify-around items-center bg-black border-white border-y-[.1px] text-black p-7 lg:p-20">
+      <div className="flex sm:mt-96 lg:mt-32 justify-around items-center bg-black border-white border-y-[.1px] text-black p-7 lg:p-20">
         <div>
           <div className=" bg-white p-10 rounded-bl-[20%] rounded-tr-[20%] rounded-md shadow-md shadow-white mb-10">
             <h1
