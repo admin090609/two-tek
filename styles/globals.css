@@ -846,8 +846,8 @@ body {
 @keyframes tracking-in-expand-fwd-bottom {
   0% {
     letter-spacing: -0.5em;
-    -webkit-transform: translateZ(-700px) translateY(100px);
-    transform: translateZ(-700px) translateY(100px);
+    -webkit-transform: translateZ(-700px) translateY(40px);
+    transform: translateZ(-700px) translateY(40px);
     opacity: 0;
   }
 
@@ -2481,7 +2481,7 @@ body {
 
 .toggle2 {
   z-index: 1000;
-  position: absolute;
+  position: absolute; /* Default to absolute positioning */
   width: 30px;
   height: 30px;
   cursor: pointer;
@@ -2493,7 +2493,14 @@ body {
   transition-duration: 0.5s;
   right: 6vw;
   margin-top: -3.75%;
+
 }
+
+.fixed {
+  position: fixed; /* Apply fixed positioning when the 'fixed' class is present */
+}
+
+
 
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {

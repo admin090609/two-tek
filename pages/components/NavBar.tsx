@@ -14,6 +14,7 @@ const NavBar = () => {
   const [nav, setNav] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State for mobile menu
   const router = useRouter();
+  const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false);
 
   const { language, setLanguage } = useLanguage();
   const content = getTranslatedContent(language);
@@ -35,14 +36,18 @@ const NavBar = () => {
     setIsMenuOpen(false);
   };
 
+  const toggleBurgerMenu = () => {
+    setIsBurgerMenuOpen(!isBurgerMenuOpen);
+  };
+
   return (
     <div
-      className={`left-0 top-0 w-full mt-0 md:mt-5 text-black z-bug px-0 md:px-8 ${
-        nav ? "text-focus-in " : "opacity-0 translate-y-[-50px] "
+      className={` left-0 top-0 w-full mt-0 md:mt-5 text-black z-bug px-0 md:px-8 ${
+        nav ? "text-focus-in " : "lg:opacity-0 lg:translate-y-[-50px] "
       } transition-all duration-1000 ease-in-out`}
     >
       <div
-        className="lg:max-w-[1305px] max-w-[768px] sm:mt-4 sm:w-full flex justify-evenly items-center md:p-5 p-0 h-[70px] md:rounded-[70px] rounded-0 m-auto"
+        className="lg:max-w-[1305px]  max-w-[768px] sm:mt-4 sm:w-full flex justify-evenly items-center md:p-5 p-0 h-[70px] md:rounded-[70px] rounded-0 m-auto"
         style={{
           backgroundImage:
             "linear-gradient(to bottom, var(--nav_bg1), var(--nav_bg2), var(--nav_bg3))",
@@ -65,7 +70,13 @@ const NavBar = () => {
             checked={isMenuOpen}
             onChange={toggleMenu}
           />
-          <label className="toggle-burger toggle2" htmlFor="checkbox2">
+          <label
+            className={`toggle-burger toggle2 ${
+              isBurgerMenuOpen ? "fixed" : ""
+            }`}
+            htmlFor="checkbox2"
+            onClick={toggleBurgerMenu}
+          >
             <div id="bar4" className="bars"></div>
             <div id="bar5" className="bars"></div>
             <div id="bar6" className="bars"></div>
@@ -154,12 +165,12 @@ const NavBar = () => {
         {/* Mobile menu */}
         {isMenuOpen && (
           <div
-            className="lg:hidden absolute top-0 right-0 text-white h-screen flex justify-center items-center text-center lg-hidden-menu"
+            className="lg:hidden top-0 right-0 text-white h-screen flex justify-center items-center text-center lg-hidden-menu"
             style={{
               backgroundImage:
                 "linear-gradient(to bottom, var(--nav_bg1), var(--nav_bg2), var(--nav_bg3))",
               height: "100vh",
-              width: "50vw",
+              width: "100vw",
               position: "fixed", // Asigurați-vă că meniul este fix în poziție
             }}
           >
