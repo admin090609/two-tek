@@ -119,11 +119,11 @@ function TranslationRoToRu() {
       <div
         className={`${
           isOpen ? "opacity-100 scale-y-100" : "opacity-0 scale-y-0"
-        } absolute mt-2 lg:w-40 h-20 w-32 rounded-lg   overflow-hidden z-10 transform origin-top transition-transform duration-300`}
+        } absolute mt-2 lg:w-40 h-20 lg:h-20 w-32 dropdown-menu rounded-lg overflow-hidden z-10 transform origin-top transition-transform duration-300`}
         style={{ background: "var( --translate_bg)" , boxShadow:" 0px 5px 15px var( --translate_shadow)"}}
       >
         <ul
-          className="divide-y"
+          className="divide-y flex flex-col"
           style={{ borderColor: "var(--translate_line)" }}
         >
           {language !== "ro" && (

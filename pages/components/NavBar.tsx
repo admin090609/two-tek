@@ -54,7 +54,7 @@ const NavBar = () => {
         }}
       >
         <div className="text-4xl font-bold text-focus-in flex items-center -ml-14 lg:ml-0">
-        <Image
+          <Image
             src="/images/Logo-1.png"
             alt="Icon"
             width={100}
@@ -176,8 +176,8 @@ const NavBar = () => {
             style={{
               backgroundImage:
                 "linear-gradient(to bottom, var(--nav_bg1), var(--nav_bg2), var(--nav_bg3))",
-              height: "100vh",
-              width: "100vw",
+              height: "100%",
+              width: "100%",
               position: "fixed", // Asigurați-vă că meniul este fix în poziție
             }}
           >
@@ -196,7 +196,10 @@ const NavBar = () => {
                   smooth={true}
                   offset={-70}
                   duration={1000}
-                  onClick={closeMenu}
+                  onClick={() => {
+                    closeMenu(); // Închideți meniul mobil
+                    setIsBurgerMenuOpen(false); // Setează isBurgerMenuOpen pe false
+                  }}
                 >
                   {content.Nav1}
                 </ScrollLink>
@@ -215,7 +218,10 @@ const NavBar = () => {
                   smooth={true}
                   offset={-70}
                   duration={1800}
-                  onClick={closeMenu}
+                  onClick={() => {
+                    closeMenu(); // Închideți meniul mobil
+                    setIsBurgerMenuOpen(false); // Setează isBurgerMenuOpen pe false
+                  }}
                 >
                   {content.Nav2}
                 </ScrollLink>
@@ -234,7 +240,10 @@ const NavBar = () => {
                   smooth={true}
                   offset={-70}
                   duration={1800}
-                  onClick={closeMenu}
+                  onClick={() => {
+                    closeMenu(); // Închideți meniul mobil
+                    setIsBurgerMenuOpen(false); // Setează isBurgerMenuOpen pe false
+                  }}
                 >
                   {content.Nav3}
                 </ScrollLink>
@@ -253,7 +262,10 @@ const NavBar = () => {
                   smooth={true}
                   offset={-60}
                   duration={2000}
-                  onClick={closeMenu}
+                  onClick={() => {
+                    closeMenu(); // Închideți meniul mobil
+                    setIsBurgerMenuOpen(false); // Setează isBurgerMenuOpen pe false
+                  }}
                 >
                   {content.Nav4}
                 </ScrollLink>
@@ -269,7 +281,7 @@ const NavBar = () => {
           <div className="mr-5 hidden lg:block">
             <TranslateRoToRu />
           </div>
-          <div className="-mr-[4vw] sm:mr-0">
+          <div className="-mr-[3vw] sm:mr-0">
             <Color />
           </div>
         </div>
