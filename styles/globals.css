@@ -61,9 +61,11 @@
   --name1_color: black;
   --review_bg: black;
   --arrow: black;
+  --loading_text: black;
 }
 
 [data-theme="dark"] {
+  --loading_text: white;
   --body_background: black;
   --body_color: white;
   --container_bg: #222;
@@ -726,17 +728,10 @@ body {
   line-height: 1;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (max-width: 1024px) {
   .toggle {
     width: 32px;
     height: 32px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .toggle {
-    width: 40px;
-    height: 40px;
   }
 }
 
@@ -769,6 +764,21 @@ body {
 
 .fade-in {
   animation: fadeIn 5s ease-in-out;
+  /* Adjust the duration and easing as needed */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in1 {
+  animation: fadeIn 2s ease-in-out;
   /* Adjust the duration and easing as needed */
 }
 

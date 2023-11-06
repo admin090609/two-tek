@@ -47,19 +47,26 @@ const NavBar = () => {
       } transition-all duration-1000 ease-in-out`}
     >
       <div
-        className="lg:max-w-[1305px]  max-w-[768px] sm:mt-4 sm:w-full flex justify-evenly items-center md:p-5 p-0 h-[70px] md:rounded-[70px] rounded-0 m-auto"
+        className="lg:max-w-[1305px]  max-w-[768px] sm:mt-4 sm:w-full flex sm:justify-around justify-evenly lg:justify-evenly items-center md:p-5 p-0 h-[70px] md:rounded-[70px] rounded-0 m-auto"
         style={{
           backgroundImage:
             "linear-gradient(to bottom, var(--nav_bg1), var(--nav_bg2), var(--nav_bg3))",
         }}
       >
-        <div className="text-4xl sm:p-4 font-bold text-focus-in -ml-14 lg:ml-0">
+        <div className="text-4xl font-bold text-focus-in flex items-center -ml-14 lg:ml-0">
+        <Image
+            src="/images/Logo-1.png"
+            alt="Icon"
+            width={100}
+            height={100}
+            className=" w-[60px] sm:w-[70px] object-contain"
+          />
           <Image
             src="/images/Logo-text.png"
             alt="Icon"
             width={2000}
             height={2000}
-            className=" w-[100px] sm:w-[130px]"
+            className=" w-[70px] ml-1 sm:w-[90px]"
           />
         </div>
 

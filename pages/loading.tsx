@@ -51,7 +51,7 @@ const Loading = () => {
   return (
     <>
       <div
-        className={`flex justify-center items-center min-h-screen ${
+        className={`flex flex-col justify-center items-center min-h-screen ${
           typeof localStorage ? "dark-bg" : "light-bg"
         }`}
         style={{ background: "var(  --loading_bg)" }}
@@ -104,6 +104,9 @@ const Loading = () => {
             </filter>
           </defs>
         </svg>
+        <h1 className="text-lg mt-10 fade-in1" style={{ color: "var(--loading_text)" }}>
+          Developed by <span className="text-2xl font-bold">2Tek</span> 
+        </h1>
       </div>
     </>
   );

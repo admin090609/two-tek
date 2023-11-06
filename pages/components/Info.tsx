@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import useLanguage from "../../public/LanguageContext";
 import { getTranslatedContent } from "./TranslateRoToRu";
+import Color from "./Color";
 
 function Info() {
   const [showComponent, setShowComponent] = useState(false);

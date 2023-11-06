@@ -23,7 +23,7 @@ export default function Home() {
     // For now, let's simulate a 3-second loading delay
     const loadingTimeout = setTimeout(() => {
       setContentLoaded(true);
-    }, 2500);
+    }, 2700);
 
     return () => {
       clearTimeout(loadingTimeout);
