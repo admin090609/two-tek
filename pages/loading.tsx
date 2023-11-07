@@ -2,7 +2,8 @@ import React, { useState, useEffect, useContext } from "react";
 
 const Loading = () => {
   const [percentage, setPercentage] = useState(0);
-  const body = document.querySelector("body");
+  const body = typeof document !== "undefined" ? document.querySelector("body") : null;
+
   const hasLocalStorage = typeof localStorage !== "undefined";
 
   const setDarkMode = () => {
