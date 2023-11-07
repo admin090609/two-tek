@@ -119,15 +119,15 @@ function TranslationRoToRu() {
       <div
         className={`${
           isOpen ? "opacity-100 scale-y-100" : "opacity-0 scale-y-0"
-        } absolute mt-2 lg:w-40 h-20 lg:h-20 w-32 dropdown-menu rounded-lg overflow-hidden z-10 transform origin-top transition-transform duration-300`}
-        style={{ background: "var( --translate_bg)" , boxShadow:" 0px 5px 15px var( --translate_shadow)"}}
+        } absolute mt-2 lg:w-40 h-20 lg:h-20 w-32 rounded-lg overflow-hidden z-10 transform origin-top transition-transform duration-300`}
+        style={{ background: "var( --translate_bg)" , boxShadow:" 0px 3px 10px var( --translate_shadow)"}}
       >
         <ul
           className="divide-y flex flex-col"
           style={{ borderColor: "var(--translate_line)" }}
         >
           {language !== "ro" && (
-            <li>
+            <li className="-mt-2 pb-1 lg:-mt-0 lg:pb-0">
               <a
                 className="block lg:px-4 lg:py-2 ul1 cursor-pointer"
                 style={{
@@ -144,7 +144,7 @@ function TranslationRoToRu() {
             </li>
           )}
           {language !== "ru" && (
-            <li>
+            <li className="-mt-2 pb-1 lg:-mt-0 lg:pb-0">
               <a
                 className="block lg:px-4 lg:py-2 ul1 cursor-pointer"
                 style={{
@@ -161,7 +161,7 @@ function TranslationRoToRu() {
             </li>
           )}
           {language !== "en" && (
-            <li>
+            <li className="pt-2 pb-1 lg:pt-0 lg:pb-0">
               <a
                 className="block lg:px-4 lg:py-2 ul1 cursor-pointer"
                 style={{

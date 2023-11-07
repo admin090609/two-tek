@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import useLanguage from "../../public/LanguageContext";
 import { getTranslatedContent } from "./TranslateRoToRu";
-
+import Link from "next/link";
 const CalendlyWidget = () => {
   const [showCalendly, setShowCalendly] = useState(false);
   const [fadeIn, setFadeIn] = useState(false); // State variable for the fade-in animation
@@ -28,7 +28,6 @@ const CalendlyWidget = () => {
     };
   }, []);
 
-
   useEffect(() => {
     // Trigger the fade-in animation when the component mounts
     setFadeIn(true);
@@ -49,13 +48,14 @@ const CalendlyWidget = () => {
       className={containerClassName}
       style={{ position: "fixed", bottom: "0px", right: "0px", zIndex: 9999 }}
     >
+      <Link href="https://calendly.com/two2tek?hide_landing_page_details=1&hide_gdpr_banner=1">
         <button
           onClick={toggleCalendly}
           style={{
             position: "absolute",
             background: "#008DFD",
             color: "#ffffff",
-            padding: isMobile ? "5px 1px": "10px 20px",
+            padding: isMobile ? "5px 1px" : "10px 20px",
             border: "none",
             bottom: "20px",
             right: "20px",
@@ -65,19 +65,9 @@ const CalendlyWidget = () => {
             zIndex: 10000,
           }}
         >
-        {isMobile ? content.calendlyMobile : content.calendly}
-      </button>
-      <div style={calendlyStyles}>
-        <iframe
-          title="Calendly"
-          src="https://calendly.com/two2tek?hide_landing_page_details=1&hide_gdpr_banner=1"
-          style={{
-            width: "100%",
-            height: "100%",
-            border: "none",
-          }}
-        ></iframe>
-      </div>
+          {isMobile ? content.calendlyMobile : content.calendly}
+        </button>
+      </Link>
     </div>
   );
 };
