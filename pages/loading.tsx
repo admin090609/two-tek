@@ -2,21 +2,21 @@ import React, { useState, useEffect, useContext } from "react";
 
 const Loading = () => {
   const [percentage, setPercentage] = useState(0);
-  // Assuming you have a dark mode state in a context
-  // Replace with your actual dark mode state management
+  const body = document.querySelector("body");
+  const hasLocalStorage = typeof localStorage !== "undefined";
+
   const setDarkMode = () => {
-    document.querySelector("body")?.setAttribute("data-theme", "dark");
+    body?.setAttribute("data-theme", "dark");
     localStorage.setItem("selectedTheme", "dark");
   };
 
   const setLightMode = () => {
-    document.querySelector("body")?.setAttribute("data-theme", "light");
+    body?.setAttribute("data-theme", "light");
     localStorage.setItem("selectedTheme", "light");
   };
 
   const toggleTheme = () => {
-    const isDark =
-      document.querySelector("body")?.getAttribute("data-theme") === "dark";
+    const isDark = body?.getAttribute("data-theme") === "dark";
     if (isDark) {
       setLightMode();
     } else {
@@ -25,8 +25,7 @@ const Loading = () => {
   };
 
   useEffect(() => {
-    // Check if localStorage is available
-    if (typeof localStorage) {
+    if (hasLocalStorage) {
       const selectedTheme = localStorage.getItem("selectedTheme");
       if (selectedTheme === "dark") {
         setDarkMode();
@@ -34,7 +33,7 @@ const Loading = () => {
         setLightMode();
       }
     }
-  }, []);
+  }, [hasLocalStorage]);
 
   useEffect(() => {
     const interval = setInterval(() => {
