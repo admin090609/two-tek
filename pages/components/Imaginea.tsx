@@ -154,10 +154,10 @@ function Slider() {
           </div>
           <div className="buttons">
             <button id="prev" onClick={handlePrevClick}>
-              <FontAwesomeIcon icon={faAngleLeft} />
+              <FontAwesomeIcon className=" px-1 lg:w-6 lg:h-6" icon={faAngleLeft} />
             </button>
             <button id="next" onClick={handleNextClick}>
-              <FontAwesomeIcon icon={faAngleRight} />
+              <FontAwesomeIcon className=" px-1 lg:w-6 lg:h-6" icon={faAngleRight} />
             </button>
           </div>
         </div>

@@ -535,14 +535,21 @@ body {
 }
 
 .buttons button {
-  width: 40px;
-  height: 40px;
+  width: 2vw;
   border-radius: 50%;
   border: 1px solid var(--buttons_button_boder);
   transition: 0.5s;
   margin-right: 5px;
   background-color: var(--buttons_bg);
 }
+
+@media screen and (max-width: 768px) {
+  .buttons button {
+    width: 7vw;
+  }
+}
+
+
 
 .buttons button:hover {
   background-color: var(--buttons_button_hover_background);
