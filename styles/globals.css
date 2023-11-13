@@ -76,7 +76,7 @@
   --buttons_button_hover_background: white;
   --buttons_button_hover_color: black;
   --ball_bg: white;
-  --toggle_bg: white;
+  --toggle_bg: black;
   --toggle_shadow: #ffffff1a;
   --card_shadow: rgb(160, 158, 158);
   --card_color: #bebebe;
@@ -138,6 +138,8 @@ body {
   background-color: var(--body_background);
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
+  user-select: none; /* Dezactivează selecția textului */
+  transition: all 0.3s;
 }
 
 ::-webkit-scrollbar-track {
@@ -548,8 +550,6 @@ body {
     width: 7vw;
   }
 }
-
-
 
 .buttons button:hover {
   background-color: var(--buttons_button_hover_background);
@@ -2510,15 +2510,11 @@ body {
   transition-duration: 0.5s;
   right: 6vw;
   margin-top: -3.75%;
-
 }
 
 .fixed {
   position: fixed; /* Apply fixed positioning when the 'fixed' class is present */
 }
-
-
-
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .toggle2 {
