@@ -47,7 +47,7 @@ const NavBar = () => {
       } transition-all duration-1000 ease-in-out`}
     >
       <div
-        className="lg:max-w-[1305px]  max-w-[768px] sm:mt-4 sm:w-full flex sm:justify-around justify-evenly lg:justify-evenly items-center md:p-5 p-0 h-[70px] md:rounded-[70px] rounded-0 m-auto"
+        className="lg:max-w-[1305px] transition-all duration-300  max-w-[768px] sm:mt-4 sm:w-full flex sm:justify-around justify-evenly lg:justify-evenly items-center md:p-5 p-0 h-[70px] md:rounded-[70px] rounded-0 m-auto"
         style={{
           backgroundImage:
             "linear-gradient(to bottom, var(--nav_bg1), var(--nav_bg2), var(--nav_bg3))",
