@@ -5,15 +5,13 @@ import { Router } from "next/router";
 import Loading from "./loading";
 import { LanguageProvider } from "../public/LanguageContext";
 
-
 export default function App({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const startLoading = () => setLoading(true);
-    const endLoading = () => setLoading(false); 
+    const endLoading = () => setLoading(false);
 
-    
     Router.events.on("routeChangeStart", startLoading);
     Router.events.on("routeChangeComplete", endLoading);
     Router.events.on("routeChangeError", endLoading);
@@ -26,6 +24,8 @@ export default function App({ Component, pageProps }: AppProps) {
   }, []);
   return (
     <>
+   
+
       <LanguageProvider>
         {loading ? <Loading /> : null}
         <Component {...pageProps} />

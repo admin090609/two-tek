@@ -2,21 +2,22 @@ import React, { useState, useEffect, useContext } from "react";
 
 const Loading = () => {
   const [percentage, setPercentage] = useState(0);
-  // Assuming you have a dark mode state in a context
-  // Replace with your actual dark mode state management
+  const body = typeof document !== "undefined" ? document.querySelector("body") : null;
+
+  const hasLocalStorage = typeof localStorage !== "undefined";
+
   const setDarkMode = () => {
-    document.querySelector("body")?.setAttribute("data-theme", "dark");
+    body?.setAttribute("data-theme", "dark");
     localStorage.setItem("selectedTheme", "dark");
   };
 
   const setLightMode = () => {
-    document.querySelector("body")?.setAttribute("data-theme", "light");
+    body?.setAttribute("data-theme", "light");
     localStorage.setItem("selectedTheme", "light");
   };
 
   const toggleTheme = () => {
-    const isDark =
-      document.querySelector("body")?.getAttribute("data-theme") === "dark";
+    const isDark = body?.getAttribute("data-theme") === "dark";
     if (isDark) {
       setLightMode();
     } else {
@@ -25,8 +26,7 @@ const Loading = () => {
   };
 
   useEffect(() => {
-    // Check if localStorage is available
-    if (typeof localStorage) {
+    if (hasLocalStorage) {
       const selectedTheme = localStorage.getItem("selectedTheme");
       if (selectedTheme === "dark") {
         setDarkMode();
@@ -34,7 +34,7 @@ const Loading = () => {
         setLightMode();
       }
     }
-  }, []);
+  }, [hasLocalStorage]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -51,7 +51,7 @@ const Loading = () => {
   return (
     <>
       <div
-        className={`flex justify-center items-center min-h-screen ${
+        className={`flex flex-col justify-center items-center min-h-screen ${
           typeof localStorage ? "dark-bg" : "light-bg"
         }`}
         style={{ background: "var(  --loading_bg)" }}
@@ -104,6 +104,9 @@ const Loading = () => {
             </filter>
           </defs>
         </svg>
+        <h1 className="text-lg mt-10 fade-in1" style={{ color: "var(--loading_text)" }}>
+          Developed by <span className="text-2xl font-bold">2Tek</span> 
+        </h1>
       </div>
     </>
   );

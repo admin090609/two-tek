@@ -8,7 +8,7 @@ const Review = () => {
   const content = getTranslatedContent(language);
   const myRef = useRef<HTMLDivElement | null>(null);
   const h1Ref = useRef<HTMLDivElement | null>(null);
-  const h2Ref = useRef<HTMLDivElement | null>(null); // Update this line
+  const h2Ref = useRef<HTMLDivElement | null>(null);
   const h3Ref = useRef<HTMLDivElement | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [isVisible2, setIsVisible2] = useState(false);
@@ -25,17 +25,19 @@ const Review = () => {
   useEffect(() => {
     const selectedLanguage = localStorage.getItem("selectedLanguage");
 
-    if (selectedLanguage) {
-      setLanguage(selectedLanguage);
-      console.log(`language is ${selectedLanguage}`);
-      const content = getTranslatedContent(selectedLanguage);
-      setReviewData({
-        title: content.ReviewApiSudexTitle,
-        description: content.ReviewApiSudexText,
-        mainImage: "/images/misha.png",
-      });
+    if (!selectedLanguage) {
+      localStorage.setItem("selectedLanguage", "ro"); // Setați limba implicită aici (de exemplu, "ro")
     }
-  }, [setLanguage]);
+
+    setLanguage(selectedLanguage || "ro"); // Utilizați limba implicită aici sau orice altă limbă doriți
+
+    const content = getTranslatedContent(language);
+    setReviewData({
+      title: content.ReviewApiSudexTitle,
+      description: content.ReviewApiSudexText,
+      mainImage: "/images/misha.png",
+    });
+  }, [language]);
 
   useEffect(() => {
     if (myRef.current && !hasAnimated) {
@@ -44,10 +46,10 @@ const Review = () => {
         if (entry.isIntersecting) {
           setIsVisible(true);
           setHasAnimated(true);
-          observer.unobserve(myRef.current!); // Use the non-null assertion operator here
+          observer.unobserve(myRef.current!);
         }
       });
-      observer.observe(myRef.current!); // Use the non-null assertion operator here
+      observer.observe(myRef.current!);
     }
 
     if (h1Ref.current && !hasAnimated) {
@@ -56,10 +58,10 @@ const Review = () => {
         if (entry.isIntersecting) {
           setIsVisible2(true);
           setHasAnimated(true);
-          h1Observer.unobserve(h1Ref.current!); // Use the non-null assertion operator here
+          h1Observer.unobserve(h1Ref.current!);
         }
       });
-      h1Observer.observe(h1Ref.current!); // Use the non-null assertion operator here
+      h1Observer.observe(h1Ref.current!);
     }
     if (h2Ref.current && !hasAnimated) {
       const h2Observer = new IntersectionObserver((entries) => {
@@ -67,10 +69,10 @@ const Review = () => {
         if (entry.isIntersecting) {
           setIsVisible3(true);
           setHasAnimated(true);
-          h2Observer.unobserve(h2Ref.current!); // Use the non-null assertion operator here
+          h2Observer.unobserve(h2Ref.current!);
         }
       });
-      h2Observer.observe(h2Ref.current!); // Use the non-null assertion operator here
+      h2Observer.observe(h2Ref.current!);
     }
     if (h3Ref.current && !hasAnimated) {
       const h3Observer = new IntersectionObserver((entries) => {
@@ -78,10 +80,10 @@ const Review = () => {
         if (entry.isIntersecting) {
           setIsVisible4(true);
           setHasAnimated(true);
-          h3Observer.unobserve(h3Ref.current!); // Use the non-null assertion operator here
+          h3Observer.unobserve(h3Ref.current!);
         }
       });
-      h3Observer.observe(h3Ref.current!); // Use the non-null assertion operator here
+      h3Observer.observe(h3Ref.current!);
     }
   }, [hasAnimated]);
 
@@ -97,12 +99,12 @@ const Review = () => {
 
   return (
     <>
-      <div className="flex justify-around items-center bg-black border-white border-y-[.1px] text-black p-7 sm:p-20">
+      <div className="flex sm:mt-96 lg:mt-32 justify-around items-center bg-black border-white border-y-[.1px] text-black p-7 lg:p-20">
         <div>
           <div className=" bg-white p-10 rounded-bl-[20%] rounded-tr-[20%] rounded-md shadow-md shadow-white mb-10">
             <h1
               ref={myRef}
-              className={`text-start font-semibold text-xl sm:text-4xl mb-5
+              className={`text-start font-semibold text-xl sm:text-3xl lg:text-4xl mb-5
 ${isVisible ? "fade-in-top " : ""}`}
             >
               {reviewData.title}
@@ -110,7 +112,8 @@ ${isVisible ? "fade-in-top " : ""}`}
             <p
               ref={h1Ref}
               className={`text-start sm:text-xl sm:max-w-[700px]
-${isVisible2 ? "fade-in-left" : ""}`}
+${isVisible2 ? "fade-in-left1" : ""}
+              `}
             >
               {reviewData.description}
             </p>
@@ -118,7 +121,8 @@ ${isVisible2 ? "fade-in-left" : ""}`}
           <div
             ref={h2Ref}
             className={`flex justify-between
-${isVisible3 ? "scale-in-center" : ""}`}
+${isVisible3 ? "scale-in-center" : ""}
+            `}
           >
             <div
               onClick={() =>
@@ -135,7 +139,7 @@ ${isVisible3 ? "scale-in-center" : ""}`}
                 alt=""
                 width={307}
                 height={298}
-                className="rounded-[50%] w-[24vw] sm:w-[9vw]"
+                className="rounded-[50%] w-[24vw] sm:w-[17vw] lg:w-[9vw]"
               />
             </div>
             <div
@@ -153,7 +157,7 @@ ${isVisible3 ? "scale-in-center" : ""}`}
                 alt=""
                 width={307}
                 height={298}
-                className="rounded-[50%] w-[24vw] sm:w-[9vw]"
+                className="rounded-[50%] w-[24vw] sm:w-[17vw] lg:w-[9vw]"
               />
             </div>
             <div
@@ -171,14 +175,15 @@ ${isVisible3 ? "scale-in-center" : ""}`}
                 alt=""
                 width={307}
                 height={298}
-                className="rounded-[50%] w-[24vw] sm:w-[9vw]"
+                className="rounded-[50%] w-[24vw] sm:w-[17vw] lg:w-[9vw]"
               />
             </div>
           </div>
         </div>
         <div
           ref={h3Ref}
-          className={` hidden sm:block ${isVisible4 ? "tilt-in-fwd-br" : ""}`}
+          className={` hidden sm:block ${isVisible4 ? "tilt-in-fwd-br" : ""}
+          `}
         >
           <Image src={reviewData.mainImage} alt="" width={307} height={298} />
         </div>

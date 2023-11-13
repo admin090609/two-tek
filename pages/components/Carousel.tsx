@@ -101,7 +101,7 @@ const Carousel = () => {
 
   return (
     <>
-      <div className=" mt-24 lg:mt-32 mb-10 lg:mb-20 flex-col justify-evenly mx-2  lg:mx-32 items-center">
+      <div className=" mt-24 sm:mt-44 lg:mt-32 mb-10 lg:mb-20 flex-col justify-evenly mx-2  lg:mx-32 items-center">
         <h1
           ref={h1Ref}
           className={` text-center text-2xl sm:text-5xl  lg:text-4xl mb-5 sm:mb-7 font-semibold 

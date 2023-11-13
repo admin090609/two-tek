@@ -88,7 +88,7 @@ const Paralax2 = () => {
 
   return (
     <>
-      <div className=" mt-72 sm:mt-64 sm:mx-64 p-4 md:p-8 lg:p-0">
+      <div className="mt-20 sm:mt-0 lg:mt-64 lg:mx-64 p-4 md:p-8 lg:p-0">
         <h1
           ref={h1Ref}
           className={`text-center text-2xl sm:text-5xl font-semibold ${
@@ -110,99 +110,70 @@ const Paralax2 = () => {
           {content.HowText}
         </p>
       </div>
-      <div
-        ref={div1Ref}
-        className={`flex sm:flex-row flex-col justify-around items-center mx-4 md:mx-8 lg:mx-0 mb-12 sm:mr-20 sm:ml-80 p-4 py-8 rounded-md ${
-          isVisible1 ? "tilt-in-fwd-tl" : ""
-        }`}
-        style={{
-          background:
-            "linear-gradient(120deg, var(--carousel_gradient1), var(--carousel_gradient2))", // Keep the original colors or change them as needed
-        }}
-      >
-        <div className="sm:max-w-2xl hover:-translate-y-1 transition duration-500 ease-in-out">
-          <h1 className="sm:text-3xl text-2xl text-center sm:text-start font-bold mb-5 sm:leading-tight">
+      <div className="sm:flex sm:flex-wrap block justify-center">
+        <div
+          ref={div1Ref}
+          className={`lg:w-[34%]  w-[full] rounded-xl sm:p-4 ${
+            isVisible1 ? "tilt-in-fwd-tl" : ""
+          }`}
+          style={{
+            background:
+              "linear-gradient(120deg, var(--carousel_gradient1), var(--carousel_gradient2))", // Keep the original colors or change them as needed
+          }}
+        >
+          <div className=" circle  "></div>
+          <h1 className="sm:text-3xl text-2xl text-start font-bold pl-6 sm:pl-6 pt-6 sm:leading-tight">
             {content.HowBoxTitle1}
           </h1>
           <p
-            className="sm:text-xl text-center sm:text-start sm:mb-0 mb-2 sm:leading-normal"
+            className="sm:text-xl sm:mb-0 mb-2 p-6 sm:max-w-[700px] lg:max-w-full sm:p-6 sm:leading-normal"
             style={{ color: "var(--paralax_p)" }}
           >
             {content.HowBoxText}
           </p>
         </div>
-        <div className="sm:w-[20%] w-[60%]">
-          <Image
-            src="/images/search.png"
-            alt=""
-            width={1024}
-            height={1024}
-            className="sm:py-5"
-          />
-        </div>
-      </div>
-
-      <div
-        ref={div2Ref}
-        className={`flex sm:flex-row flex-col justify-around items-center mb-12 shadow-xl mx-4 md:mx-8 lg:mx-0 sm:mx-44 sm:ml-20 sm:mr-80 p-4 py-8 rounded-md ${
-          isVisible2 ? "tilt-in-fwd-tr" : ""
-        }`}
-        style={{
-          background:
-            "linear-gradient(120deg, var(--carousel_gradient1), var(--carousel_gradient2))", // Keep the original colors or change them as needed
-        }}
-      >
-        <div className="sm:max-w-2xl hover:-translate-y-1 transition duration-500 ease-in-out">
-          <h1 className="sm:text-3xl font-bold  text-2xl text-center sm:text-start  mb-5 leading-normal">
+        <div
+          ref={div2Ref}
+          className={`lg:w-[34%] w-[full] sm:mt-8 lg:mt-0 mt-8 lg:ml-20 rounded-xl sm:p-4 ${
+            isVisible2 ? "tilt-in-fwd-tr" : ""
+          }`}
+          style={{
+            background:
+              "linear-gradient(120deg, var(--carousel_gradient1), var(--carousel_gradient2))", // Keep the original colors or change them as needed
+          }}
+        >
+          <div className=" circle1 "></div>
+          <h1 className="sm:text-3xl text-2xl text-start font-bold pt-6 pl-6 sm:pl-6 sm:leading-tight">
             {content.HowBoxTitlev2}
           </h1>
           <p
-            className="sm:text-xl text-center sm:text-start sm:mb-0 mb-2 sm:leading-normal"
+            className="sm:text-xl sm:mb-0 mb-2 p-6 sm:p-6 sm:max-w-[700px] lg:max-w-full sm:leading-normal"
             style={{ color: "var(--paralax_p)" }}
           >
             {content.HowBoxTextv2}
           </p>
         </div>
-        <div className="sm:w-[20%] w-[60%]">
-          <Image
-            src="/images/web.png"
-            alt=""
-            width={1024}
-            height={1024}
-            className="sm:py-5"
-          />
-        </div>
-      </div>
-
-      <div
-        ref={div3Ref}
-        className={`flex sm:flex-row flex-col justify-around items-center mb-12 shadow-xl mx-4 md:mx-8 lg:mx-0 sm:mx-44 sm:mr-20 sm:ml-80 p-4 py-8 rounded-md   ${
-          isVisible3 ? "tilt-in-fwd-tl" : ""
-        }`}
-        style={{
-          background:
-            "linear-gradient(120deg, var(--carousel_gradient1), var(--carousel_gradient2))", // Keep the original colors or change them as needed
-        }}
-      >
-        <div className="sm:max-w-2xl hover:-translate-y-1 transition duration-500 ease-in-out ">
-          <h1 className="sm:text-3xl font-bold mb-5  text-2xl text-center sm:text-start  leading-normal">
+        <div
+          ref={div3Ref}
+          className={`lg:w-[34%] h-[full] mt-8 sm:mt-8 lg:mt-10 rounded-xl p-4  ${
+            isVisible3 ? "tilt-in-fwd-tl" : ""
+          }`}
+          style={{
+            background:
+              "linear-gradient(120deg, var(--carousel_gradient1), var(--carousel_gradient2))", // Keep the original colors or change them as needed
+          }}
+        >
+          <div className=" circle2 "></div>
+          <h1 className="sm:text-3xl text-2xl text-start font-bold pt-3 pl-3 sm:pl-6 lg:pl-0  sm:leading-tight">
             {content.HowBoxTitlev3}
           </h1>
           <p
-            className="sm:text-xl text-center sm:text-start sm:mb-0 mb-2 sm:leading-normal"
+            className="sm:text-xl sm:mb-0 mb-2 p-3 sm:pl-6 sm:max-w-[700px] lg:max-w-full lg:pl-0 sm:leading-normal"
             style={{ color: "var(--paralax_p)" }}
           >
             {content.HowBoxTextv3}
           </p>
-        </div>
-        <div className="sm:w-[20%] w-[60%]">
-          <Image
-            src="/images/mobile.png"
-            alt=""
-            width={1024}
-            height={1024}
-            className="sm:py-5"
-          />
+          <div className="lg:w-[100vw] w-[23%] rounded-[50%] circle-shape sm:w-[7.5%] float-rigth text-center"></div>
         </div>
       </div>
     </>

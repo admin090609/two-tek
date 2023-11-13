@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import useLanguage from "../../public/LanguageContext";
 import { getTranslatedContent } from "./TranslateRoToRu";
+import Color from "./Color";
 
 function Info() {
   const [showComponent, setShowComponent] = useState(false);
@@ -49,7 +50,7 @@ function Info() {
       }`}
     >
       <div className="lg:w-[70vw] mx-2 sm:mx-auto relative">
-        <div className=" overflow-hidden h-[500px]  sm:w-[100%] sm:h-[500px]">
+        <div className=" overflow-hidden h-[450px]  sm:w-[100%] sm:h-[500px]">
           <Image
             src={theme === "dark" ? "/images/image.jpg" : "/images/slider.jpg"}
             alt=""
@@ -63,9 +64,9 @@ function Info() {
             showComponent ? "tracking-in-contract-bck" : ""
           }`}
         >
-          <p className="sm:text-6xl text-[37px] font-semibold sm:mb-4 leading-[45px] sm:leading-[60px] py-3  ">
+          <p className="sm:text-6xl text-[50px] font-semibold sm:mb-4 leading-[50px] sm:leading-[60px] py-3  ">
             {content.LandingTitle1} <br /> {content.LandingTitle2} <br />
-            <span className="sm:tracking-wide text-[28px] sm:text-[45px] rounded-[50px] tracking-in-contract-bck px-3 font-light border-2 border-[#91A8B7]">
+            <span className="sm:tracking-wide text-[30px] sm:text-[45px] rounded-[50px] tracking-in-contract-bck px-3 font-light border-2 border-[#91A8B7]">
               {content.LandingTitleCircle}
             </span>
             <br />
