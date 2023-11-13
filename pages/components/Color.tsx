@@ -42,7 +42,7 @@ const Color = () => {
 
   return (
     <div>
-      <label className="toggle" htmlFor="switch">
+      <label className="toggle  transition-all duration-300" htmlFor="switch">
         <input
           id="switch"
           className="input"
