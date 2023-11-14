@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Router } from "next/router";
 import Loading from "./loading";
 import { LanguageProvider } from "../public/LanguageContext";
+import { ThemeProvider } from "../public/ThemeContext";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(false);
@@ -24,12 +25,12 @@ export default function App({ Component, pageProps }: AppProps) {
   }, []);
   return (
     <>
-   
-
-      <LanguageProvider>
-        {loading ? <Loading /> : null}
-        <Component {...pageProps} />
-      </LanguageProvider>
+      <ThemeProvider>
+        <LanguageProvider>
+          {loading ? <Loading /> : null}
+          <Component {...pageProps} />
+        </LanguageProvider>
+      </ThemeProvider>
     </>
   );
 }

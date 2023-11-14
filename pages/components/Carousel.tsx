@@ -4,6 +4,8 @@ import Link from "next/link";
 import "animate.css";
 import useLanguage from "../../public/LanguageContext";
 import { getTranslatedContent } from "./TranslateRoToRu";
+import { useTheme } from "@/public/ThemeContext";
+
 
 const logoData = [
   { src: "/images/sanduta.png", link: "https://sandutart.vercel.app/" },
@@ -20,7 +22,8 @@ const darkThemeLogoData = [
 ];
 
 const Carousel = () => {
-  const [theme, setTheme] = useState('');
+  const { theme: themeFromContext, toggleTheme } = useTheme();
+  const [theme, setTheme] = useState(themeFromContext);
   const myRef = useRef<HTMLDivElement | null>(null);
   const h1Ref = useRef<HTMLDivElement | null>(null);
   const h2Ref = useRef<HTMLHRElement | null>(null); // Update this line
@@ -36,12 +39,11 @@ const Carousel = () => {
   const content = getTranslatedContent(language);
 
   useEffect(() => {
-    // You can perform the DOM manipulation after the component is mounted.
-    const bodyTheme = document.querySelector("body")?.getAttribute("data-theme");
+    const bodyTheme = themeFromContext;
     if (bodyTheme) {
       setTheme(bodyTheme);
     }
-  }, []);
+  }, [themeFromContext]);
 
   useEffect(() => {
     if (myRef.current && !hasAnimated) {

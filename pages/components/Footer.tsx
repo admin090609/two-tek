@@ -4,9 +4,12 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import useLanguage from "../../public/LanguageContext";
 import { getTranslatedContent } from "./TranslateRoToRu";
+import { useTheme } from "@/public/ThemeContext";
+
 
 const Footer = () => {
-  const [theme, setTheme] = useState('');
+  const { theme: themeFromContext, toggleTheme } = useTheme();
+  const [theme, setTheme] = useState(themeFromContext);
   const [hoverStates, setHoverStates] = useState([false, false, false, false]);
   const myRef = useRef<HTMLDivElement | null>(null);
   const h1Ref = useRef<HTMLDivElement | null>(null);
@@ -19,12 +22,12 @@ const Footer = () => {
   const { language, setLanguage } = useLanguage();
   const content = getTranslatedContent(language);
   useEffect(() => {
-    // You can perform the DOM manipulation after the component is mounted.
-    const bodyTheme = document.querySelector("body")?.getAttribute("data-theme");
+    const bodyTheme = themeFromContext;
     if (bodyTheme) {
       setTheme(bodyTheme);
     }
-  }, []);
+  }, [themeFromContext]);
+  
   const handleIconHover = (index: number, isHovered: boolean) => {
     const newHoverStates = [...hoverStates];
     newHoverStates[index] = isHovered;

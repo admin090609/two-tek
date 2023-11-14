@@ -3,14 +3,17 @@ import Link from "next/link";
 import Image from "next/image";
 import useLanguage from "../../public/LanguageContext";
 import { getTranslatedContent } from "./TranslateRoToRu";
-import Color from "./Color";
+import { useTheme } from "@/public/ThemeContext";
 
 function Info() {
   const [showComponent, setShowComponent] = useState(false);
-  const [theme, setTheme] = useState("");
   const [isMobile, setIsMobile] = useState(false);
   const { language, setLanguage } = useLanguage();
   const content = getTranslatedContent(language);
+  const lightModeImage = "/images/slider.jpg";
+  const darkModeImage = "/images/image.jpg";
+  const { theme: themeFromContext, toggleTheme } = useTheme();
+  const [theme, setTheme] = useState(themeFromContext);
 
   useEffect(() => {
     // Setăm `showComponent` la `true` după o întârziere scurtă pentru a declanșa animația
@@ -34,14 +37,11 @@ function Info() {
   }, []);
 
   useEffect(() => {
-    // You can perform the DOM manipulation after the component is mounted.
-    const bodyTheme = document
-      .querySelector("body")
-      ?.getAttribute("data-theme");
+    const bodyTheme = themeFromContext;
     if (bodyTheme) {
       setTheme(bodyTheme);
     }
-  }, []);
+  }, [themeFromContext]);
 
   return (
     <div
@@ -52,10 +52,10 @@ function Info() {
       <div className="lg:w-[70vw] mx-2 sm:mx-auto relative">
         <div className=" overflow-hidden h-[450px]  sm:w-[100%] sm:h-[500px]">
           <Image
-            src={theme === "dark" ? "/images/image.jpg" : "/images/slider.jpg"}
+            src={theme === "dark" ? darkModeImage : lightModeImage}
             alt=""
-            layout="fill" // This allows the image to fill its container
-            objectFit="cover" // This ensures the image covers the entire container
+            layout="fill"
+            objectFit="cover"
             className="rounded-3xl"
           />
         </div>
