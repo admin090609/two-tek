@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from "react";
 import useLanguage from "../../public/LanguageContext";
 import { getTranslatedContent } from "./TranslateRoToRu";
-import Link from "next/link";
-const CalendlyWidget = () => {
-  const [showCalendly, setShowCalendly] = useState(false);
+
+interface CalendlyWidgetProps {
+  setCalendlyOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const CalendlyWidget: React.FC<CalendlyWidgetProps> = ({ setCalendlyOpen }) => {  const [showCalendly, setShowCalendly] = useState(false);
   const [fadeIn, setFadeIn] = useState(false); // State variable for the fade-in animation
 
   const toggleCalendly = () => {
     setShowCalendly(!showCalendly);
+    setCalendlyOpen(!showCalendly);
   };
 
   const { language, setLanguage } = useLanguage();
@@ -48,26 +52,35 @@ const CalendlyWidget = () => {
       className={containerClassName}
       style={{ position: "fixed", bottom: "0px", right: "0px", zIndex: 9999 }}
     >
-      <Link href="https://calendly.com/two2tek?hide_landing_page_details=1&hide_gdpr_banner=1">
-        <button
-          onClick={toggleCalendly}
+      <button
+        onClick={toggleCalendly}
+        style={{
+          position: "absolute",
+          background: "#008DFD",
+          color: "#ffffff",
+          padding: isMobile ? "5px 1px" : "10px 20px",
+          border: "none",
+          bottom: "20px",
+          right: "20px",
+          width: isMobile ? "130px" : "190px", // Stilul pentru mobile
+          borderRadius: "5px",
+          cursor: "pointer",
+          zIndex: 10000,
+        }}
+      >
+        {isMobile ? content.calendlyMobile : content.calendly}
+      </button>
+      <div style={calendlyStyles}>
+        <iframe
+          title="Calendly"
+          src="https://calendly.com/two2tek?hide_landing_page_details=1&hide_gdpr_banner=1"
           style={{
-            position: "absolute",
-            background: "#008DFD",
-            color: "#ffffff",
-            padding: isMobile ? "5px 1px" : "10px 20px",
+            width: "100%",
+            height: "100%",
             border: "none",
-            bottom: "20px",
-            right: "20px",
-            width: isMobile ? "130px" : "190px", // Stilul pentru mobile
-            borderRadius: "5px",
-            cursor: "pointer",
-            zIndex: 10000,
           }}
-        >
-          {isMobile ? content.calendlyMobile : content.calendly}
-        </button>
-      </Link>
+        ></iframe>
+      </div>
     </div>
   );
 };
