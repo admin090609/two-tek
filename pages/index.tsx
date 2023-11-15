@@ -33,12 +33,11 @@ export default function Home() {
 
   return (
     <>
-     {contentLoaded ? (
+
+      {contentLoaded ? (
         <>
           {!calendlyOpen && <NavBar />}
-          <div>
-          {!calendlyOpen && <Info />}
-          </div>
+          <div>{!calendlyOpen && <Info />}</div>
           <div>
             <Carousel />
           </div>
