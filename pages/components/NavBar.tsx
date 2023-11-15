@@ -169,9 +169,10 @@ const NavBar = () => {
             style={{
               backgroundImage:
                 "linear-gradient(to bottom, var(--nav_bg1), var(--nav_bg2), var(--nav_bg3))",
-              height: "100%",
+              height: "101%",
               width: "100%",
               position: "fixed", // Asigurați-vă că meniul este fix în poziție
+              zIndex: 2,
             }}
           >
             <ul className="flex flex-col justify-center items-center text-center gap-4 md:text-2xl ">
