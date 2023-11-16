@@ -31,7 +31,7 @@ export default function App({ Component, pageProps }: AppProps) {
           
           <Head>
             <title>2Tek</title>
-            <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
+            <link rel="shortcut icon" href="/logo.png" type="image/png" />
             <meta
               name="description"
               content="Obține un site care nu doar atrage atenția, ci și transformă vizitatorii în clienți fideli. Înălțăm standardele digitale, iar succesul tău este misiunea noastră!"
