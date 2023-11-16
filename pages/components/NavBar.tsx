@@ -55,11 +55,11 @@ const NavBar = () => {
       >
         <div className="text-4xl font-bold text-focus-in flex items-center -ml-14 lg:ml-0">
           <Image
-            src="/images/Logo.png"
+            src="/images/logo.png"
             alt="Icon"
             width={100}
             height={100}
-            className=" w-[100%] sm:w-[12vw] object-contain"
+            className="w-[16vh]"
           />
         </div>
 

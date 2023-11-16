@@ -28,10 +28,10 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <ThemeProvider>
         <LanguageProvider>
-          
           <Head>
             <title>2Tek</title>
-            <link rel="shortcut icon" href="/logo.png" type="image/png" />
+            <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
             <meta
               name="description"
               content="Obține un site care nu doar atrage atenția, ci și transformă vizitatorii în clienți fideli. Înălțăm standardele digitale, iar succesul tău este misiunea noastră!"
