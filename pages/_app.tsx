@@ -6,6 +6,7 @@ import Loading from "./loading";
 import { LanguageProvider } from "../public/LanguageContext";
 import { ThemeProvider } from "../public/ThemeContext";
 import Head from "next/head";
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(false);
@@ -70,7 +71,7 @@ export default function App({ Component, pageProps }: AppProps) {
         "
             />
           </Head>
-
+          <Analytics />
           {loading ? <Loading /> : null}
           <Component {...pageProps} />
         </LanguageProvider>
