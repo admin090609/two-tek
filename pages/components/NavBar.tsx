@@ -53,7 +53,7 @@ const NavBar = () => {
             "linear-gradient(to bottom, var(--nav_bg1), var(--nav_bg2), var(--nav_bg3))",
         }}
       >
-        <div className="text-4xl font-bold text-focus-in flex items-center -ml-14 lg:ml-0">
+        <div className=" text-focus-in flex items-center -ml-14 lg:ml-0">
           <Image
             src="/images/Logo.png"
             alt="Icon"
