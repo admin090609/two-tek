@@ -71,7 +71,7 @@ const NavBar = () => {
             onChange={toggleMenu}
           />
           <label
-            className={`toggle-burger toggle2 ${
+            className={` toggle2 ${
               isBurgerMenuOpen ? "fixed" : ""
             }`}
             htmlFor="checkbox2"
