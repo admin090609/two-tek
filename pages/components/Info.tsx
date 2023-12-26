@@ -78,7 +78,7 @@ function Info() {
                 showComponent ? "text-shadow-pop-left" : ""
               }ease-linear duration-500`}
             >
-              {content.LandingContacts} +373 685 487 89
+              {content.LandingContacts} +373 600 088 57
             </button>
           </Link>
         </div>
