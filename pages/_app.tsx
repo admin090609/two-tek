@@ -6,7 +6,7 @@ import Loading from "./loading";
 import { LanguageProvider } from "../public/LanguageContext";
 import { ThemeProvider } from "../public/ThemeContext";
 import Head from "next/head";
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(false);
@@ -32,7 +32,10 @@ export default function App({ Component, pageProps }: AppProps) {
           <Head>
             <title>2Tek</title>
             <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-            <meta name="google-site-verification" content="ewcNtBxLOwqGAH28aI1i4A0uSkJZB55GlZfueC86iGg" />
+            <meta
+              name="google-site-verification"
+              content="ewcNtBxLOwqGAH28aI1i4A0uSkJZB55GlZfueC86iGg"
+            />
             <meta
               name="description"
               content="Obține un site care nu doar atrage atenția, ci și transformă vizitatorii în clienți fideli. Înălțăm standardele digitale, iar succesul tău este misiunea noastră!"
