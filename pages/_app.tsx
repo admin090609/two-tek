@@ -47,6 +47,8 @@ export default function App({ Component, pageProps }: AppProps) {
         tek,
         2tek,
         2,
+        near me, 
+        near,
         2tek web,
         twotek,
         Twotek,
