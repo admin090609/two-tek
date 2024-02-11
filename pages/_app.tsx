@@ -32,6 +32,7 @@ export default function App({ Component, pageProps }: AppProps) {
           <Head>
             <title>2Tek</title>
             <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+            <link rel="manifest" href="/manifest.json"></link>
             <meta
               name="google-site-verification"
               content="ewcNtBxLOwqGAH28aI1i4A0uSkJZB55GlZfueC86iGg"
