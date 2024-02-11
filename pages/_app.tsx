@@ -40,7 +40,7 @@ export default function App({ Component, pageProps }: AppProps) {
             <meta name="google-site-verification" content="A8VlxVbO7a7wR-snYd5_L0eHUx99rNTjS4s9zo1MPTU" />
             <meta
               name="description"
-              content="Obține un site care nu doar atrage atenția, ci și transformă vizitatorii în clienți fideli. Înălțăm standardele digitale, iar succesul tău este misiunea noastră!"
+              content="Get a website with 2Tek, that not only grabs attention but also turns visitors into loyal customers."
             />
             <meta
               name="keywords"
